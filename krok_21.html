@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+  
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Vlasni-Test</title>
+  
+    <link rel="stylesheet" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Витрати і бюджет</title>
+</head>
+
+<body>
+    <header class="pagetype-content">
+        <div class="scrolltracker">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+        <div id="topButtons">
+            <a id="headerLogo" href="/">home</a>
+            <button type="button" id="toggleMenu" class="inactive">&#9776;</button>
+            <button type="button" id="menuBack" class="hidden">back</button>           
+            <span id='headerTitle' class="hidden"></span>
+            <span id="navActiveSectionTitle" class="hidden"></span>
+        </div>
+        <nav id="mainNav" class="hidden customScrollBar">
+            <div class="vertJustify">
+                <ul id="mainNavUl" class="pos1">
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Психологія і фінанси</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/psyhology_faktory_vplyvu.html" itemprop="url" class="mainNavLevel2Link hub">Цілі, цінності, рішення</a>
+                                <ul>
+                                    <li><a href="/psyhology_faktory_vplyvu.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/psyhology_porady.html" class="mainNavLevel3Link ">Декілька порад</a></li>
+                                    <li><a href="/psyhology_tsili_rivnivaga.html" class="mainNavLevel3Link ">Цілі і рівновага</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel2Link hub">Цілі і цінності</a>
+                                <ul>
+                                    <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel3Link ">Дослідження цінностей</a></li>
+                                    <li><a href="/psyhology_envy.html" class="mainNavLevel3Link ">Порівняння з іншими</a></li>
+                                    <li><a href="/psyhology_reklama.html" class="mainNavLevel3Link ">Реклама</a></li>
+                                    <li><a href="/psyhology_reklama_metody.html" class="mainNavLevel3Link ">Методи реклами</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_start.html" class="mainNavLevel2Link hub">Інші фактори впливу</a>
+                                <ul>
+                                    <li><a href="/psyhology_start.html" class="mainNavLevel3Link ">Індивідуальні умови</a></li>
+                                    <li><a href="/psyhology_life_cycle.html" class="mainNavLevel3Link ">Життєвий цикл</a></li>
+                                    <li><a href="/psyhology_sposib_zyttya.html" class="mainNavLevel3Link ">Спосіб життя</a></li>
+                                    <li><a href="/psyhology_economy.html" class="mainNavLevel3Link ">Економіка</a></li>
+                                    <li><a href="/psyhology_social.html" class="mainNavLevel3Link ">Соціальні фактори</a></li>
+                                    <li><a href="/psyhology_tech.html" class="mainNavLevel3Link ">Технологічні зміни</a></li>
+                                    <li><a href="/psyhology_communication.html" class="mainNavLevel3Link ">Навички комунікації</a></li>
+                                    <li><a href="/psyhology_uperedgennya.html" class="mainNavLevel3Link ">Упередження</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_6krokiv.html" class="mainNavLevel2Link hub">Процес прийняття рішень</a>
+                                <ul>
+                                    <li> <a href="/psyhology_6krokiv.html" class="mainNavLevel3Link ">6 кроків</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_5typiv.html" class="mainNavLevel2Link hub">Фінансова поведінка</a>
+                                <ul>
+                                    <li><a href="/psyhology_5typiv.html" class="mainNavLevel3Link ">5 типів особистостей</a></li>
+                                    <li><a href="/psyhology_emotion.html" class="mainNavLevel3Link ">Емоції</a></li>
+                                    <li><a href="/psyhology_7mental.html" class="mainNavLevel3Link ">Психологічно сильні риси</a></li>
+                                    <li><a href="/psyhology_povedinka.html" class="mainNavLevel3Link ">Зміна поведінки</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/quiz_cinnosty.html" class="mainNavLevel2Link hub">Тести</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Покроковий план дій</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/krok_1.html" itemprop="url" class="mainNavLevel2Link hub">Кроки 1-7</a>
+                                <ul>
+                                    <li><a href="/krok_1.html" class="mainNavLevel3Link ">Крок 1 "Прагнення до змін"</a></li>
+                                    <li><a href="/krok_2.html" class="mainNavLevel3Link ">Крок 2 "Оцінка фінансової ситуації"</a></li>
+                                    <li><a href="/krok_3.html" class="mainNavLevel3Link ">Крок 3 "Розгрібання фінансового безладу"</a></li>
+                                    <li><a href="/krok_4.html" class="mainNavLevel3Link ">Крок 4 "Налаштуйтесь на успіх"</a></li>
+                                    <li><a href="/krok_5.html" class="mainNavLevel3Link ">Крок 5 "Копії кредитних звітів"</a></li>
+                                    <li><a href="/krok_6.html" class="mainNavLevel3Link ">Крок 6 "Виправлення кредитного звіту"</a></li>
+                                    <li><a href="/krok_7.html" class="mainNavLevel3Link ">Крок 7 "Рахуйте свої гроші"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_8.html" class="mainNavLevel2Link hub">Кроки 8-14</a>
+                                <ul>
+                                    <li><a href="/krok_8.html" class="mainNavLevel3Link ">Крок 8 "Визначте стартову позицію"</a></li>
+                                    <li><a href="/krok_9.html" class="mainNavLevel3Link ">Крок 9 "Борговий тест"</a></li>
+                                    <li><a href="/krok_10.html" class="mainNavLevel3Link ">Крок 10 "Визначення пріоритетів"</a></li>
+                                    <li><a href="/krok_11.html" class="mainNavLevel3Link ">Крок 11 "Встановлення фінансових цілей"</a></li>
+                                    <li><a href="/krok_12.html" class="mainNavLevel3Link ">Крок 12 "Коротко-, середньо- та довгострокові цілі"</a></li>
+                                    <li><a href="/krok_13.html" class="mainNavLevel3Link ">Крок 13 "Сплата боргів"</a></li>
+                                    <li><a href="/krok_14.html" class="mainNavLevel3Link ">Крок 14 "Очікуйте на неочікуване"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_15.html" class="mainNavLevel2Link hub">Кроки 15-21</a>
+                                <ul>
+                                    <li><a href="/krok_15.html" class="mainNavLevel3Link ">Крок 15 "Убезпечте своє фінансове майбутнє"</a></li>
+                                    <li><a href="/krok_16.html" class="mainNavLevel3Link ">Крок 16 "Візьміть на себе зобов’язання"</a></li>
+                                    <li><a href="/krok_17.html" class="mainNavLevel3Link ">Крок 17 "Здійснюйте накопичення для ваших цілей"</a></li>
+                                    <li><a href="/krok_18.html" class="mainNavLevel3Link ">Крок 18 "Куди зникають ваші гроші"</a></li>
+                                    <li><a href="/krok_19.html" class="mainNavLevel3Link ">Крок 19 "Задокументуйте постійні первинні витрати"</a></li>
+                                    <li><a href="/krok_20.html" class="mainNavLevel3Link ">Крок 20 "Заплануйте періодичні витрати"</a></li>
+                                    <li><a href="/krok_21.html" class="mainNavLevel3Link ">Крок 21 "Здійснюйте облік ваших витрат"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_22.html" class="mainNavLevel2Link hub">Кроки 22-28</a>
+                                <ul>
+                                    <li><a href="/krok_22.html" class="mainNavLevel3Link ">Крок 22 "Визначте шляхи зменшення витрат"</a></li>
+                                    <li><a href="/krok_23.html" class="mainNavLevel3Link ">Крок 23 "Заощаджуйте на бакалійних товарах"</a></li>
+                                    <li><a href="/krok_24.html" class="mainNavLevel3Link ">Крок 24 "Здійснюйте облік зменшення витрат"</a></li>
+                                    <li><a href="/krok_25.html" class="mainNavLevel3Link ">Крок 25 "Контролюйте сімейний захист"</a></li>
+                                    <li><a href="/krok_26.html" class="mainNavLevel3Link ">Крок 26 "Усвідомлюйте вартість кредиту"</a></li>
+                                    <li><a href="/krok_27.html" class="mainNavLevel3Link ">Крок 27 "Сформуйте фінансову команду"</a></li>
+                                    <li><a href="/krok_28.html" class="mainNavLevel3Link ">Крок 28 "Відчуйте переваги"</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Калькулятори</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/budget.html" itemprop="url" class="mainNavLevel2Link hub">Бюджетування</a>
+                                <ul>
+                                    <li><a href="/budget.html" class="mainNavLevel3Link ">Бюджет</a></li>
+                                    <li><a href="/net_worth.html" class="mainNavLevel3Link ">Чиста вартість</a></li>
+                                    <!-- <li><a href="/emergency.html" class="mainNavLevel3Link ">Резервний фонд</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/compound.html" itemprop="url" class="mainNavLevel2Link hub">Накопичення</a>
+                                <ul>
+                                    <li><a href="/compound.html" class="mainNavLevel3Link ">Складний відсоток</a></li>
+                                    <li><a href="/goals.html" class="mainNavLevel3Link ">Цілі</a></li>
+                                    <li><a href="/withdrawal.html" class="mainNavLevel3Link ">Вилучення</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pay-day.html" itemprop="url" class="mainNavLevel2Link hub">Борги</a>
+                                <ul>
+                                    <li><a href="/pay-day.html" class="mainNavLevel3Link ">Кредит до зарплати</a></li>
+                                    <li><a href="/cards.html" class="mainNavLevel3Link ">Кредитні картки</a></li>
+                                    <li><a href="/ploan.html" class="mainNavLevel3Link ">Споживчі кредити</a></li>
+                                    <li><a href="/mortgage.html" class="mainNavLevel3Link ">Іпотека</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/fund.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/fund.html" class="mainNavLevel3Link ">Взаємні фонди</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/priorytety.html" itemprop="url" class="mainNavLevel2Link hub">Таблиці,форми</a>
+                                <ul>
+                                    <li><a href="/priorytety.html" class="mainNavLevel3Link ">Пріоритети</a></li>
+                                    <li><a href="/fin_priorytety.html" class="mainNavLevel3Link ">Фінансові цілі</a></li>
+                                    <li><a href="/table_borgy.html" class="mainNavLevel3Link ">Таблиця боргів</a> </li>
+                                    <li><a href="/vybir_kredyt.html" class="mainNavLevel3Link ">Порівняння кредитних пропозицій</a></li>
+                                    <li><a href="/postiyni_vytraty.html" class="mainNavLevel3Link ">Постійні витрати</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Відтворення відео</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4zPII1A7-Or76lpvqlMKYx3" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Покроковий план дій</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фактори впливу</a>                            
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xK5A0boJI7GheZse90PVZB" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фінансова поведінка</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xVuYEx5hayj6RqTynyhohE" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Захист від шахрайства</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=bU3leCbEnuo" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Психологічно сильні риси </a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=8_pGLlLm8P4&list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2&index=7" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i>Рекламні методи впливу </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Тести</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/quiz_kredity.html" itemprop="url" class="mainNavLevel2Link hub">Управління</a>
+                                <ul>
+                                    <li><a href="/quiz_kredity.html" class="mainNavLevel3Link ">Кредити</a></li>
+                                    <li><a href="/quiz25.html" class="mainNavLevel3Link ">До 25 років</a></li>
+                                    <li><a href="/quiz_upravlinnya.html" class="mainNavLevel3Link ">Управління</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizinvest.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/quizinvest.html" class="mainNavLevel3Link ">Інвестиції</a></li>
+                                    <li><a href="/quiz_payovi_fondy.html" class="mainNavLevel3Link ">Колективні інвестиції</a></li>
+                                    <li><a href="/quiz_other_invest.html" class="mainNavLevel3Link ">Інші інвестиції</a></li>
+                                    <li><a href="/quiz_pensiy.html" class="mainNavLevel3Link ">Пенсійне страхування</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizdiversification.html" itemprop="url" class="mainNavLevel2Link hub">Ризики</a>
+                                <ul>
+                                    <li><a href="/quizdiversification.html" class="mainNavLevel3Link ">Диверсифікація</a></li>
+                                    <li><a href="/quiz_scam.html" class="mainNavLevel3Link ">Шахрайство</a></li>
+                                    <li><a href="/quizcurancy.html" class="mainNavLevel3Link ">Валюта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quiz_cinnosty.html" itemprop="url" class="mainNavLevel2Link hub">Інше</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="mainContent">
+        <div id="hero">
+            <div id="heroImg">
+                <div id="heroText">
+                    <nav id="breadcrumbs">
+                        <a href="/krok_20.html" class="breadcrumbLink"><i class="material-icons" style="font-size: 18px;transform: rotate(45deg);">call_received</i>&nbsp; Крок 20</a>
+                        <a href="/krok_22.html" class="breadcrumbLink"><span>Крок 22&nbsp; </span><i class="material-icons" style="font-size: 18px;transform: rotate(45deg)">call_made</i></a>
+                    </nav>
+                    <div>
+                        <h1>План дій</h1>
+                        <p id="pagetagline">Крок 21: Здійснюйте облік своїх витрат
+                            <p id="pagetime"><i style="font-size: 18px;" class="material-icons">play_circle_outline</i> <span>&nbsp; 1 відео,&nbsp; 3 хв. 11 сек </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="max-width: 47.05rem;padding: 0 1rem ">
+            <p class="pagesummary">Про важливість здійснення обліку витрат</p>
+            <h2> Здійснюйте облік ваших витрат</h2>
+            <p>Не дозволяйте вашим грошам вислизнути крізь пальці. Це може статися так само легко з кавою, обідом та повсякденними дрібними речами.</p>
+            <p>Ви можете подумати, що великі витрати на великі речі - це те, що призводить до проблем з грошима. Але часто щоденні дрібниці,це те, що в кінцевому підсумку коштують вам більше.</p>
+            <p>Якщо ви добре стежите за вашими грошима, ви не будете жити за межами своїх можливостей.</p>
+            <div class="standardText">
+                <div class="smartTip">
+                    <p>Дисципліна та відданість є рисами, якими ви маєте володіти для загального фінансового здоров'я та фінансової грамотності.</p>
+                </div>
+            </div>
+            <p>Ось кілька речей, які ви можете зробити, щоб переконатися, що ваші витрати вписуються у ваш фінансовий план.</p>
+            <ul>
+                <li>Звіряйте бюджет з банківськими звітами.</li>
+                <li>Обліковуйте витрати.</li>
+                <li>Перевіряйте наявність витоків</li>
+            </ul>
+            <p>Витрати на витоку - це ті невеликі регулярні покупки, як ранкова чашка кави, які складаються протягом певного періоду часу. Якщо ви намагаєтеся заощадити додаткові готівкові кошти, подумайте про те, щоб зменшити витрати на витоки.</p>
+            <p>Оскільки маленькі витрати часто здійснюються на цікаві речі, такі як напої або розваги, не скорочуйте їх повністю. Замість цього виберіть лише одну чи дві речі для скорочення.</p>
+            <h2>Дізнайтесь більше</h2>
+            <div id="video_player" class="figure">
+                <div id="video_container">
+                    <a href="https://www.youtube.com/watch?v=JUY5JGAj_S8">
+                        <img src="/assets/video/functions_video.svg"/>
+                     </a>
+                    <!-- <video controls poster="img/vlasnifinansy.jpg">     
+                      <source src="video/step21.webm" type="video/webm">
+                        <source src="video/step21.mp4" type="video/mp4">                   
+                        </video> -->
+                    <div class="video-text">Облік витрат</div>
+                </div>
+            </div><br>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"></a>Скрипт до відео</h2>
+                    <!-- <button class="accordianRowToggle">toggle accordian row</button> -->
+                </div>
+                <div class="accordianRowContent">
+                    <h3>Здійснюйте облік ваших витрат.</h3>
+
+                    <p>Настав час, щоб занести ваші постійні, змінні і періодичні витрати в перший стовпчик таблиці витрат. </p>
+                    <p>Ця таблиця допоможе вам визначити витрати, які можна скоротити і запобігти імпульсивним придбанням. Цей процес може зайняти багато часу, але є дуже важливою складовою управління, щоб тримати під контролем свої фінанси. </p>
+                    <p>Після того, як ви підрахували загальну суму існуючих витрат, варто додати інформацію про доходи. Для цього, можливо, було б корисно звернутися до вашої таблиці доходів. </p>
+                    <p>Відніміть суму ваших загальних щомісячних витрат від суми вашого щомісячного чистого доходу. Якщо ваші витрати перевищують ваші доходи, будьте впевнені, що є способи, щоб збалансувати бюджет. </p>
+                    <p>Тримайте під рукою таблицю витрат - це має стати вашою дорожньою картою до фінансового благополуччя. </p>
+                    <p>Дисципліна та самовідданість - це головне. Спочатку дисципліна, бо якщо ви не відстежуєте свої витрати, вам доведеться змусити себе це зробити. </p>
+                    <p>Наприклад, якщо ви є марнотратом, то, швидше за все, у вас є кишеня чи гаманець, повний квитанцій. Варто вас схвалити за збереження квитанцій. </p>
+                    <p>Проте ви, напевно, не знаєте, що саме існує у вашому обліковому записі під час здійснення покупок. Ви маєте комфорт, знаючи, що на рахунку є гроші, які дають зелене світло для витрат. </p>
+                    <p>Напевно ви чули вислів: "Ні болю, ні здобутків". Те саме стосується фінансової грамотності та освіти. Вам здається, що буде болісно, коли вам доведеться зупинитися і записати всі свої витрати. Безумовно, ви будете опиратись. </p>
+                    <p>Але ідея полягає в тому, щоб створити нову звичку записувати витрати. Це стане нормальним режимом, ймовірно, через сім - десять днів. </p>
+                    <p>Тому, ніякого опору. Ваші кроки, спрямовані на документування витрат кожного разу, коли ви витрачаєте гроші, виконують більшу роль, ніж раніше. Документація про ваші витрати покаже вам чорним по білому, куди саме дійсно йдуть ваші
+                        гроші. </p>
+                    <p>Без виконання цього завдання ви не змогли б точно сказати, куди день за днем зникають ваші гроші. Звичайно, у вас були б квитанції, але, швидше за все, у вас є автоматичні списання коштів, і ви не знаєте про день місяця, коли вони
+                        списуються, крім щоквартальних або річних відрахувань. </p>
+                    <p>Кожна вартість впливає на стан вашого фінансового господарства. Знання реальної картини в фінансах також вимагає цілеспрямованості. Це не те, що треба робити випадково. Важливо бути вірним до запису цієї інформації. Не достатньо сказати,
+                        що ви збираєтеся це зробити, а потім с першого разу забути.
+                    </p>
+                    <p>Вибирайте олівець або ручку та записуйте витрати, як тільки ви згадали, що ви їх не записали. Дисципліна та відданість є рисами, якими ви маєте володіти для загального фінансового здоров'я та фінансової грамотності.
+                    </p>
+                </div>
+            </div><br>
+            <div class="calculatorLink clickable">
+                <h3><a href="/budget.html" title="Калькулятор сімейного бюджету">Калькулятор сімейного бюджету</a></h3>
+                <p>Намагайтесь дотримуватись запланованих витрат</p>
+            </div>
+            <h2>Додатковий матеріал</h2>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"></a>БЮДЖЕТ</h2>
+                    <!-- <button class="accordianRowToggle">toggle accordian row</button> -->
+                </div>
+                <div class="accordianRowContent">
+                    <h3>Для чого бюджет?</h3>
+                    <p>Найкращий спосіб контролювати свої фінанси - зробити бюджет. Це простий інструмент, який допомагає вам зрозуміти, звідки і скільки грошей йде до вашого дому та куди і скільки виходять з нього.</p>
+                    <p>Бюджет показує, чи ви витрачаєте більше або менше, ніж можете собі дозволити. Це дає можливість спрямувати свої гроші туди, де це має найбільшу користь, щоб ви могли залишатися із залишками на рахунках і почати розміщувати гроші на
+                        досягнення своїх цілей.</p>
+                    <p> Використання бюджету допоможе вам залишатись на біговій доріжці життя від зарплати до зарплати. Це дає можливість класифікувати пріоритети ваших грошей та знайти правильний баланс між витратами та заощадженнями.</p>
+                    <p>Бюджет дозволяє погасити кредитну картку або кредит, краще планувати, коли вам потрібно здійснити великі платежі, а також заощадити на відпустку чи велику покупку.</p>
+                    <h3>Створення бюджету.</h3>
+                    <p>Використовуйте калькулятор бюджету, щоб спланувати напрямки використання ваших грошей. Виберіть часовий інтервал для вашого бюджету, який відповідає вашому стилю життя - наприклад, тиждень, два тижні або місяць.</p>
+                    <p>Корисно подивитися на гроші, які надходять і витрачаються протягом цілого року. Включіть до складу регулярні платежі, такі як оренда або іпотечний кредит, телефон та електрика, автомобільний або громадський транспорт.</p>
+                    <p>Перевірка банківських виписок, виписок з кредитних карток, квитанцій та торгових чеків допоможе вам вираховувати всі ваші витрати.</p>
+                    <p>Додайте всі гроші, які ви отримуєте протягом певного періоду часу. Це може включати оплату вашої повної або часткової роботи, будь-яку повсякденну роботу, вашу пенсію, державні пільги, виплати за дитину та будь-які гроші з інвестицій.
+                        Якщо ваш дохід змінний, зробіть оцінку на підставі заробітку минулого року.</p>
+                    <p>Розробляючи пріоритети для своїх грошей, подумайте про те, які статті вам необхідні для ваших основних витрат на проживання (потреби), а які додаткові витрати або речі,без яких ви могли б обійтися (бажання), якщо вам потрібно було
+                        б заощадити гроші.</p>
+                    <h3>Використання бюджету.</h3>
+                    <p>Надрукуйте заповнену таблицю планування бюджету та зберігайте її де небудь. Перш ніж виходити в супермаркет або інші магазини, перевірте свій бюджет, щоб побачити, скільки ви можете витратити, а потім дотримуйтесь цієї суми.</p>
+                    <p>Можливо, ви навіть захочете взяти з собою калькулятор або скористатись мобільним додатком, який можна обрати на
+                        <a href="https://play.google.com/store/apps/category/FINANCE">Google Play,</a> щоб стежити за своїми витратами на ходу. Це може зайняти трохи більше часу, але ви будете точно знати, на що ваші гроші витрачаються.</p>
+                    <p>Якщо ви намагаєтеся економити гроші, подивіться на свій бюджет і знайдіть способи додатково скоротити витрати. Спробуйте та заплануйте певну суму для веселощів, дозвілля та особистих витрат, але не робіть свій бюджет настільки жорстким,
+                        щоб ви не змогли його дотримуватися.</p>
+                    <p>Це гарна ідея переглядати ваш бюджет кожні 3 до 6 місяців, щоб переконатися, що він відображає ваш поточний дохід, витрати і те, що ви хочете досягти. Як тільки ви навчитесь користуватися бюджетом та дотримуватися його, ви можете переглядати
+                        його рідше, наприклад, раз на рік.</p>
+                    <p>Ви, ймовірно, також захочете оновити свій бюджет, коли відбудуться значні зміни у ваших доходах чи витратах, наприклад, отримання або втрата роботи, покупка чи продаж автомобіля або будинку, додаткові витрати на розширення сім'ї або
+                        лікування.
+                    </p>
+                    <p><em>Якщо у вас залишилися гроші (надлишок).</em><br> Багато чого, що можна зробити з будь-якими додатковими готівковими коштами, зокрема:</p>
+                    <ul>
+                        <li>Віідкрити строковий депозитний рахунок;</li>
+                        <li>Обрати інвестицію;</li>
+                        <li>Збільшити відрахування на пенсійні заощадження.</li>
+                    </ul>
+                    <p>Коли ви отримуєте приріст заробітної плати, бонус, спеціальні надбавки або податкове відшкодування, покладіть ці гроші безпосередньо на свій ощадний рахунок або на пенсійний, щоб збільшити його.</p>
+                    <p><em>Якщо ви витрачаєте більше ніж можете собі дозволити (дефіцит).</em></p>
+                    <p>Це не кінець світу, але вам потрібно вжити заходів для усунення дефіциту. Перевірте свій бюджет, щоб переконатись, що всі ці суми є правильними, і подивіться на свої витрати, щоб дізнатись, чи можна знизити їх.<br> Що б ви могли скоротити?</p>
+                </div>
+            </div><br>
+            <div class="standardText">
+                <div class="smartTip">
+                    <p>Бюджетування - це вміння, якому кожний може навчитися. Чим більше ви це робите, тим легше залишатись на вершині управління власними грошима</p>
+                </div>
+            </div>
+            <aside class="upnext">
+                <div>
+                    <h2>&nbsp;Інші розділи</h2>
+                    <ul>
+                        <li class="clickable" title="Крок 22">
+                            <a href="/krok_22.html">
+                                <h3>Крок 22</h3>
+                                <p>Шляхи зменшення витрат </p>
+                                <p>1 відео,&nbsp; 3хв. 37 сек</p>
+                            </a>
+                        </li>
+                        <li class="clickableback" title="Крок 20">
+                            <a href="/krok_20.html" style="text-align:right;padding-right:2rem">
+                                <h3>Крок 20</h3>
+                                <p>Заплануйте періодичні витрати </p>
+                                <p>1 відео,&nbsp; 2хв. 16 сек</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"><i class="material-icons" style="color: #0047f5; font-size:18px;margin-top:5px">announcement</i></a>&nbsp; Уточнення
+                    </h2>
+                </div>
+                <div class="accordianRowContent">
+                    <p>Будь-яке посилання на конкретну компанію, комерційний продукт, процес чи послугу не є і не передбачає схвалення або рекомендацію. </p>
+                    <p>Ми робимо все можливе, щоб інформація на цих курсах була актуальною, але з часом нові матеріали, а також законодавчі та нормативні зміни можуть зробити цей матеріал неактуальним.</p>
+                    <p> Якщо ви виявите неточну інформацію, зв'яжіться з нами.</p>
+                </div>
+            </div><br>
+        </div>
+    </main>
+    <footer>
+        <div class="brandms">
+            <ul>
+                <li>
+                    <span style="font-size: 15px;">mail@vlasnifinansy.info&nbsp;</span>
+                    <span><i class='far fa-copyright'></i> 2023</span>
+                </li>
+                <li style="display:inline-block;">
+                    <a href="/" id="headerLogo">home></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

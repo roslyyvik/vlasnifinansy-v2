@@ -1,0 +1,399 @@
+.alert-red {
+    color: #d84847
+}
+
+.action-blue {
+    color: #0047f5
+}
+
+.ms-calc {
+    background-color: transparent;
+    padding: 0;
+    margin: 2rem 0;
+    border: 1px solid #e1e1e1
+}
+
+.ms-calc h2 {
+    margin: 0
+}
+
+.ms-calc h2.shaded {
+    background-color: #f3f3f3;
+    color: #0047f5;
+    border-bottom: 1px solid #c3c3c3;
+    padding: 1rem 1.5rem
+}
+
+.ms-calc h3 {
+    margin-top: 1rem
+}
+
+.ms-calc p {
+    flex: 0 100%
+}
+
+@media screen and (min-width:40rem) {
+    .ms-calc p {
+        flex: 0 auto
+    }
+    .ms-calc p.col-max2 {
+        flex: 0 50%
+    }
+    .ms-calc p.col-max3 {
+        flex: 0 33%
+    }
+}
+
+.ms-calc h3,
+.ms-calc h4,
+.ms-calc p {
+    padding: 0 1rem;
+    box-sizing: border-box
+}
+
+@media screen and (min-width:40rem) {
+    .ms-calc h3,
+    .ms-calc h4,
+    .ms-calc p {
+        padding: 0 0 0 1.5rem
+    }
+}
+
+.ms-calc .col100 {
+    flex-basis: 100%;
+    padding-right: 1rem
+}
+
+@media screen and (min-width:40rem) {
+    .ms-calc .col100 {
+        padding-right: 1.5rem
+    }
+}
+
+.ms-calc .flex {
+    position: relative
+}
+
+.ms-calc hr {
+    margin: 1rem 0!important;
+    background-color: transparent;
+    color: transparent;
+    border-bottom: 2px dotted #ccc;
+    border-top: none!important;
+    max-width: none!important
+}
+
+.ms-calc hr.hr-break {
+    border: none;
+    margin: 0!important
+}
+
+.ms-calc input[type=number],
+.ms-calc input[type=text] {
+    border-color: #d0d0d0
+}
+
+.ms-calc input[type=checkbox],
+.ms-calc input[type=radio] {
+    width: auto
+}
+
+.ms-calc select {
+    width: 100%;
+    border: .05rem solid #d0d0d0!important;
+    padding: 1rem
+}
+
+.ms-calc input {
+    text-align: left;
+    width: 100%
+}
+
+.ms-calc input.empty {
+    background-image: radial-gradient(circle at center, #d84847 3px, transparent 4px);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 1rem 100%
+}
+
+.ms-calc input,
+.ms-calc select {
+    margin: 0 1rem .5rem 0
+}
+
+@media screen and (min-width:40rem) {
+    .ms-calc input,
+    .ms-calc select {
+        width: 12rem
+    }
+    .ms-calc input.input100,
+    .ms-calc select.input100 {
+        width: 100%
+    }
+}
+
+.ms-calc .input {
+    flex-wrap: wrap;
+    display: flex;
+    position: relative
+}
+
+.ms-calc .label-required {
+    background-image: radial-gradient(circle at center, #d84847 3px, transparent 4px);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: 1rem 100%;
+    padding-left: 1rem;
+    font-size: .75rem;
+    margin: 1.25rem 0 0 1.5rem
+}
+
+.ms-calc .result {
+    display: none
+}
+
+.ms-calc .enlarge-text {
+    font-size: 1.7em;
+    color: #0047f5;
+    font-weight: 700
+}
+
+.ms-calc .result-box {
+    border: 1px solid #e1e1e1;
+    border-right: none;
+    border-left: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    background-color: transparent
+}
+
+.ms-calc .result-box>h3:first-child {
+    color: #0047f5
+}
+
+.ms-calc .result-box.last {
+    border-bottom: none
+}
+
+.ms-calc #chart {
+    padding: .25rem
+}
+
+.ms-calc .explore>div {
+    margin-top: 2rem;
+    margin-bottom: 2rem
+}
+
+.ms-calc .explore .exploreToggle {
+    padding: 1rem 1.5rem;
+    margin: 0 0 .5rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #0047f5;
+    color: #fff
+}
+
+.ms-calc .explore .exploreToggle:after {
+    content: "";
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    transform: rotate(45deg);
+    transform-origin: center;
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    border-right: .1rem solid #fff;
+    border-bottom: .1rem solid #fff
+}
+
+.ms-calc .explore .exploreToggle.light {
+    background-color: #f3f3f3;
+    color: #222
+}
+
+.ms-calc .explore .exploreToggle.light:after {
+    border-right: .1rem solid #acacac;
+    border-bottom: .1rem solid #acacac
+}
+
+.ms-calc .explore .exploreToggle.open:after {
+    transform: rotate(-135deg)
+}
+
+.ms-calc .key {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    margin-right: 5px
+}
+
+.ms-calc .key.bar1 {
+    background-color: #0047f5
+}
+
+.ms-calc .key.bar2 {
+    background-color: #42bfc7
+}
+
+.ms-calc table.chart-tooltip {
+    font-size: .75rem!important;
+    margin-bottom: 0!important
+}
+
+.ms-calc table.chart-tooltip td,
+.ms-calc table.chart-tooltip th {
+    padding: .25rem!important;
+    background-color: #fff!important;
+    border: 0!important;
+    font-weight: 400
+}
+
+.ms-calc .tooltip:not(.glossButton) {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    overflow: visible;
+    font-size: .75rem!important;
+    padding: .1rem .35rem!important;
+    margin: 0 .25rem!important;
+    background-color: #0047f5!important;
+    color: #fff!important;
+    border-radius: 1rem!important;
+    border: none!important;
+    min-width: auto!important;
+    line-height: .9rem
+}
+
+.ms-calc .tooltip:not(.glossButton):before {
+    content: "?"
+}
+
+.ms-calc .tooltip:not(.glossButton):focus {
+    outline: none;
+    background-color: #42bfc7!important
+}
+
+.ms-calc .tooltip:not(.glossButton).dotted {
+    border-bottom: 1px dashed #222!important;
+    background-image: none;
+    background-color: transparent!important;
+    color: #222!important;
+    font-size: unset!important;
+    cursor: help!important;
+    padding: 0!important;
+    margin: 0!important;
+    border-radius: 0!important
+}
+
+.ms-calc .tooltip:not(.glossButton).dotted:before {
+    content: ""
+}
+
+.ms-calc .tooltip:not(.glossButton).light {
+    color: #fff!important;
+    border-bottom: 1px dashed #fff!important
+}
+
+.ms-calc .tooltip .tooltiptext:not(.glossButton) {
+    visibility: hidden;
+    width: 240px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -120px;
+    margin-bottom: .4rem;
+    font-style: normal;
+    font-size: .8rem;
+    color: #333;
+    background-color: #ace8fa;
+    text-align: center;
+    padding: .5rem;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    white-space: normal;
+    position: absolute;
+    z-index: 1
+}
+
+.ms-calc .tooltip .tooltiptext:not(.glossButton).align-left {
+    text-align: left
+}
+
+@media screen and (max-width:39rem) {
+    .ms-calc .tooltip .tooltiptext:not(.glossButton) {
+        left: 0;
+        position: fixed;
+        bottom: -4rem;
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+        transition: bottom .8s;
+        font-size: 1rem;
+        padding: 1rem .5rem
+    }
+}
+
+.ms-calc .tooltip:hover .tooltiptext {
+    visibility: visible
+}
+
+@media screen and (max-width:39rem) {
+    .ms-calc .tooltip:hover .tooltiptext {
+        bottom: 0
+    }
+}
+
+.ms-calc .tooltip .tooltiptext:after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #ace8fa
+}
+
+#savingsGoalsContainer .hide {
+    display: none
+}
+
+#savingsGoalsContainer span.or {
+    margin: 0 1rem
+}
+
+#savingsGoalsContainer select {
+    margin-top: .5rem
+}
+
+@media screen and (min-width:40rem) {
+    #savingsGoalsContainer select {
+        margin-top: 0
+    }
+}
+
+#savingsGoalsContainer input[type=checkbox] {
+    width: auto
+}
+
+#savingsGoalsContainer .chkLabel {
+    width: 12rem;
+    display: inline-block
+}
+
+#savingsGoalsContainer .chart-tooltip {
+    font-size: .75rem;
+    margin-bottom: 0
+}
+
+#savingsGoalsContainer .chart-tooltip td,
+#savingsGoalsContainer .chart-tooltip th {
+    padding: .25rem
+}
+
+#savingsGoalsContainer #nperFreq {
+    margin-left: 0
+}
+
+#savingsGoalsContainerResult {
+    display: none
+}

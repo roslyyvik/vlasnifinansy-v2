@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+  
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Vlasni-Test</title>
+  
+    <link rel="stylesheet" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/quiz25.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style1.css">
+
+    <script src="js/quiz25.js"></script>
+    <!-- <script src="script/newgen.js"></script> -->
+    <title>Тест | Пайові фонди</title>
+</head>
+
+<body>
+    <header class="pagetype-content">
+        <div class="scrolltracker">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+        <div id="topButtons">
+            <a id="headerLogo" href="/">home</a>
+            <button type="button" id="toggleMenu" class="inactive">&#9776;</button>
+            <button type="button" id="menuBack" class="hidden">back</button>           
+            <span id='headerTitle' class="hidden"></span>
+            <span id="navActiveSectionTitle" class="hidden"></span>
+        </div>
+        <nav id="mainNav" class="hidden customScrollBar">
+            <div class="vertJustify">
+                <ul id="mainNavUl" class="pos1">
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Психологія і фінанси</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/psyhology_faktory_vplyvu.html" itemprop="url" class="mainNavLevel2Link hub">Цілі, цінності, рішення</a>
+                                <ul>
+                                    <li><a href="/psyhology_faktory_vplyvu.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/psyhology_porady.html" class="mainNavLevel3Link ">Декілька порад</a></li>
+                                    <li><a href="/psyhology_tsili_rivnivaga.html" class="mainNavLevel3Link ">Цілі і рівновага</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel2Link hub">Цілі і цінності</a>
+                                <ul>
+                                    <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel3Link ">Дослідження цінностей</a></li>
+                                    <li><a href="/psyhology_envy.html" class="mainNavLevel3Link ">Порівняння з іншими</a></li>
+                                    <li><a href="/psyhology_reklama.html" class="mainNavLevel3Link ">Реклама</a></li>
+                                    <li><a href="/psyhology_reklama_metody.html" class="mainNavLevel3Link ">Методи реклами</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_start.html" class="mainNavLevel2Link hub">Інші фактори впливу</a>
+                                <ul>
+                                    <li><a href="/psyhology_start.html" class="mainNavLevel3Link ">Індивідуальні умови</a></li>
+                                    <li><a href="/psyhology_life_cycle.html" class="mainNavLevel3Link ">Життєвий цикл</a></li>
+                                    <li><a href="/psyhology_sposib_zyttya.html" class="mainNavLevel3Link ">Спосіб життя</a></li>
+                                    <li><a href="/psyhology_economy.html" class="mainNavLevel3Link ">Економіка</a></li>
+                                    <li><a href="/psyhology_social.html" class="mainNavLevel3Link ">Соціальні фактори</a></li>
+                                    <li><a href="/psyhology_tech.html" class="mainNavLevel3Link ">Технологічні зміни</a></li>
+                                    <li><a href="/psyhology_communication.html" class="mainNavLevel3Link ">Навички комунікації</a></li>
+                                    <li><a href="/psyhology_uperedgennya.html" class="mainNavLevel3Link ">Упередження</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_6krokiv.html" class="mainNavLevel2Link hub">Процес прийняття рішень</a>
+                                <ul>
+                                    <li> <a href="/psyhology_6krokiv.html" class="mainNavLevel3Link ">6 кроків</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_5typiv.html" class="mainNavLevel2Link hub">Фінансова поведінка</a>
+                                <ul>
+                                    <li><a href="/psyhology_5typiv.html" class="mainNavLevel3Link ">5 типів особистостей</a></li>
+                                    <li><a href="/psyhology_emotion.html" class="mainNavLevel3Link ">Емоції</a></li>
+                                    <li><a href="/psyhology_7mental.html" class="mainNavLevel3Link ">Психологічно сильні риси</a></li>
+                                    <li><a href="/psyhology_povedinka.html" class="mainNavLevel3Link ">Зміна поведінки</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/quiz_cinnosty.html" class="mainNavLevel2Link hub">Тести</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Покроковий план дій</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/krok_1.html" itemprop="url" class="mainNavLevel2Link hub">Кроки 1-7</a>
+                                <ul>
+                                    <li><a href="/krok_1.html" class="mainNavLevel3Link ">Крок 1 "Прагнення до змін"</a></li>
+                                    <li><a href="/krok_2.html" class="mainNavLevel3Link ">Крок 2 "Оцінка фінансової ситуації"</a></li>
+                                    <li><a href="/krok_3.html" class="mainNavLevel3Link ">Крок 3 "Розгрібання фінансового безладу"</a></li>
+                                    <li><a href="/krok_4.html" class="mainNavLevel3Link ">Крок 4 "Налаштуйтесь на успіх"</a></li>
+                                    <li><a href="/krok_5.html" class="mainNavLevel3Link ">Крок 5 "Копії кредитних звітів"</a></li>
+                                    <li><a href="/krok_6.html" class="mainNavLevel3Link ">Крок 6 "Виправлення кредитного звіту"</a></li>
+                                    <li><a href="/krok_7.html" class="mainNavLevel3Link ">Крок 7 "Рахуйте свої гроші"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_8.html" class="mainNavLevel2Link hub">Кроки 8-14</a>
+                                <ul>
+                                    <li><a href="/krok_8.html" class="mainNavLevel3Link ">Крок 8 "Визначте стартову позицію"</a></li>
+                                    <li><a href="/krok_9.html" class="mainNavLevel3Link ">Крок 9 "Борговий тест"</a></li>
+                                    <li><a href="/krok_10.html" class="mainNavLevel3Link ">Крок 10 "Визначення пріоритетів"</a></li>
+                                    <li><a href="/krok_11.html" class="mainNavLevel3Link ">Крок 11 "Встановлення фінансових цілей"</a></li>
+                                    <li><a href="/krok_12.html" class="mainNavLevel3Link ">Крок 12 "Коротко-, середньо- та довгострокові цілі"</a></li>
+                                    <li><a href="/krok_13.html" class="mainNavLevel3Link ">Крок 13 "Сплата боргів"</a></li>
+                                    <li><a href="/krok_14.html" class="mainNavLevel3Link ">Крок 14 "Очікуйте на неочікуване"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_15.html" class="mainNavLevel2Link hub">Кроки 15-21</a>
+                                <ul>
+                                    <li><a href="/krok_15.html" class="mainNavLevel3Link ">Крок 15 "Убезпечте своє фінансове майбутнє"</a></li>
+                                    <li><a href="/krok_16.html" class="mainNavLevel3Link ">Крок 16 "Візьміть на себе зобов’язання"</a></li>
+                                    <li><a href="/krok_17.html" class="mainNavLevel3Link ">Крок 17 "Здійснюйте накопичення для ваших цілей"</a></li>
+                                    <li><a href="/krok_18.html" class="mainNavLevel3Link ">Крок 18 "Куди зникають ваші гроші"</a></li>
+                                    <li><a href="/krok_19.html" class="mainNavLevel3Link ">Крок 19 "Задокументуйте постійні первинні витрати"</a></li>
+                                    <li><a href="/krok_20.html" class="mainNavLevel3Link ">Крок 20 "Заплануйте періодичні витрати"</a></li>
+                                    <li><a href="/krok_21.html" class="mainNavLevel3Link ">Крок 21 "Здійснюйте облік ваших витрат"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_22.html" class="mainNavLevel2Link hub">Кроки 22-28</a>
+                                <ul>
+                                    <li><a href="/krok_22.html" class="mainNavLevel3Link ">Крок 22 "Визначте шляхи зменшення витрат"</a></li>
+                                    <li><a href="/krok_23.html" class="mainNavLevel3Link ">Крок 23 "Заощаджуйте на бакалійних товарах"</a></li>
+                                    <li><a href="/krok_24.html" class="mainNavLevel3Link ">Крок 24 "Здійснюйте облік зменшення витрат"</a></li>
+                                    <li><a href="/krok_25.html" class="mainNavLevel3Link ">Крок 25 "Контролюйте сімейний захист"</a></li>
+                                    <li><a href="/krok_26.html" class="mainNavLevel3Link ">Крок 26 "Усвідомлюйте вартість кредиту"</a></li>
+                                    <li><a href="/krok_27.html" class="mainNavLevel3Link ">Крок 27 "Сформуйте фінансову команду"</a></li>
+                                    <li><a href="/krok_28.html" class="mainNavLevel3Link ">Крок 28 "Відчуйте переваги"</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Калькулятори</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/budget.html" itemprop="url" class="mainNavLevel2Link hub">Бюджетування</a>
+                                <ul>
+                                    <li><a href="/budget.html" class="mainNavLevel3Link ">Бюджет</a></li>
+                                    <li><a href="/net_worth.html" class="mainNavLevel3Link ">Чиста вартість</a></li>
+                                    <!-- <li><a href="/emergency.html" class="mainNavLevel3Link ">Резервний фонд</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/compound.html" itemprop="url" class="mainNavLevel2Link hub">Накопичення</a>
+                                <ul>
+                                    <li><a href="/compound.html" class="mainNavLevel3Link ">Складний відсоток</a></li>
+                                    <li><a href="/goals.html" class="mainNavLevel3Link ">Цілі</a></li>
+                                    <li><a href="/withdrawal.html" class="mainNavLevel3Link ">Вилучення</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pay-day.html" itemprop="url" class="mainNavLevel2Link hub">Борги</a>
+                                <ul>
+                                    <li><a href="/pay-day.html" class="mainNavLevel3Link ">Кредит до зарплати</a></li>
+                                    <li><a href="/cards.html" class="mainNavLevel3Link ">Кредитні картки</a></li>
+                                    <li><a href="/ploan.html" class="mainNavLevel3Link ">Споживчі кредити</a></li>
+                                    <li><a href="/mortgage.html" class="mainNavLevel3Link ">Іпотека</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/fund.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/fund.html" class="mainNavLevel3Link ">Взаємні фонди</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/priorytety.html" itemprop="url" class="mainNavLevel2Link hub">Таблиці,форми</a>
+                                <ul>
+                                    <li><a href="/priorytety.html" class="mainNavLevel3Link ">Пріоритети</a></li>
+                                    <li><a href="/fin_priorytety.html" class="mainNavLevel3Link ">Фінансові цілі</a></li>
+                                    <li><a href="/table_borgy.html" class="mainNavLevel3Link ">Таблиця боргів</a> </li>
+                                    <li><a href="/vybir_kredyt.html" class="mainNavLevel3Link ">Порівняння кредитних пропозицій</a></li>
+                                    <li><a href="/postiyni_vytraty.html" class="mainNavLevel3Link ">Постійні витрати</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Відтворення відео</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4zPII1A7-Or76lpvqlMKYx3" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Покроковий план дій</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фактори впливу</a>                            
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xK5A0boJI7GheZse90PVZB" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фінансова поведінка</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xVuYEx5hayj6RqTynyhohE" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Захист від шахрайства</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=bU3leCbEnuo" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Психологічно сильні риси </a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=8_pGLlLm8P4&list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2&index=7" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i>Рекламні методи впливу </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Тести</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/quiz_kredity.html" itemprop="url" class="mainNavLevel2Link hub">Управління</a>
+                                <ul>
+                                    <li><a href="/quiz_kredity.html" class="mainNavLevel3Link ">Кредити</a></li>
+                                    <li><a href="/quiz25.html" class="mainNavLevel3Link ">До 25 років</a></li>
+                                    <li><a href="/quiz_upravlinnya.html" class="mainNavLevel3Link ">Управління</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizinvest.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/quizinvest.html" class="mainNavLevel3Link ">Інвестиції</a></li>
+                                    <li><a href="/quiz_payovi_fondy.html" class="mainNavLevel3Link ">Колективні інвестиції</a></li>
+                                    <li><a href="/quiz_other_invest.html" class="mainNavLevel3Link ">Інші інвестиції</a></li>
+                                    <li><a href="/quiz_pensiy.html" class="mainNavLevel3Link ">Пенсійне страхування</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizdiversification.html" itemprop="url" class="mainNavLevel2Link hub">Ризики</a>
+                                <ul>
+                                    <li><a href="/quizdiversification.html" class="mainNavLevel3Link ">Диверсифікація</a></li>
+                                    <li><a href="/quiz_scam.html" class="mainNavLevel3Link ">Шахрайство</a></li>
+                                    <li><a href="/quizcurancy.html" class="mainNavLevel3Link ">Валюта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quiz_cinnosty.html" itemprop="url" class="mainNavLevel2Link hub">Інше</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="mainContent">
+        <div id="hero">
+            <div id="heroImg">
+                <div id="heroText">
+                    <nav id="breadcrumbs">
+                        <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2" class="breadcrumbLink"><i class="material-icons" style="font-size: 18px;transform: rotate(45deg);">call_received </i>&nbsp; Фактори впливу</a>
+                        <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4zPII1A7-Or76lpvqlMKYx3" class="breadcrumbLink"><span> План дій&nbsp;</span><i class="material-icons" style="font-size: 18px;transform: rotate(45deg)">call_made</i></a>
+                    </nav>
+                    <div>
+                        <h1>Тест колективне інвестування</h1>
+                        <p id="pagetagline">Перевірте свої знання.</p>
+                        <!-- <p id="pagetime"><i style="font-size: 18px;" class="material-icons">play_circle_outline</i> <span style="margin-left: 5px;"> Добірка відео</span></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="max-width: 47.05rem;padding: 0 1rem ">
+            <h2>Пройдіть даний тест, щоб перевірити свої знання щодо можливостей та переваг колективного інвестування на фінансвовому ринку.</h2>
+            <h3>Тест містить десять запитань. Обирайте відповідь та отримуйте результат. Загальна оцінка - по завершенню теста.</h3>
+            <div class="box fill grey" id="quiz-container">
+                <!-- QUESTION 1 -->
+                <div class="qquestion" id="q1">
+                    <p>
+                        Головна відмінність інтервального інвестиційного фонду, полягає в тому що фонд зобов'язаний: </p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> На вимогу інвестора викуповувати цінні папери фонду у будь який чаc.</li>
+                        <li class="qanswer incorrect"> Забезпечити високі доходи на цінні папери, придбані інвесторами.</li>
+                        <li class="qanswer incorrect"> Здійснювати виплату фіксованого доходу у певний інтервал часу.</li>
+                        <li class="qanswer correct"> Викуповувати цінні папери у інвесторів у визначені інтервали часу.</li>
+                    </ul>
+                    <p class="qfeedback correct">Це вірно! Викуповують свої цінні папери періодично (1 раз на тиждень, місяць, квартал), але не рідше ніж 1 раз на рік. За стратегією інвестування є більш ризикованими і водночас дохіднішими, ніж відкриті фонди.
+                    </p>
+                    <p class="qfeedback incorrect">Неправильно. Викуповують свої цінні папери періодично (1 раз на тиждень, місяць, квартал), але не рідше ніж 1 раз на рік. За стратегією інвестування є більш ризикованими і водночас дохіднішими, ніж відкриті фонди.
+                    </p>
+                </div>
+                <!-- QUESTION 2 -->
+                <div class="qquestion" id="q2">
+                    <p>За стратегією інвестування найбільш ризикованими і, можливо, найбільш прибутковими є:</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Відкриті інвестиційні фонди.</li>
+                        <li class="qanswer incorrect"> Інтервальні інвестиційні фонди.</li>
+                        <li class="qanswer correct"> Закриті інвестиційні фонди.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно! Закриті фонди за стратегією інвестування є найбільш ризикованими і, можливо, найбільш прибутковими. Можуть до 100% активів фонду вкладати в акції. Це прибутково, але дуже ризиковано. Викуповують свої цінні папери після закінчення
+                        терміну дії фонду.
+                    </p>
+                    <p class="qfeedback incorrect">Це неправильно. Закриті фонди за стратегією інвестування є найбільш ризикованими і, можливо, найбільш прибутковими. Можуть до 100% активів фонду вкладати в акції. Це прибутково, але дуже ризиковано. Викуповують свої цінні папери після
+                        закінчення терміну дії фонду.
+                    </p>
+                </div>
+                <!-- QUESTION 3 -->
+                <div class="qquestion" id="q3">
+                    <p>За результатами роботи відкритого дтверсификованого фонду А його дохідність на інвестиційні сертифікати склала 15% річних за минулий рік. Ви прийняли рішення інвестувати у фонд через купівлю сертифікатів, які витрати ви маєте сплатити?</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> При купівлі цінного паперу фонду.</li>
+                        <li class="qanswer incorrect"> За управління цінними паперами фонду.</li>
+                        <li class="qanswer incorrect"> За продаж цінних паперів фонду.</li>
+                        <li class="qanswer correct"> Всі відповіді вірні.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно!
+                        <a href="/fund.html" title="Калькулятор інвестфонду">Калькулятор інвестфонду</a>
+                    </p>
+                    <p class="qfeedback incorrect">Не вірно. Правильна відповідь "Всі відповіді вірні."
+                        <a href="/fund.html" title="Калькулятор інвестфонду">Калькулятор інвестфонду</a>
+                    </p>
+                </div>
+                <!-- QUESTION 4 -->
+                <div class="qquestion" id="q4">
+                    <p>Який документ визначає обрану фондом інвестиційну стратегію?
+                    </p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer correct"> Інвестиційна декларація.</li>
+                        <li class="qanswer incorrect"> Проспект емісії цінних паперів фонду.</li>
+                        <li class="qanswer incorrect"> Статут компанії з управління активами фонду.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно! Інвестиційна декларація містить інформацію про обрану інвестиційну стратегію [поміркована (із середнім ризиком), агресивна (дуже ризикована), структуру активів фонду: скільки максимально відсотків активів фонд вкладатиме
+                        в певні фінансові інструменти і цінні папери одного емітента,галузі, в яких працюють емітенти куплених КУА цінних паперів (енергетичні, металургійні, хімічні, машинобудівні компанії тощо).
+                    </p>
+                    <p class="qfeedback incorrect">Неправильно. Інвестиційна декларація містить інформацію про обрану інвестиційну стратегію [поміркована (із середнім ризиком), агресивна (дуже ризикована), структуру активів фонду: скільки максимально відсотків активів фонд вкладатиме
+                        в певні фінансові інструменти і цінні папери одного емітента,галузі, в яких працюють емітенти куплених КУА цінних паперів (енергетичні, металургійні, хімічні, машинобудівні компанії тощо).
+                    </p>
+                </div>
+                <!-- QUESTION 5 -->
+                <div class="qquestion" id="q5">
+                    <p>
+                        Який вид цінних паперів відноситься до пайового інвестиційного фонду?</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Акція.</li>
+                        <li class="qanswer incorrect"> Облігація.</li>
+                        <li class="qanswer correct"> Інвестиційний сертифікат.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно.
+                    </p>
+                    <p class="qfeedback incorrect">Неправильно. Вірна відповідь "інвестиційний сертифікат".
+                    </p>
+                </div>
+                <!-- QUESTION 6 -->
+                <div class="qquestion" id="q6">
+                    <p>Найвищий рівень ризику мають інвестиції до:</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Відкритого диверсифікованого фонду.</li>
+                        <li class="qanswer incorrect"> Інтервального фонду.</li>
+                        <li class="qanswer correct"> Закритий недиверсифікований фонд.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно. Закриті недивесифіковані фонди можуть до 100% активів фонду вкладати в акції. Це прибутково, але дуже ризиковано.
+                    </p>
+                    <p class="qfeedback incorrect">Не вірно. Закриті недивесифіковані фонди мають найвищий рівень ризику,бо мають право до 100% активів фонду вкладати в акції. Це прибутково, але дуже ризиковано.
+                    </p>
+                </div>
+                <!-- QUESTION 7 -->
+                <div class="qquestion" id="q7">
+                    <p>Емітентом інвестиційних сертифікатів пайового фонду є:</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Інвестиційний фонд</li>
+                        <li class="qanswer correct"> Компанія з управління активами фонду.</li>
+                        <li class="qanswer incorrect"> Депозитарна установа.</li>
+                        <li class="qanswer incorrect"> Національна комісія з цінних паперів та фондового ринку.
+                        </li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback incorrect">Це не вірно. Інвестори в обмін на вкладені у фонд гроші отримують від КУА інвестиційні сертифікати, які є цінними паперами, що підтверджують право інвестора на частку активів фонду, їх випускає КУА, котра в такий спосіб створює фонд.
+                    </p>
+                    <p class="qfeedback correct">Це вірно. Інвестори в обмін на вкладені у пайовий фонд гроші отримують від КУА інвестиційні сертифікати, які є цінними паперами, що підтверджують право інвестора на частку активів фонду, їх випускає КУА, котра в такий спосіб створює
+                        фонд.
+                    </p>
+                </div>
+                <!-- QUESTION 8 -->
+                <div class="qquestion" id="q8">
+                    <p>За якою ставкою оподатковується прибуток інвестора-фізичної особи від участі у інвестиційному фонді?</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> 18%</li>
+                        <li class="qanswer correct"> 9%</li>
+                        <li class="qanswer incorrect"> 19,5%</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">
+                        </i>Це вірно.
+                    </p>
+                    <p class="qfeedback incorrect">Ні, це неправильно. Вірна відповідь - 9%.
+                    </p>
+                </div>
+                <!-- QUESTION 9 -->
+                <div class="qquestion" id="q9">
+                    <p>Чи існують певні гарантії щодо повернення інвестицій та їх прибутковості?</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Так. Гарантує Компагія з управління активами фонду.</li>
+                        <li class="qanswer incorrect"> Так. Суму 200 тис. грн гарантує держава.</li>
+                        <li class="qanswer correct"> Жодних гарантій не існує.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно. Інвестор повинен усвідомлювати, що прибутковість фонду не гарантується ні державою, ні компанією з управління активами. Вартість цінних паперів ІСІ може як збільшуватись, так і зменшуватись, відповідно до зміни ринкової вартості
+                        цінних паперів та інших активів, у які інвестовано кошти ІСІ.
+                    </p>
+                    <p class="qfeedback incorrect">Неправильно. Інвестор повинен усвідом- лювати, що прибутковість фонду не гарантується ні державою, ні компанією з управління активами. Вартість цінних паперів ІСІ може як збільшуватись, так і зменшуватись, відповідно до зміни ринкової
+                        вартості цінних паперів та інших активів, у які інвестовано кошти ІСІ.
+                    </p>
+                </div>
+                <!-- QUESTION 10 -->
+                <div class="qquestion" id="q10">
+                    <p>Андрій має намір спробувати інвестувати 20 000 ₴ на фондовий ринок і обирає інвестиційний фонд з найменшим ризиком за стратегією інвестування. Який фонд є для нього прийнятним?</p>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer incorrect"> Закритий недиверсифікований фонд.</li>
+                        <li class="qanswer incorrect"> Інтервальний фонд.</li>
+                        <li class="qanswer correct"> Відкритий диверсифікований фонд.</li>
+                        <li class="qanswer incorrect"> Корпоративний інвестиційний фонд.</li>
+                    </ul>
+                    <!-- feedback -->
+                    <p class="qfeedback correct">Це вірно. Відкриті диверсифіковані фонди викуповують свої цінні папери (інвестиційні сертифікати) на першу вимогу інвестора. За стратегією інвестування є найменш ризикованими, оскільки лише невелику частку коштів вкладають в акції
+                        (найбільш ризиковий ЦП), але і найменш прибутковими. Зобов’язані вкладати активи фонду в різні фінансові інструменти (акції, облігації, депозити тощо).
+                    </p>
+                    <p class="qfeedback incorrect">Це неправильно. Відкриті диверсифіковані фонди викуповують свої цінні папери (інвестиційні сертифікати) на першу вимогу інвестора. За стратегією інвестування є найменш ризикованими, оскільки лише невелику частку коштів вкладають в
+                        акції (найбільш ризиковий ЦП), але і найменш прибутковими. Зобов’язані вкладати активи фонду в різні фінансові інструменти (акції, облігації, депозити тощо).
+                    </p>
+                </div>
+                <!-- RESULTS -->
+                <div class="qresults" id="qresults">
+                    <div style="text-align: center;">
+                        <h2>
+                            Вітаємо з закінченням тесту!</h2>
+                        <h3> Ваша загальна оцінка</h3>
+                        <h2 class="qscore">&nbsp;</h2>
+                        <i class="fa fa-handshake-o" style="font-size:96px;color:#0077b3"></i></h2>
+                        <p style="text-align: center;"><a href="#" title="ТЕСТИ" class="quizlink">Спробуйте інший тест</a></p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="upnext">&nbsp;Спробуйте ще</h2>
+            <aside class="upnext">
+                <div>
+                    <ul>
+                        <li class="clickable" title="Тест інвестиції">
+                            <a href="/quizinvest.html">
+                                <h3>Тест на інвестиції</h3>
+                                <p>Перевірте свої знання</p>
+                                <p>10 запитань</p>
+                            </a>
+                        </li>
+                        <li class="clickable" title="Диверсифікація ризиків">
+                            <a href="/quizdiversification.html">
+                                <h3>Тест диверсифікація ризиків</h3>
+                                <p>Перевірте свої знання</p>
+                                <p>10 запитань</p>
+                            </a>
+                        </li>
+                        <li class="clickable" title="Калькулятор інвестиційний фонд">
+                            <a href="/fund.html">
+                                <h3>Калькулятор вартості обслуговування інвестфонду</h3>
+                                <p>Як збори та витрати вплинуть на ваші інвестиції</p>
+                                <p>1 калькулятор,&nbsp; розрахунок альтернативи</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"><i class="material-icons" style="color: #0047f5; font-size:18px;margin-top:5px">announcement</i></a>&nbsp; Уточнення
+                    </h2>
+                </div>
+                <div class="accordianRowContent">
+                    <p>Будь-яке посилання на конкретну компанію, комерційний продукт, процес чи послугу не є і не передбачає схвалення або рекомендацію. </p>
+                    <p>Ми робимо все можливе, щоб інформація на цих курсах була актуальною, але з часом нові матеріали, а також законодавчі та нормативні зміни можуть зробити цей матеріал неактуальним.</p>
+                    <p> Якщо ви виявите неточну інформацію, зв'яжіться з нами.</p>
+                </div>
+            </div><br>
+        </div>
+    </main>
+    <footer>
+        <div class="brandms">
+            <ul>
+                <li>
+                    <span style="font-size: 15px;">mail@vlasnifinansy.info&nbsp;</span>
+                    <span><i class='far fa-copyright'></i> 2023</span>
+                </li>
+                <li style="display:inline-block;">
+                    <a href="/" id="headerLogo">home></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordianTitle");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <!-- <script src="script/newgen.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+.clear {
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.clear_value {
+    color: #CCCCCC;
+}
+
+.clear_value_on {
+    color: #000000;
+}
+
+.txt {
+    float: left;
+    margin: 0;
+    padding: 2.5px 7px;
+    font-size: 14px;
+    font-family: Georgia, Verndana, serif;
+}
+
+.total {
+    border: none !important;
+    font-weight: bold !important;
+    font-size: 12px;
+    background-color: #EEE;
+}
+
+.content {
+    background: #ffffff url(/Images/FLM/CommonImages/content_bg_n.gif) left top repeat-x;
+    display: table;
+    width: 100%;
+}
+
+.content_padding {
+    padding: 14px 0 30px 0;
+}
+
+.content_block {
+    position: relative;
+    margin-top: -106px;
+}
+
+.content_calblock {
+    width: 100%;
+    position: relative;
+    /* margin-top: -45px; */
+}
+
+
+/* .center_content_toppad .form {
+    margin: 15px 30px 20px;
+} */
+
+.left_content {
+    vertical-align: top;
+    width: 319px;
+    float: left;
+    overflow: hidden;
+}
+
+.left_content_padding {
+    padding: 121px 0 0 0;
+}
+
+.right_content {
+    vertical-align: top;
+    width: 590px;
+    float: left;
+    overflow: hidden;
+}
+
+.center_content {
+    vertical-align: top;
+    background: url(/Images/FLM/CommonImages/inner_content_block_bg.gif) left top no-repeat;
+    width: 100%;
+}
+
+.center_content .center_content_toppad {
+    padding: 10px 8px 0 8px;
+}
+
+.center_content_cal {
+    vertical-align: top;
+    background: url(/Images/FLM/CommonImages/inner_content_calblock_bg.gif) left top no-repeat;
+    width: 100%;
+}
+
+
+/* .center_content_cal .center_content_toppad {
+    padding: 15px 8px 25px 9px;
+} */
+
+.sub_title {
+    font: 22px/29px Georgia, "Times New Roman", Times, serif;
+    padding: 0 100px 5px 30px;
+    color: #12546c;
+}
+
+.sub_description {
+    padding: 0 100px 10px 30px;
+    color: #12546c;
+}
+
+.center_content .sub_title {
+    padding: 22px 100px 20px 28px;
+}
+
+
+/* .center_content_padding {
+    padding: 0 18px;
+} */
+
+
+/*/////// worksheet tables /////////////////////////////////////////////////////////////*/
+
+table .tb_worksheet {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #222222;
+}
+
+.tb_worksheet td {
+    border-right: 1px solid #e0ebeb;
+    border-bottom: 1px solid #e0ebeb;
+    padding: 2px 5px 2px 2px;
+}
+
+.tb_worksheet .col-header {
+    border-bottom: 2px solid #669999;
+    color: #0068aa;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.tb_worksheet .col-icon {
+    border-right: none;
+    vertical-align: top;
+}
+
+.tb_worksheet .col-total {
+    border-left: 2px solid #85adad;
+    border-right: 2px solid #85adad;
+    background-color: #b3e0ff;
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+}
+
+.tb_worksheet .row-net {
+    background-color: #b3e0ff;
+    border-top: 2px solid #669999;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tb_worksheet .row-net-border {
+    border-top: 2px solid #669999;
+    font-weight: bold;
+}
+
+.tb_worksheet .col-last {
+    border-right: none;
+    color: #333333;
+    font-family: Tahoma, Verdana, Arial, "Times New Roman";
+    width: 100px;
+}
+
+.tb_worksheet input {
+    border: none;
+    width: 100px;
+    text-align: left;
+}
+
+.tb_worksheet input .txt {
+    margin: 2px;
+    font-size: 13px;
+    font-family: Georgia, Verndana, serif;
+}
+
+.tb_worksheet .col-last input {
+    text-align: left;
+    width: 100%;
+}
+
+
+/* Record of Daily Expenditures - Worksheet */
+
+.tb_worksheet3 {
+    border-top: 1px solid #8fbdd9;
+    border-left: 1px solid #8fbdd9;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #222222;
+}
+
+.tb_worksheet3 th {
+    font-size: 12px;
+    color: #FFFFFF;
+    border-right: 1px solid #8fbdd9;
+    border-bottom: 1px solid #8fbdd9;
+    padding: 5px 5px 5px 15px;
+    background-color: #5a6d95;
+    text-align: left;
+}
+
+.tb_worksheet3 .tb-header th {
+    border: none;
+    padding: 10px 10px 0 5px;
+}
+
+.tb_worksheet3 .tb-header input {
+    font-size: 13px;
+    width: 100px;
+    text-align: left;
+}
+
+.tb_worksheet3 .tb-header input.year {
+    width: 70px !important;
+}
+
+.tb_worksheet3 td {
+    border-right: 1px solid #8fbdd9;
+    border-bottom: 1px solid #8fbdd9;
+    padding: 0 3px 0 3px;
+    height: 22px;
+    background-color: #FFFFFF;
+}
+
+.tb_worksheet3 .subHd {
+    font-size: 10px;
+    font-weight: bold;
+    color: #00643a;
+    text-align: center;
+    height: 28px;
+}
+
+.tb_worksheet3 .subHd-first {
+    padding-left: 30px;
+    text-align: left;
+}
+
+.tb_worksheet3 .subHd-last {
+    background-color: #F2f7fb;
+    color: #005ea4;
+    text-align: left;
+    width: 100px;
+    white-space: nowrap;
+    border-left: 2px solid #06734f !important;
+}
+
+.tb_worksheet3 .col-last {
+    background-color: #d9e9f2;
+    font-weight: bold;
+    border-left: 2px solid #06734f !important;
+}
+
+.tb_worksheet3 .row-total {
+    background-color: #d9e9f2;
+    font-weight: bold;
+    border-top: 2px solid #06734f !important;
+    height: 28px;
+}
+
+.tb_worksheet3 .last-corner-cell {
+    background-color: #d9e9f2;
+    font-weight: bold;
+    border-top: 2px solid #0069aa !important;
+    border-left: 2px solid #0069aa !important;
+    height: 28px;
+}
+
+.tb_worksheet3 input {
+    border: none;
+    width: 99%;
+    text-align: left;
+}
+
+.tb_worksheet3 .label {
+    white-space: nowrap;
+}
+
+.tb_worksheet3 .label input {
+    text-align: left !important;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.tb_worksheet3 .txt {
+    padding: 0px !important;
+}
+
+input[type="text"] {
+    color: #999;
+    background-color: white;
+    font-weight: normal;
+    border: none;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+}
+
+
+/*form { display:inline }*/
+
+
+/* .form {} */
+
+
+/* .center_content_toppad .form {
+    margin: 10px 20px 15px 20px
+} */
+
+.center {
+    margin: 0 auto;
+}
+
+.form th {
+    font-weight: normal;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.form td {
+    color: #babec0;
+    font-size: 14px;
+    padding: 5px 10px;
+    /* margin: 2rem 1rem; */
+}
+
+input,
+select,
+textarea {
+    margin: 0;
+    border: 1px solid #c1d9ee;
+}
+
+.form label {
+    color: #1e465c;
+    font-size: 11px;
+    line-height: 14px;
+    display: block;
+}
+
+.form .form_req {
+    padding: 5px 0px;
+}
+
+.form .form_req .formcell {
+    background-color: #DEE8EA;
+    font-weight: bold;
+}
+
+.form .form_req label {
+    color: #00aeef;
+}
+
+.form .form_err .formcell {
+    color: #FF0000;
+    border-right: 1px solid #FF0000;
+}
+
+.form .form_err .errmessage {
+    color: #FF0000;
+    font: normal 11px/14px Arial, Helvetica, sans-serif;
+}
+
+.errmessage {
+    color: #FF0000;
+    font: normal 11px/14px Arial, Helvetica, sans-serif;
+}
+
+.form .form_err input,
+.form .form_err select,
+.form .form_err textarea {
+    border: 1px solid red !important;
+}
+
+.form .form_err label {
+    color: #FF0000;
+}
+
+.form label.form_err {
+    color: #FF0000;
+}
+
+.form input {
+    padding: 10px 3px;
+}
+
+.form textarea {
+    width: 350px;
+    height: 150px;
+    padding: 2px 3px;
+}
+
+.form select {
+    /* width: 100%; */
+    font-size: 12px;
+    border-radius: .2rem;
+    padding: 0.5rem 0.5rem;
+    font: normal normal normal 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+input,
+textarea,
+select,
+option {
+    font-size: 14px;
+    color: #333333;
+}
+
+
+/* input,
+textarea {} */
+
+option {
+    padding-right: 5px;
+}
+
+.short {
+    width: 40px !important;
+}
+
+.med {
+    width: 90px !important;
+}
+
+.long {
+    width: 165px !important;
+}
+
+.exlong {
+    width: 280px !important;
+}
+
+.form textarea.med {
+    width: 140px !important;
+    height: 50px !important;
+    padding: 2px 3px;
+}
+
+.no_border {
+    border: none !important;
+    width: auto !important;
+}
+
+.no_border input {
+    border: none !important;
+}
+
+input[type='checkbox'] {
+    border: none;
+}
+
+input[type='radio'] {
+    border: none;
+}
+
+.odd {
+    background: url() left top repeat;
+    padding: 10px 15px;
+}
+
+.even {
+    padding: 10px 15px;
+}
+
+
+/* tr.odd {} */
+
+
+/* tr.even {} */
+
+.num_text {
+    padding: 5px 0 5px 10px !important;
+}
+
+.green {
+    font-size: 12px;
+    color: #42bfc7 !important;
+}
+
+.blue {
+    font-size: 14px;
+    color: #0047f5 !important;
+}
+
+.violet {
+    font-size: 12px;
+    color: #ff9100 !important;
+    vertical-align: top;
+}
+
+.form_spacer {
+    width: 20px !important;
+    white-space: nowrap;
+    padding: 0 !important;
+}
+
+.formcell {
+    color: #1e465c;
+    text-align: right;
+    background-color: none;
+    padding-right: 5px;
+    font: 12px/15px Arial, Helvetica, sans-serif;
+    vertical-align: top;
+}
+
+.formcell a {
+    color: #CCCCCC;
+    text-decoration: underline;
+}
+
+.formcell a:link {
+    color: #CCCCCC;
+    text-decoration: underline;
+}
+
+.formcell a:visited {
+    color: #CCCCCC;
+    text-decoration: underline;
+}
+
+.formcell a:active {
+    color: #CCCCCC;
+    text-decoration: underline;
+}
+
+.formcell a:hover {
+    color: #FF9900;
+    text-decoration: underline;
+}
+
+.form_submit {
+    padding: 10px 20px;
+    text-align: right;
+}

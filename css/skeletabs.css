@@ -1,0 +1,111 @@
+/*! Skeletabs v2.1.1: bundled themes and effects | MIT License */
+
+.skltbs-tab-group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-image: linear-gradient(45deg, #0047f5, #0047f5 50%, #42bfc7);
+}
+
+.skltbs-tab-group::after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+.skltbs-tab-item {
+    float: left;
+    margin: 0;
+}
+
+.skltbs-tab {
+    display: block;
+    padding: 1em 1.25em;
+    color: #fff;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+.skltbs-panel,
+.skltbs-panel>h3 {
+    padding: 15px 25px;
+    color: #e4dfdf
+}
+
+.skltbs-panel-heading {
+    margin-top: 3px;
+}
+
+.skltbs-panel-heading:first-child {
+    margin-top: 0
+}
+
+.skltbs-tab:focus,
+.skltbs-panel {
+    outline: 0;
+}
+
+.skltbs-tab.skltbs-active {
+    color: inherit;
+    font-family: regular, montserrat, sans-serif;
+    text-decoration: none;
+    background: #e4dfdf;
+    /* background-image: linear-gradient(45deg, #0047f5, #0047f5 50%, #42bfc7); */
+}
+
+.skltbs-mode-accordion,
+.skltbs-active {
+    background-image: linear-gradient(45deg, #0047f5, #0047f5 50%, #42bfc7);
+}
+
+
+/* .skltbs-tab.skltbs-active:focus,
+.skltbs-tab.skltbs-active:hover {
+    border-color: #5ca9f7
+} */
+
+
+/* .skltbs-panel {
+    background-color: #fff;
+    border: 2px solid #a8a8e6
+} */
+
+
+/* .skltbs-panel:focus {
+    outline: 0;
+    border-color: #74b6f8
+} */
+
+
+/* .skltbs-tab:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0 0 0 2px #085cb2;
+    box-shadow: inset 0 0 0 2px #085cb2
+} */
+
+
+/* .skltbs-tab.skltbs-active {
+    background: #2b8ff5
+} */
+
+
+/* .skltbs-tab.skltbs-active:focus,
+.skltbs-tab.skltbs-active:hover {
+    border-color: #000
+}
+
+.skltbs-panel:focus {
+    outline: 0;
+    border-color: #085cb2
+} */

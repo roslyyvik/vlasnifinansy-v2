@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Vlasni-Test</title>
+
+  <link rel="stylesheet" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="css/skeletabs.css" rel="stylesheet">
+    <title>Планування пенсії</title>
+    <style>
+        #mainContent td,
+        th {
+            border: solid thin #bbb;
+            padding: .5rem;
+            text-align: left;
+            color: rgb(92, 89, 89);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        
+        .accordianTitle:after {
+            content: '\002B';
+            color: #0047f5;
+            font-weight: bold;
+            justify-content: flex-end;
+            margin: 1rem;
+        }
+        
+        .active:not(.mainNavLevel1) {
+            background-color: #F3F3F3;
+            border-bottom: 2px solid #ff9100;
+        }
+        
+        .active:not(.mainNavLevel1):after {
+            content: "\2212";
+        }
+        
+        .accordianRowContent {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="pagetype-content">
+        <div class="scrolltracker">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+        <div id="topButtons">
+            <a id="headerLogo" href="/">home</a>
+            <button type="button" id="toggleMenu" class="inactive">&#9776;</button>
+            <button type="button" id="menuBack" class="hidden">back</button>            
+            <span id='headerTitle' class="hidden"></span>
+            <span id="navActiveSectionTitle" class="hidden"></span>
+        </div>
+        <nav id="mainNav" class="hidden customScrollBar">
+            <div class="vertJustify">
+                <ul id="mainNavUl" class="pos1">
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Психологія і фінанси</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/psyhology_faktory_vplyvu.html" itemprop="url" class="mainNavLevel2Link hub">Цілі, цінності, рішення</a>
+                                <ul>
+                                    <li><a href="/psyhology_faktory_vplyvu.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/psyhology_porady.html" class="mainNavLevel3Link ">Декілька порад</a></li>
+                                    <li><a href="/psyhology_tsili_rivnivaga.html" class="mainNavLevel3Link ">Цілі і рівновага</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel2Link hub">Цілі і цінності</a>
+                                <ul>
+                                    <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel3Link ">Дослідження цінностей</a></li>
+                                    <li><a href="/psyhology_envy.html" class="mainNavLevel3Link ">Порівняння з іншими</a></li>
+                                    <li><a href="/psyhology_reklama.html" class="mainNavLevel3Link ">Реклама</a></li>
+                                    <li><a href="/psyhology_reklama_metody.html" class="mainNavLevel3Link ">Методи реклами</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_start.html" class="mainNavLevel2Link hub">Інші фактори впливу</a>
+                                <ul>
+                                    <li><a href="/psyhology_start.html" class="mainNavLevel3Link ">Індивідуальні умови</a></li>
+                                    <li><a href="/psyhology_life_cycle.html" class="mainNavLevel3Link ">Життєвий цикл</a></li>
+                                    <li><a href="/psyhology_sposib_zyttya.html" class="mainNavLevel3Link ">Спосіб життя</a></li>
+                                    <li><a href="/psyhology_economy.html" class="mainNavLevel3Link ">Економіка</a></li>
+                                    <li><a href="/psyhology_social.html" class="mainNavLevel3Link ">Соціальні фактори</a></li>
+                                    <li><a href="/psyhology_tech.html" class="mainNavLevel3Link ">Технологічні зміни</a></li>
+                                    <li><a href="/psyhology_communication.html" class="mainNavLevel3Link ">Навички комунікації</a></li>
+                                    <li><a href="/psyhology_uperedgennya.html" class="mainNavLevel3Link ">Упередження</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_6krokiv.html" class="mainNavLevel2Link hub">Процес прийняття рішень</a>
+                                <ul>
+                                    <li> <a href="/psyhology_6krokiv.html" class="mainNavLevel3Link ">6 кроків</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_5typiv.html" class="mainNavLevel2Link hub">Фінансова поведінка</a>
+                                <ul>
+                                    <li><a href="/psyhology_5typiv.html" class="mainNavLevel3Link ">5 типів особистостей</a></li>
+                                    <li><a href="/psyhology_emotion.html" class="mainNavLevel3Link ">Емоції</a></li>
+                                    <li><a href="/psyhology_7mental.html" class="mainNavLevel3Link ">Психологічно сильні риси</a></li>
+                                    <li><a href="/psyhology_povedinka.html" class="mainNavLevel3Link ">Зміна поведінки</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/quiz_cinnosty.html" class="mainNavLevel2Link hub">Тести</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Покроковий план дій</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/krok_1.html" itemprop="url" class="mainNavLevel2Link hub">Кроки 1-7</a>
+                                <ul>
+                                    <li><a href="/krok_1.html" class="mainNavLevel3Link ">Крок 1 "Прагнення до змін"</a></li>
+                                    <li><a href="/krok_2.html" class="mainNavLevel3Link ">Крок 2 "Оцінка фінансової ситуації"</a></li>
+                                    <li><a href="/krok_3.html" class="mainNavLevel3Link ">Крок 3 "Розгрібання фінансового безладу"</a></li>
+                                    <li><a href="/krok_4.html" class="mainNavLevel3Link ">Крок 4 "Налаштуйтесь на успіх"</a></li>
+                                    <li><a href="/krok_5.html" class="mainNavLevel3Link ">Крок 5 "Копії кредитних звітів"</a></li>
+                                    <li><a href="/krok_6.html" class="mainNavLevel3Link ">Крок 6 "Виправлення кредитного звіту"</a></li>
+                                    <li><a href="/krok_7.html" class="mainNavLevel3Link ">Крок 7 "Рахуйте свої гроші"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_8.html" class="mainNavLevel2Link hub">Кроки 8-14</a>
+                                <ul>
+                                    <li><a href="/krok_8.html" class="mainNavLevel3Link ">Крок 8 "Визначте стартову позицію"</a></li>
+                                    <li><a href="/krok_9.html" class="mainNavLevel3Link ">Крок 9 "Борговий тест"</a></li>
+                                    <li><a href="/krok_10.html" class="mainNavLevel3Link ">Крок 10 "Визначення пріоритетів"</a></li>
+                                    <li><a href="/krok_11.html" class="mainNavLevel3Link ">Крок 11 "Встановлення фінансових цілей"</a></li>
+                                    <li><a href="/krok_12.html" class="mainNavLevel3Link ">Крок 12 "Коротко-, середньо- та довгострокові цілі"</a></li>
+                                    <li><a href="/krok_13.html" class="mainNavLevel3Link ">Крок 13 "Сплата боргів"</a></li>
+                                    <li><a href="/krok_14.html" class="mainNavLevel3Link ">Крок 14 "Очікуйте на неочікуване"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_15.html" class="mainNavLevel2Link hub">Кроки 15-21</a>
+                                <ul>
+                                    <li><a href="/krok_15.html" class="mainNavLevel3Link ">Крок 15 "Убезпечте своє фінансове майбутнє"</a></li>
+                                    <li><a href="/krok_16.html" class="mainNavLevel3Link ">Крок 16 "Візьміть на себе зобов’язання"</a></li>
+                                    <li><a href="/krok_17.html" class="mainNavLevel3Link ">Крок 17 "Здійснюйте накопичення для ваших цілей"</a></li>
+                                    <li><a href="/krok_18.html" class="mainNavLevel3Link ">Крок 18 "Куди зникають ваші гроші"</a></li>
+                                    <li><a href="/krok_19.html" class="mainNavLevel3Link ">Крок 19 "Задокументуйте постійні первинні витрати"</a></li>
+                                    <li><a href="/krok_20.html" class="mainNavLevel3Link ">Крок 20 "Заплануйте періодичні витрати"</a></li>
+                                    <li><a href="/krok_21.html" class="mainNavLevel3Link ">Крок 21 "Здійснюйте облік ваших витрат"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_22.html" class="mainNavLevel2Link hub">Кроки 22-28</a>
+                                <ul>
+                                    <li><a href="/krok_22.html" class="mainNavLevel3Link ">Крок 22 "Визначте шляхи зменшення витрат"</a></li>
+                                    <li><a href="/krok_23.html" class="mainNavLevel3Link ">Крок 23 "Заощаджуйте на бакалійних товарах"</a></li>
+                                    <li><a href="/krok_24.html" class="mainNavLevel3Link ">Крок 24 "Здійснюйте облік зменшення витрат"</a></li>
+                                    <li><a href="/krok_25.html" class="mainNavLevel3Link ">Крок 25 "Контролюйте сімейний захист"</a></li>
+                                    <li><a href="/krok_26.html" class="mainNavLevel3Link ">Крок 26 "Усвідомлюйте вартість кредиту"</a></li>
+                                    <li><a href="/krok_27.html" class="mainNavLevel3Link ">Крок 27 "Сформуйте фінансову команду"</a></li>
+                                    <li><a href="/krok_28.html" class="mainNavLevel3Link ">Крок 28 "Відчуйте переваги"</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Калькулятори</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/budget.html" itemprop="url" class="mainNavLevel2Link hub">Бюджетування</a>
+                                <ul>
+                                    <li><a href="/budget.html" class="mainNavLevel3Link ">Бюджет</a></li>
+                                    <li><a href="/net_worth.html" class="mainNavLevel3Link ">Чиста вартість</a></li>
+                                    <!-- <li><a href="/emergency.html" class="mainNavLevel3Link ">Резервний фонд</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/compound.html" itemprop="url" class="mainNavLevel2Link hub">Накопичення</a>
+                                <ul>
+                                    <li><a href="/compound.html" class="mainNavLevel3Link ">Складний відсоток</a></li>
+                                    <li><a href="/goals.html" class="mainNavLevel3Link ">Цілі</a></li>
+                                    <li><a href="/withdrawal.html" class="mainNavLevel3Link ">Вилучення</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pay-day.html" itemprop="url" class="mainNavLevel2Link hub">Борги</a>
+                                <ul>
+                                    <li><a href="/pay-day.html" class="mainNavLevel3Link ">Кредит до зарплати</a></li>
+                                    <li><a href="/cards.html" class="mainNavLevel3Link ">Кредитні картки</a></li>
+                                    <li><a href="/ploan.html" class="mainNavLevel3Link ">Споживчі кредити</a></li>
+                                    <li><a href="/mortgage.html" class="mainNavLevel3Link ">Іпотека</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/fund.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/fund.html" class="mainNavLevel3Link ">Взаємні фонди</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/priorytety.html" itemprop="url" class="mainNavLevel2Link hub">Таблиці,форми</a>
+                                <ul>
+                                    <li><a href="/priorytety.html" class="mainNavLevel3Link ">Пріоритети</a></li>
+                                    <li><a href="/fin_priorytety.html" class="mainNavLevel3Link ">Фінансові цілі</a></li>
+                                    <li><a href="/table_borgy.html" class="mainNavLevel3Link ">Таблиця боргів</a> </li>
+                                    <li><a href="/vybir_kredyt.html" class="mainNavLevel3Link ">Порівняння кредитних пропозицій</a></li>
+                                    <li><a href="/postiyni_vytraty.html" class="mainNavLevel3Link ">Постійні витрати</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Відтворення відео</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4zPII1A7-Or76lpvqlMKYx3" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Покроковий план дій</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фактори впливу</a>                            
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xK5A0boJI7GheZse90PVZB" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фінансова поведінка</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xVuYEx5hayj6RqTynyhohE" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Захист від шахрайства</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=bU3leCbEnuo" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Психологічно сильні риси </a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=8_pGLlLm8P4&list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2&index=7" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i>Рекламні методи впливу </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Тести</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/quiz_kredity.html" itemprop="url" class="mainNavLevel2Link hub">Управління</a>
+                                <ul>
+                                    <li><a href="/quiz_kredity.html" class="mainNavLevel3Link ">Кредити</a></li>
+                                    <li><a href="/quiz25.html" class="mainNavLevel3Link ">До 25 років</a></li>
+                                    <li><a href="/quiz_upravlinnya.html" class="mainNavLevel3Link ">Управління</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizinvest.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/quizinvest.html" class="mainNavLevel3Link ">Інвестиції</a></li>
+                                    <li><a href="/quiz_payovi_fondy.html" class="mainNavLevel3Link ">Колективні інвестиції</a></li>
+                                    <li><a href="/quiz_other_invest.html" class="mainNavLevel3Link ">Інші інвестиції</a></li>
+                                    <li><a href="/quiz_pensiy.html" class="mainNavLevel3Link ">Пенсійне страхування</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizdiversification.html" itemprop="url" class="mainNavLevel2Link hub">Ризики</a>
+                                <ul>
+                                    <li><a href="/quizdiversification.html" class="mainNavLevel3Link ">Диверсифікація</a></li>
+                                    <li><a href="/quiz_scam.html" class="mainNavLevel3Link ">Шахрайство</a></li>
+                                    <li><a href="/quizcurancy.html" class="mainNavLevel3Link ">Валюта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quiz_cinnosty.html" itemprop="url" class="mainNavLevel2Link hub">Інше</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main" id="mainContent">
+        <div id="hero">
+            <div id="heroImg">
+                <div id="heroText">
+                    <nav id="breadcrumbs">
+                        <a href="/krok_14.html" class="breadcrumbLink"><i class="material-icons" style="font-size: 18px;transform: rotate(45deg);">call_received</i>&nbsp; Крок 14</a>
+                        <a href="/krok_16.html" class="breadcrumbLink"><span>Крок 16&nbsp; </span><i class="material-icons" style="font-size: 18px;transform: rotate(45deg)">call_made</i></a>
+                    </nav>
+                    <div>
+                        <h1>План дій</h1>
+                        <p id="pagetagline">Крок 15: Пенсійне забезпечення
+                            <p id="pagetime"><i style="font-size: 18px;" class="material-icons">play_circle_outline</i> <span>&nbsp; 2 відео,&nbsp; 7 хв. 04 сек </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="max-width: 47.05rem;padding: 0 1rem ">
+            <p class="pagesummary">Про пенсійне забезпечення</p>
+            <h2>Убезпечте своє фінансове майбутнє</h2>
+            <p>Отримання пенсії дозволяє людині отримувати кошти на забезпечення своїх потреб у віці, коли їй уже важко буде працювати і вона втратить джерело постійного доходу – заробітну плату.</p>
+            <div class="standardText">
+                <div class="smartTip">
+                    <p>В Україні громадяни мають право на отримання державної пенсії (за умови сплати страхових внесків на державне пенсійне страхування, і наявності необхідної кількості трудового стажу) і недержавного пенсійного забезпечення (за умови сплати
+                        додаткових внесків у недержавний пенсійний фонд).</p>
+                </div>
+            </div>
+            <p>Планування виходу на пенсію дуже схоже на складання пазлів.<br> Кожне рішення, яке ви зробите в одній сфері свого фінансового життя, матиме вплив на інші.</p>
+            <p>Шість ключових розділів, що ви маєте розглянути включають в себе:</p>
+            <ul>
+                <li>Солідарна пенсія.</li>
+                <li>Робота.</li>
+                <li>Борги та кредити.</li>
+                <li>Страхування.</li>
+                <li>Заощадження і інвестиції.</li>
+                <li>Пенсійний план приватної пенсії.</li>
+            </ul>
+            <h2>Дізнайтесь більше</h2>
+            <div id="video_player" class="figure">
+                <div id="video_container">
+                    <a href="https://www.youtube.com/watch?v=TU4jZSsQFw0">
+                        <img src="/assets/video/online_media.svg"/>
+                     </a>
+                    <!-- <video controls poster="img/vlasnifinansy.jpg">     
+                      <source src="video/step15_hd.webm" type="video/webm">
+                        <source src="video/step15_hd.mp4" type="video/mp4">                   
+                        </video> -->
+                    <div class="video-text">Планування пенсії</div>
+                </div>
+            </div><br>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"></a>Скрипт до відео</h2>
+                    <!-- <button class="accordianRowToggle">toggle accordian row</button> -->
+                </div>
+                <div class="accordianRowContent">
+                    <h3>Убезпечте своє фінансове майбутнє</h3>
+                    <p>Отримання пенсії дозволяє людині отримувати кошти на забезпечення своїх потреб у віці, коли їй вже важко буде працювати і вона втратить джерело постійного доходу – заробітну плату. </p>
+                    <p>В Україні громадяни мають право на отримання державної пенсії (за умови сплати страхових внесків на державне пенсійне страхування, і наявності необхідної кількості трудового стажу) і недержавного пенсійного забезпечення (за умови сплати
+                        додаткових внесків у недержавний пенсійний фонд).
+                    </p>
+                    <p>Уся система пенсійного забезпечення в Україні складається з трех рівнів:</p>
+                    <ul>
+                        <li>державна солідарна система (коли за рахунок внесків працюючих утримуються пенсіонери); </li>
+                        <li>обов’язкова накопичувальна система (коли кожен громадянин за рахунок своїх обов’язкових внесків державі заробляє свою державну пенсію); </li>
+                        <li>добровільна накопичувальна пенсійна система (коли люди, за бажанням, вкладають гроші в недержавні пенсійні фонди з метою отримання додаткової пенсії). </li>
+                    </ul>
+                    <p><strong>Державна солідарна система.</strong> У її основі стоїть саме солідарна пенсійна система, коли всі працюючі сплачують внески на отримання пенсій людям, котрі досягли пенсійного віку. Тобто всі внески йдуть в загальний казан,
+                        а там розподіляються на виплати пенсіонерам. </p>
+                    <p><strong>Обов’язкова накопичувальна система.</strong> Суть системи полягає в тому, що сплачені до системи державного пенсійного забезпечення кошти потрапляють на особові персоніфіковані рахунки платника, де вони обліковуються та зберігаються.</p>
+                    <p>Після виходу на пенсію людина отримає суму накопичених коштів (з певними відсотками) у формі щомісячних пенсійних виплат. Кожен працюючий має своє свідоцтво платника внесків на загальнообов’язкове пенсійне страхування. </p>
+                    <p>Виплати з накопичувального фонду здійснюються додатково до виплат із солідарної системи.</p>
+                    <p><strong>Третій рівень пенсійної системи – добровільна система недержавного пенсійного забезпечення.</strong> Функціонування її забезпечують недержавні пенсійні фонди, страхові компанії та банківські установи. </p>
+                    <p>Скористатися недержавним пенсійним забезпеченням фізичні особи можуть, якщо за власним бажанням вирішать сплачувати додаткові внески разом із внесками до солідарної та накопичувальної систем. Такі додаткові внески за них може сплачувати
+                        роботодавець. </p>
+                    <p>Відтак після виходу на пенсію особа одержуватиме не лише державні (з пенсійного та накопичувального фондів), а й недержавні кошти. Як і у випадку з накопичувальним фондом, такі виплати проводяться як за рахунок сплачених коштів, так
+                        і за рахунок отриманого інвестиційного прибутку. </p>
+                    <p>Не впадайте у розпач, якщо не маєте конкретних цілей щодо вашого виходу на пенсію. Якщо це буде для вас втіхою, то ви не одинокі в цьому. Дослідження показують, що багато домогосподарств не є готовими до свого виходу на пенсію.
+                    </p>
+                    <p>Ось деякі речі, які слід враховувати при оцінці ваших пенсійних заощаджень:</p>
+                    <ul>
+                        <li><strong>Використовуйте доступні ресурси.</strong>Беріть участь у пенсійному плані вашого підприємства, особливо, якщо вони мають програми з відповідними фондами. Якщо ви не берете участі у цих програмах це рівнозначно тому, що
+                            ви залишаєте гроші на столі та відмовляєтесь від значних податкових переваг. Якщо такі програми вашої компанії не доступні для вас, розгляньте варіант із встановлення Незалежного Пенсійного Рахунку.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><strong>	Шукайте професіональної підтримки.</strong><br> Професіонал-консультант, якому ви довіряєте, може допомогти вам у визначенні кількості грошей для пенсійних заощаджень. <br> Він також може допомогти визначити вашу терпимість
+                            до ризику та спланувати комплексну стратегію, яка наблизить вас до фінансових цілей.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><strong>Беріть активну участь.</strong><br> Коли ви не берете участь у пенсійному плані, ви витрачаєте час на вивчення ваших інвестиційних можливостей, щоб приймати обгрунтовані рішення.<br> Тим не менше, більшість людей не в змозі
+                            активно управляти своїми рахунками, і врівноважувати розподіл активів, коли зміниться ринкова ситуація.<br> Відновлення рівноваги вашого портфелю щорічно для збереження відсотків таких, яких ви хочете, це ключовий підхід, щоб
+                            максимізувати дохід і мінімізувати ризик.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><strong>Уникайте раннього виводу у готівку.</strong><br> Пам’ятайте, що ви вилучаєте гроші з вашого інвестиційного рахунку, вам доведеться сплатити податок плюс штраф за будь-яке вилучення грошей.</li>
+                    </ul>
+
+                    <p>Може так статись, що солідарної пенсії буде недостатньо для зручного виходу на пенсію. Це означає, що вам доведеться брати на себе відповідальність і керувати своєю долею. </p>
+                    <p>Спосіб зробити це - це зрозуміти, що вам знадобиться, і розробити фінансовий план, який дає можливість виходу на пенсію.</p>
+                    <p>Першим кроком у плануванні виходу на пенсію є визначення того, скільки вам потрібно. Загальне правило полягає в тому, що вам потрібно 80% вашого поточного доходу для покриття ваших пенсійних витрат. </p>
+                </div>
+            </div>
+            <!-- <div class="calculatorLink clickable">
+                <p><a href="/table_borgy.html" title="Таблиця боргів">Таблиця боргів</a></p>
+                <p>Використовуйте таблицю для управління боргами </p>
+            </div> -->
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"></a>Додатковий матеріал
+                    </h2>
+                </div>
+                <div class="accordianRowContent">
+                    <h3>Пенсійне планування</h3>
+                    <p>Планування виходу на пенсію дуже схоже на складання пазлів.<br> Кожне рішення, яке ви зробите в одній сфері свого фінансового життя, матиме вплив на інші.<br> Фактори, як довго ви будете працювати і скільки ви накопичили, сильно впливають
+                        на ваш ідеальний вихід на пенсію.<br> Відданість вашим існуючим переконанням і аналіз того, що ви маєте для виходу на пенсію, дає вам можливість приймати обгрунтовані рішення у шести ключових сферах.</p>
+                    <p>Шість ключових розділів, що ви маєте розглянути включають в себе:</p>
+                    <ul>
+                        <li>Солідарна пенсія.</li>
+                        <li>Робота.</li>
+                        <li>Борги та кредити.</li>
+                        <li>Страхування.</li>
+                        <li>Заощадження і інвестиції.</li>
+                        <li>Пенсійний план приватної пенсії.</li>
+                    </ul>
+                    <h3>Як довго збираєтесь працювати?</h3>
+                    <p>Загальні правила:</p>
+                    <ul>
+                        <li>Продовжуйте працювати, поки не впевнені, що можете дозволити собі звільнитися (якщо ваше здоров'я чи інші умови змушують вас піти у відставку).</li>
+                        <li>Порадьтеся з фінансовими консультантами та спеціалістами з питань управління персоналом, щоб зрозуміти податкові наслідки та переваги перед прийняттям рішення про вихід на пенсію або прийняття пропозиції про достроковий вихід на
+                            пенсію
+                        </li>
+                    </ul>
+                    <p>В залежності від вашого віку, ви можете ще багато років працювати перед виходом на пенсію, або ви можете вже дивитись пенсії прямо в обличчя.</p>
+                    <p>Незалежно від вашого віку, коли ви вирішите піти у відставку, вибір на повний робочий день або неповний робочий день до та під час виходу на пенсію - це рішення, яке ви можете прийняти лише з огляду на ваші особисті виплати та компроміси.</p>
+                    <h3>Борги та кредити.</h3>
+                    <p>Загальні правила:</p>
+                    <ul>
+                        <li>Протягом 10 років до виходу на пенсію скоротіть всі борги. Оплачуйте кредитні картки, автокредити, готівкові позики та будь-які інші борги, які ви платите щомісяця (відомі як споживчий борг). Якщо є можливість, погашайте іпотечний
+                            кредит.
+                        </li>
+                        <li>Не беріть на себе нові борги до або під час виходу на пенсію без планування його погашення.</li>
+                        <li>Відстежуйте свої витрати та сплачуйте рахунки своєчасно. Розмовляйте з кредиторами завчасно, і постійно, якщо ви відчуваєте, що можете відставати.
+                        </li>
+                        <li>Тримайте щонайменше три місяці резервних грошових коштів готівкою, щоб уникнути використання кредиту за непередбачені події.
+                        </li>
+                    </ul>
+                    <p>Щоб досягти стиль життя на пенсії,якого ви хочете, вам слід почати аналіз існуючої практики отримання боргів.</p>
+                    <p>Визначення деяких боргових звичок, зміна або усунення їх зменшить ваш борг та забезпечить збереження вашим пенсійним заощадженням як можна довше.</p>
+                    <p>Багато, що зміниться, коли ви вийдете на пенсію,також може бути зменшений потік доходів.</p>
+                    <ul>
+                        <li>Якщо ваші пенсійні заощадження використовується для обслуговування боргу, ви в основному запозичуєте у майбутнього себе, кому може знадобитися цей дохід на життєвому шляху.</li>
+                        <li>Ваш борг може зменшити ваші накопичені фінансові активи та заощадження,і як наслідок, зменшити потенційні заробітки з цих активів.</li>
+                        <li>Ваш стиль життя на пенсії більше обмежений боргом, оскільки у вас буде менше можливостей доступу для отримання доходів.</li>
+                        <li>Заборгованість може спричинити фізичні симптоми стресу, впливати на ваше здоров'я і послабити ваше почуття благополуччя, збільшення витрат на медичну допомогу і призведе до відчаю.</li>
+                        <li>Без значних активів, які генерують хороші прибутки, вам доведеться повернутися до робочого місця.</li>
+                    </ul>
+                    <p>Завдяки своїм впливам на стиль життя, легко зрозуміти, чому ви маєте сплатити заборгованість перед тим, як вийти на пенсію.</p>
+                    <h3>Страхування під час пенсії.</h3>
+                    <p>Загальні правила:</p>
+                    <ul>
+                        <li>Зрозумійте свої цінності, пов'язані з якістю життя та прислухайтесь до інших для прийняття рішень про охорону свого здоров'я.</li>
+                        <li>Домовляйтесь із своїм прцедавцем про страхування свого здоров'я.</li>
+                        <li>Збережіть більше за рахунок кишенькових витрат та майте план щодо того, які джерела доходів будуть використані для оплати охорони здоров'я.</li>
+                        <li>Застосовуйте практики для зменшення витрат на лікування та охорону свого здоров'я.</li>
+                    </ul>
+                    <p>Ваші витрати на охорону здоров'я під час виходу на пенсію стануть однією з найбільших категорій у вашому бюджеті.</p>
+                    <p>Їх вплив на ваш спосіб життя може бути значним, оскільки витрати на охорону здоров'я дорожче, ніж витрати на коригування своєї поведінки та способу життя для більшості пенсіонерів.</p>
+                    <p>Подумайте про довгострокову перспективу, про те,з якими медичними проблемами ви можете зіткнутися. Планування зараз може допомогти вам, коли прийде той час.</p>
+                    <ul>
+                        <li>Подумайте про вашу сімейну історію хвороб та медичні умови.</li>
+                        <li>Подумайте про стан свого здоров'я сьогодні та медичні обставини.</li>
+                        <li>Подумайте про сім'ю, друзів або професіоналів, до яких ви можете звернутися за допомогою за медичним або довгостроковим доглядом.</li>
+                    </ul>
+                    <h3>Заощадження і інвестиції.</h3>
+                    <p>Загальні правила</p>
+                    <ul>
+                        <li>Відкладайте більшу частину вашого річного доходу, яку тільки ви можете на пенсію.</li>
+                        <li>Переконайтеся, що у вас є достатньо грошей принаймні для 25-30 років перебування на пенсії.</li>
+                        <li>Диверсифікуйте свої інвестиційні вкладення, щоб ви могли вирішити проблему інфляції та довголіття під час вашого виходу на пенсію.</li>
+                        <li>Тримайте (і поповнюйте) резервні кошти на поточних рахунках і готівкою - надзвичайні ситуації трапляються навіть на пенсії.</li>
+                        <li>Визначте суму у розмірі річних поточних витрат на пенсії і інвестуйте у довгострокові депозити або взаємні інвестиційні фонди.</li>
+                        <li>Регулярно переглядайте свої інвестиції, щоб вони забезпечували бажаний прибуток та задовольняли потреби в грошових потоках.</li>
+                    </ul>
+                    <p>Чи зможете ви мати ідеалізовану пенсію, яку ви передбачали?<br>Запишіть відповіді на наступні питання, щоб почати думати про те, що вам потрібно буде зробити відсьогодні до виходу на пенсію, щоб забезпечити стиль життя, якого ви хочете:</p>
+                    <ol>
+                        <li>Що буде найбільше коштувати для вас на пенсії? Це може включати в себе житло, витрати на охорону здоров'я, допомогу членам сім'ї, подорожі або просто будете насолоджуватися будь-яким своїм захопленням.</li>
+                        <li>Які вкладення чи заощадження ви створили на ці конкретні витрати? Чи є у вас ресурси для фінансування інших ділянок вашої пенсії?</li>
+                        <li>Які плани ви маєте для диверсифікації своїх активів, щоб ви могли фінансувати свій спосіб життя на пенсії та забезпечували собі постійний потік доходу?</li>
+                    </ol>
+                </div>
+            </div><br>
+            <h3 class="pagesummary">Пенсійний план приватної пенсії.</h3>
+            <p>Можливо ви не завжди це відчуваєте, але час на вашому боці.<br> Чим раніше ви почнете заощаджувати та інвестувати, тим більше ви відчуєте переваг від збільшення суми відсотків.</p>
+            <p>Це те, що ви досягаєте, коли вартість ваших інвестицій (або заощаджень) зростає в залежності від їх прибутку.<br> Наприклад, депозит із щомісячним нарахуванням відсотків дасть вам більшу суму наприкінці інвестиційного періоду, ніж на початку
+                інвестування.
+            </p>
+            <p>Цей основний принцип складного відсотку не варто зупиняти з виходом на пенсію. Але вам знадобиться план розміщення ваших інвестицій, щоб забезпечити вам бажану прибутковість.</p>
+            <p>Зараз подумайте над наступними питаннями:</p>
+            <ol>
+                <li>Чи дотримуєтесь темпу накопичень, щоб досягти плануємого обсягу пенсійних заощаджень?</li>
+                <li>Якщо ні, які кроки ви можете вжити, щоб збільшити свої заощадження чи збільшити дохід від ваших інвестицій? Наприклад, чи пропонує ваша компанія-працедавець автоматичне зарахування або автоматичне збільшення пенсійних планів? Або ж ваш
+                    банк пропонує програму стимулювання заощаджень? Вам потрібен план витрат на покращення ваших заощаджень?</li>
+                <li>Чи реально збільшити ваші пенсійні заощадження? Якщо це означає збільшення вашої заборгованості за кредитною карткою на споживчі витрати або запозичення із заощаджень, передбачених для вашого резервного фонду, можливо, це не є мудрим рішенням.
+                </li>
+            </ol>
+            <p><em>Визначте свої пенсійні накопичення та інвестиційний портфель.</em></p>
+            <p>Це гарна звичка починати заощаджувати та відкладати кошти на пенсію раніше, але ви також повинні заощаджувати та інвестувати під час перебування на пенсії. Ваші накопичення та інвестиційний розподіл повинні відповідати вашим потребам для негайного
+                доступу до коштів, надзвичайних ситуацій та отримання доходу протягом усього життя.</p>
+            <p>Ключове значення має диверсифікація ваших заощаджень та інвестицій з огляду на довголіття. Це не тільки позбавить вас пережити ваші гроші, але також допоможе вам подолати інфляцію.</p>
+
+            <div id="skltbsResponsive" class="skltbs">
+                <ul role="tablist" class="skltbs-tab-group">
+                    <li role="presentation" class="skltbs-tab-item">
+                        <a role="tab" class="skltbs-tab" href="#skltbsResponsive1">Державні ЦП</a>
+                    </li>
+                    <li role="presentation" class="skltbs-tab-item">
+                        <a role="tab" class="skltbs-tab" href="#skltbsResponsive2">Оренда</a>
+                    </li>
+                    <li role="presentation" class="skltbs-tab-item">
+                        <a role="tab" class="skltbs-tab" href="#skltbsResponsive3">Грошовий ринок</a>
+                    </li>
+                    <li role="presentation" class="skltbs-tab-item">
+                        <a role="tab" class="skltbs-tab" href="#skltbsResponsive4">Фонди</a>
+                    </li>
+                    <li role="presentation" class="skltbs-tab-item">
+                        <a role="tab" class="skltbs-tab" href="#skltbsResponsive4">Ануітет</a>
+                    </li>
+                </ul>
+                <div class="skltbs-panel-group">
+                    <div role="tabpanel" id="skltbsResponsive1" class="skltbs-panel">
+                        <h3>Державні цінні папери</h3>
+                        <p>Державні облігації дають вам поєднання безпечності та високої дохідності. Казначейські цінні папери, захищені від інфляції, є державними цінними паперами, які автоматично коригуються з підвищенням інфляції.</p>
+                    </div>
+                    <div role="tabpanel" id="skltbsResponsive2" class="skltbs-panel">
+                        <h3>Оренда нерухомості</h3>
+                        <p>Оренда нерухомості забезпечуює джерело стабільного доходу, але вона також може викликати головні болі, що пов'язані з веденням бухгалтерського обліку та податкової звітності. Ви повинні обережно оцінювати переваги доходів, а також
+                            витрат та особистих зобов'язань.</p>
+                    </div>
+                    <div role="tabpanel" id="skltbsResponsive3" class="skltbs-panel">
+                        <h3>Грошовий ринок</h3>
+                        <p>Грошові кошти та короткострокові форми заощаджень (наприклад, депозити) допомагають вам зберігати кошти резервного фонду на руках, тому вам не потрібно продавати інші інвестиції, які ефективно працюють або втрачають позитивний
+                            вплив на ринку.</p>
+                    </div>
+                    <div role="tabpanel" id="skltbsResponsive4" class="skltbs-panel">
+                        <h3>Інвестиційні фонди</h3>
+                        <p>Взаємні фонди або біржові фонди дозволять вам скористатися навичками професійного менеджера грошових коштів та надати вам більше можливостей для диверсифікації у вашому портфоліо.</p>
+                    </div>
+                    <div role="tabpanel" id="skltbsResponsive4" class="skltbs-panel">
+                        <h3>Ануітет</h3>
+                        <p>Ануітети забезпечують стійкий потік доходу. Ануїтети можуть запропонувати або фіксовану, або змінну опцію виплати протягом усього життя, захищаючи вас від ризику довголіття.</p>
+                    </div>
+                </div>
+            </div><br>
+            <p>Можливо вже прийшов час додати більш ризиковані інвестиції.<br> Використовуйте свої довгострокові гроші (років 10 і далі), щоб інвестувати в акції (як внутрішні, так і іноземні), нерухомість та інші інвестиції, орієнтовані на зростання.</p>
+            <p>Вони доступні через взаємні фонди або біржові фонди та забезпечують довгострокове зростання ваших пенсійних заощаджень.</p>
+            <p>Подумайте про використання послуг фахівців, які допоможуть вам створити інвестиційний портфель і розподілити ризик на кількох ринках.</p>
+            <div class="calculatorLink clickable">
+                <h3><a href="/goals.html" title="Калькулятор цільового накопичення">Калькулятор цільового накопичення</a></h3>
+                <p>Дізнайтесь як можна досягнути цілей заощадження</p>
+            </div>
+            <div class="calculatorLink clickable">
+                <h3><a href="/compound.html" title="Калькулятор складного відсотку">Калькулятор складного відсотку</a></h3>
+                <p>Дізнайтесь як складний відсоток допомагає заощадити</p>
+            </div>
+            <h2>Як працює складний відсоток</h2>
+            <div id="video_player" class="figure">
+                <div id="video_container">
+                    <a href="https://www.youtube.com/watch?v=Fo__iDbzoSc&t=4s">
+                        <img src="/assets/video/online_learning.svg"/>
+                     </a>
+                    <!-- <video controls poster="img/vlasnifinansy.jpg">     
+                        <source src="video/compound_hd.mp4" type="video/mp4">
+                            <source src="video/compound_hd.webm" type="video/webm">                   
+                        </video> -->
+                    <div class="video-text">Складний відсоток</div>
+                </div>
+            </div><br>
+            <aside class="upnext">
+                <div>
+                    <h2>&nbsp;Інші розділи</h2>
+                    <ul>
+                        <li class="clickable" title="Крок 14">
+                            <a href="/krok_16.html">
+                                <h3>Крок 16</h3>
+                                <p>Візуалізуйте свої зобов’язання </p>
+                                <p>1 відео,&nbsp; 3 хв. 32 сек</p>
+                            </a>
+                        </li>
+                        <li class="clickableback" title="Крок 16">
+                            <a href="/krok_14.html" style="text-align:right;padding-right:2rem">
+                                <h3>Крок 14</h3>
+                                <p>Резервний фонд </p>
+                                <p>1 відео,&nbsp; 5 хв. 06 сек</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"><i class="material-icons" style="color: #0047f5; font-size:18px;margin-top:5px">announcement</i></a>&nbsp; Уточнення
+                    </h2>
+                </div>
+                <div class="accordianRowContent">
+                    <p>Будь-яке посилання на конкретну компанію, комерційний продукт, процес чи послугу не є і не передбачає схвалення або рекомендацію. </p>
+                    <p>Ми робимо все можливе, щоб інформація на цих курсах була актуальною, але з часом нові матеріали, а також законодавчі та нормативні зміни можуть зробити цей матеріал неактуальним.</p>
+                    <p> Якщо ви виявите неточну інформацію, зв'яжіться з нами.</p>
+                </div>
+            </div><br>
+        </div>
+    </main>
+    <footer>
+        <div class="brandms">
+            <ul>
+                <li>
+                    <span style="font-size: 15px;">mail@vlasnifinansy.info&nbsp;</span>
+                    <span><i class='far fa-copyright'></i> 2023</span>
+                </li>
+                <li style="display:inline-block;">
+                    <a href="/" id="headerLogo">home></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/skeletabs.js"></script>
+    <script>
+        $("#skltbsResponsive").skeletabs({
+            equalHeights: true,
+            animation: "fade-scale",
+            // autoplay: true,
+            autoplayInterval: 4500,
+            responsive: {
+                breakpoint: 800,
+                headingTagName: "h4"
+            }
+        });
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordianTitle");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

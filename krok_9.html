@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Vlasni-Test</title>
+
+  <link rel="stylesheet" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/quiz25.css" />
+    <!-- <script src="script/newgen.js"></script> -->
+    <title>Борговий тест</title>
+</head>
+
+<body>
+    <header class="pagetype-content">
+        <div class="scrolltracker">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+        <div id="topButtons">
+            <a id="headerLogo" href="/">home</a>
+            <button type="button" id="toggleMenu" class="inactive">&#9776;</button>
+            <button type="button" id="menuBack" class="hidden">back</button>           
+            <span id='headerTitle' class="hidden"></span>
+            <span id="navActiveSectionTitle" class="hidden"></span>
+        </div>
+        <nav id="mainNav" class="hidden customScrollBar">
+            <div class="vertJustify">
+                <ul id="mainNavUl" class="pos1">
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Психологія і фінанси</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/psyhology_faktory_vplyvu.html" itemprop="url" class="mainNavLevel2Link hub">Цілі, цінності, рішення</a>
+                                <ul>
+                                    <li><a href="/psyhology_faktory_vplyvu.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/psyhology_porady.html" class="mainNavLevel3Link ">Декілька порад</a></li>
+                                    <li><a href="/psyhology_tsili_rivnivaga.html" class="mainNavLevel3Link ">Цілі і рівновага</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel2Link hub">Цілі і цінності</a>
+                                <ul>
+                                    <li><a href="/psyhology_tsinnosty.html" class="mainNavLevel3Link ">Дослідження цінностей</a></li>
+                                    <li><a href="/psyhology_envy.html" class="mainNavLevel3Link ">Порівняння з іншими</a></li>
+                                    <li><a href="/psyhology_reklama.html" class="mainNavLevel3Link ">Реклама</a></li>
+                                    <li><a href="/psyhology_reklama_metody.html" class="mainNavLevel3Link ">Методи реклами</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_start.html" class="mainNavLevel2Link hub">Інші фактори впливу</a>
+                                <ul>
+                                    <li><a href="/psyhology_start.html" class="mainNavLevel3Link ">Індивідуальні умови</a></li>
+                                    <li><a href="/psyhology_life_cycle.html" class="mainNavLevel3Link ">Життєвий цикл</a></li>
+                                    <li><a href="/psyhology_sposib_zyttya.html" class="mainNavLevel3Link ">Спосіб життя</a></li>
+                                    <li><a href="/psyhology_economy.html" class="mainNavLevel3Link ">Економіка</a></li>
+                                    <li><a href="/psyhology_social.html" class="mainNavLevel3Link ">Соціальні фактори</a></li>
+                                    <li><a href="/psyhology_tech.html" class="mainNavLevel3Link ">Технологічні зміни</a></li>
+                                    <li><a href="/psyhology_communication.html" class="mainNavLevel3Link ">Навички комунікації</a></li>
+                                    <li><a href="/psyhology_uperedgennya.html" class="mainNavLevel3Link ">Упередження</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_6krokiv.html" class="mainNavLevel2Link hub">Процес прийняття рішень</a>
+                                <ul>
+                                    <li> <a href="/psyhology_6krokiv.html" class="mainNavLevel3Link ">6 кроків</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/psyhology_5typiv.html" class="mainNavLevel2Link hub">Фінансова поведінка</a>
+                                <ul>
+                                    <li><a href="/psyhology_5typiv.html" class="mainNavLevel3Link ">5 типів особистостей</a></li>
+                                    <li><a href="/psyhology_emotion.html" class="mainNavLevel3Link ">Емоції</a></li>
+                                    <li><a href="/psyhology_7mental.html" class="mainNavLevel3Link ">Психологічно сильні риси</a></li>
+                                    <li><a href="/psyhology_povedinka.html" class="mainNavLevel3Link ">Зміна поведінки</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/quiz_cinnosty.html" class="mainNavLevel2Link hub">Тести</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Покроковий план дій</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/krok_1.html" itemprop="url" class="mainNavLevel2Link hub">Кроки 1-7</a>
+                                <ul>
+                                    <li><a href="/krok_1.html" class="mainNavLevel3Link ">Крок 1 "Прагнення до змін"</a></li>
+                                    <li><a href="/krok_2.html" class="mainNavLevel3Link ">Крок 2 "Оцінка фінансової ситуації"</a></li>
+                                    <li><a href="/krok_3.html" class="mainNavLevel3Link ">Крок 3 "Розгрібання фінансового безладу"</a></li>
+                                    <li><a href="/krok_4.html" class="mainNavLevel3Link ">Крок 4 "Налаштуйтесь на успіх"</a></li>
+                                    <li><a href="/krok_5.html" class="mainNavLevel3Link ">Крок 5 "Копії кредитних звітів"</a></li>
+                                    <li><a href="/krok_6.html" class="mainNavLevel3Link ">Крок 6 "Виправлення кредитного звіту"</a></li>
+                                    <li><a href="/krok_7.html" class="mainNavLevel3Link ">Крок 7 "Рахуйте свої гроші"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_8.html" class="mainNavLevel2Link hub">Кроки 8-14</a>
+                                <ul>
+                                    <li><a href="/krok_8.html" class="mainNavLevel3Link ">Крок 8 "Визначте стартову позицію"</a></li>
+                                    <li><a href="/krok_9.html" class="mainNavLevel3Link ">Крок 9 "Борговий тест"</a></li>
+                                    <li><a href="/krok_10.html" class="mainNavLevel3Link ">Крок 10 "Визначення пріоритетів"</a></li>
+                                    <li><a href="/krok_11.html" class="mainNavLevel3Link ">Крок 11 "Встановлення фінансових цілей"</a></li>
+                                    <li><a href="/krok_12.html" class="mainNavLevel3Link ">Крок 12 "Коротко-, середньо- та довгострокові цілі"</a></li>
+                                    <li><a href="/krok_13.html" class="mainNavLevel3Link ">Крок 13 "Сплата боргів"</a></li>
+                                    <li><a href="/krok_14.html" class="mainNavLevel3Link ">Крок 14 "Очікуйте на неочікуване"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_15.html" class="mainNavLevel2Link hub">Кроки 15-21</a>
+                                <ul>
+                                    <li><a href="/krok_15.html" class="mainNavLevel3Link ">Крок 15 "Убезпечте своє фінансове майбутнє"</a></li>
+                                    <li><a href="/krok_16.html" class="mainNavLevel3Link ">Крок 16 "Візьміть на себе зобов’язання"</a></li>
+                                    <li><a href="/krok_17.html" class="mainNavLevel3Link ">Крок 17 "Здійснюйте накопичення для ваших цілей"</a></li>
+                                    <li><a href="/krok_18.html" class="mainNavLevel3Link ">Крок 18 "Куди зникають ваші гроші"</a></li>
+                                    <li><a href="/krok_19.html" class="mainNavLevel3Link ">Крок 19 "Задокументуйте постійні первинні витрати"</a></li>
+                                    <li><a href="/krok_20.html" class="mainNavLevel3Link ">Крок 20 "Заплануйте періодичні витрати"</a></li>
+                                    <li><a href="/krok_21.html" class="mainNavLevel3Link ">Крок 21 "Здійснюйте облік ваших витрат"</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/krok_22.html" class="mainNavLevel2Link hub">Кроки 22-28</a>
+                                <ul>
+                                    <li><a href="/krok_22.html" class="mainNavLevel3Link ">Крок 22 "Визначте шляхи зменшення витрат"</a></li>
+                                    <li><a href="/krok_23.html" class="mainNavLevel3Link ">Крок 23 "Заощаджуйте на бакалійних товарах"</a></li>
+                                    <li><a href="/krok_24.html" class="mainNavLevel3Link ">Крок 24 "Здійснюйте облік зменшення витрат"</a></li>
+                                    <li><a href="/krok_25.html" class="mainNavLevel3Link ">Крок 25 "Контролюйте сімейний захист"</a></li>
+                                    <li><a href="/krok_26.html" class="mainNavLevel3Link ">Крок 26 "Усвідомлюйте вартість кредиту"</a></li>
+                                    <li><a href="/krok_27.html" class="mainNavLevel3Link ">Крок 27 "Сформуйте фінансову команду"</a></li>
+                                    <li><a href="/krok_28.html" class="mainNavLevel3Link ">Крок 28 "Відчуйте переваги"</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Калькулятори</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/budget.html" itemprop="url" class="mainNavLevel2Link hub">Бюджетування</a>
+                                <ul>
+                                    <li><a href="/budget.html" class="mainNavLevel3Link ">Бюджет</a></li>
+                                    <li><a href="/net_worth.html" class="mainNavLevel3Link ">Чиста вартість</a></li>
+                                    <!-- <li><a href="/emergency.html" class="mainNavLevel3Link ">Резервний фонд</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/compound.html" itemprop="url" class="mainNavLevel2Link hub">Накопичення</a>
+                                <ul>
+                                    <li><a href="/compound.html" class="mainNavLevel3Link ">Складний відсоток</a></li>
+                                    <li><a href="/goals.html" class="mainNavLevel3Link ">Цілі</a></li>
+                                    <li><a href="/withdrawal.html" class="mainNavLevel3Link ">Вилучення</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pay-day.html" itemprop="url" class="mainNavLevel2Link hub">Борги</a>
+                                <ul>
+                                    <li><a href="/pay-day.html" class="mainNavLevel3Link ">Кредит до зарплати</a></li>
+                                    <li><a href="/cards.html" class="mainNavLevel3Link ">Кредитні картки</a></li>
+                                    <li><a href="/ploan.html" class="mainNavLevel3Link ">Споживчі кредити</a></li>
+                                    <li><a href="/mortgage.html" class="mainNavLevel3Link ">Іпотека</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/fund.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/fund.html" class="mainNavLevel3Link ">Взаємні фонди</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/priorytety.html" itemprop="url" class="mainNavLevel2Link hub">Таблиці,форми</a>
+                                <ul>
+                                    <li><a href="/priorytety.html" class="mainNavLevel3Link ">Пріоритети</a></li>
+                                    <li><a href="/fin_priorytety.html" class="mainNavLevel3Link ">Фінансові цілі</a></li>
+                                    <li><a href="/table_borgy.html" class="mainNavLevel3Link ">Таблиця боргів</a> </li>
+                                    <li><a href="/vybir_kredyt.html" class="mainNavLevel3Link ">Порівняння кредитних пропозицій</a></li>
+                                    <li><a href="/postiyni_vytraty.html" class="mainNavLevel3Link ">Постійні витрати</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Відтворення відео</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4zPII1A7-Or76lpvqlMKYx3" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Покроковий план дій</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фактори впливу</a>                            
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xK5A0boJI7GheZse90PVZB" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Фінансова поведінка</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/playlist?list=PLsrhrqRDzn4xVuYEx5hayj6RqTynyhohE" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Захист від шахрайства</a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=bU3leCbEnuo" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i> Психологічно сильні риси </a>
+                            </li>
+                            <li> <a href="https://www.youtube.com/watch?v=8_pGLlLm8P4&list=PLsrhrqRDzn4wr9hz09Ao7wjIY_L9tnKB2&index=7" itemprop="url" class="mainNavLevel2Link hub"><i class='far fa-file-video'></i>Рекламні методи впливу </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainNavLevel1"><a href="#banking-and-budgeting" itemprop="url" class="mainNavLevel1Link">Тести</a>
+                        <ul class="mainNavLevel2Container hidden customScrollBar">
+                            <li>
+                                <a href="/quiz_kredity.html" itemprop="url" class="mainNavLevel2Link hub">Управління</a>
+                                <ul>
+                                    <li><a href="/quiz_kredity.html" class="mainNavLevel3Link ">Кредити</a></li>
+                                    <li><a href="/quiz25.html" class="mainNavLevel3Link ">До 25 років</a></li>
+                                    <li><a href="/quiz_upravlinnya.html" class="mainNavLevel3Link ">Управління</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizinvest.html" itemprop="url" class="mainNavLevel2Link hub">Інвестиції</a>
+                                <ul>
+                                    <li><a href="/quizinvest.html" class="mainNavLevel3Link ">Інвестиції</a></li>
+                                    <li><a href="/quiz_payovi_fondy.html" class="mainNavLevel3Link ">Колективні інвестиції</a></li>
+                                    <li><a href="/quiz_other_invest.html" class="mainNavLevel3Link ">Інші інвестиції</a></li>
+                                    <li><a href="/quiz_pensiy.html" class="mainNavLevel3Link ">Пенсійне страхування</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quizdiversification.html" itemprop="url" class="mainNavLevel2Link hub">Ризики</a>
+                                <ul>
+                                    <li><a href="/quizdiversification.html" class="mainNavLevel3Link ">Диверсифікація</a></li>
+                                    <li><a href="/quiz_scam.html" class="mainNavLevel3Link ">Шахрайство</a></li>
+                                    <li><a href="/quizcurancy.html" class="mainNavLevel3Link ">Валюта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/quiz_cinnosty.html" itemprop="url" class="mainNavLevel2Link hub">Інше</a>
+                                <ul>
+                                    <li><a href="/quiz_cinnosty.html" class="mainNavLevel3Link ">Ваші цінності</a></li>
+                                    <li><a href="/quiz_faktory.html" class="mainNavLevel3Link ">Фактори впливу</a></li>
+                                    <li><a href="/quiz_rishennya.html" class="mainNavLevel3Link ">Прийняття рішень</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="mainContent">
+        <div id="hero">
+            <div id="heroImg">
+                <div id="heroText">
+                    <nav id="breadcrumbs">
+                        <a href="/krok_8.html" class="breadcrumbLink"><i class="material-icons" style="font-size: 18px;transform: rotate(45deg);">call_received </i>&nbsp; Крок 8</a>
+                        <a href="/krok_10.html" class="breadcrumbLink"><span>Крок 10&nbsp; </span><i class="material-icons" style="font-size: 18px;transform: rotate(45deg)"> call_made</i></a>
+                    </nav>
+                    <div>
+                        <h1>План дій</h1>
+                        <p id="pagetagline">Крок 9: Борговий тест
+                            <p id="pagetime"><i style="font-size: 18px;" class="material-icons">play_circle_outline</i> <span>&nbsp; 1 відео,&nbsp; 1 хв. 40 сек,&nbsp;тест </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="max-width: 47.05rem;padding: 0 1rem ">
+            <p class="pagesummary">Чи проходите ви борговий тест?</p>
+            <p>Більшість рекомендацій стверджують,що ваша загальна сума боргу як споживача (кредитні картки, автокредити, студентські позики - все, що ви платите щомісяця, крім житла), має становити менше <strong>20 відсотків</strong> вашого річного чистого
+                (після оподаткування) доходу.</p>
+            <p>Ви можете вдатися до великої кількості боргів, намагаючись зберегти спосіб життя подібний до ваших друзів і сусідів.<br> Є багато інших причин, з яких ми можемо витрачати гроші, щоб справити враження або бути на рівні з іншими.</p>
+            <p>Коли ви порівнюєте себе з іншими (це особливо легко робити в соціальних мережах) і починаєте вірити, що ви могли б досягти успіху, якщо б мали певні речі або мали певний спосіб життя, ви відкриваєте себе для потенційних підводних каменів.</p>
+            <div class="standardText">
+                <div class="smartTip">
+                    <p>Таке мислення разом із легким доступом до кредитів може призвести до збільшення заборгованості, яку ви не зможете обслуговувати.</p>
+                </div>
+            </div>
+            <p>Для більшості з нас, щастя є метою, і покупки, які, на нашу думку, принесуть нам це щастя, часто розчаровують.</p>
+            <p>Рекомендуємо уникати витрат на зовнішнє шоу або статусні речі і позичати лише на те, що ви можете дозволити собі виплатити за короткий термін часу.</p>
+            <p>Мати певні борги не обов'язково погано, але мати борги, за якими ви не можете сплачувати в розумний термін, є стресовою ситуацією.</p>
+            <div class="standardText">
+                <div class="smartTip">
+                    <p>Тривога за борги може вплинути на вашу поведінку, ваші відносини з іншими та вашу здатність досягти ваших фінансових мрій.</p>
+                </div>
+            </div>
+            <h2>Дізнайтесь більше</h2>
+            <div id="video_player" class="figure">
+                <div id="video_container">
+                    <a href="https://www.youtube.com/watch?v=Y2NAOg75Mgw">
+                        <img src="/assets/video/video_call.svg"/>
+                     </a>
+                    <!-- <video controls poster="img/vlasnifinansy.jpg">                        
+                      <source src="video/step9_hd.webm" type="video/webm">
+                        <source src="video/step9_hd.mp4" type="video/mp4">
+                      </video> -->
+                    <div class="video-text">Борговий тест</div>
+                </div>
+            </div><br>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"></a>Скрипт до відео</h2>
+                    <!-- <button class="accordianRowToggle">toggle accordian row</button> -->
+                </div>
+                <div class="accordianRowContent">
+                    <h3>Чи проходите ви борговий тест?</h3>
+
+                    <p>Свобода від боргу є досяжною метою для кожної родини. Першим кроком для повернення собі контролю є чесний погляд на існуючі зобов’язання. Зробіть наступний борговий тест, щоб визначити, чи потрібен вам план для сплати боргів. </p>
+
+
+                    <p>Борговий тест</p>
+                    <ul>
+                        <li>Чи зростає частка від доходу, що йде на виплату боргів? </li>
+                        <li>Чи відмовляли вам у отриманні кредиту? </li>
+                    </ul>
+                    <ul>
+                        <li>Чи близько ви від ліміту ваших кредитних ліній? </li>
+                        <li>Чи здійснюєте ви тільки мінімальні платежі за вашою відновлювальною кредитною лінією за кредитною карткою? </li>
+                    </ul>
+                    <ul>
+                        <li>Чи часто ви спізнюєтесь із оплатою рахунків? </li>
+                        <li>Чи сплачуєте ви свої рахунки грошима, що призначені на щось інше? </li>
+                    </ul>
+                    <ul>
+                        <li>Чи використовуєте ви кредит для сплати за речі, що раніше купували за готівку? </li>
+                        <li>Якщо ви втратили роботу, чи постанете ви перед миттєвими фінансовими труднощами? </li>
+                    </ul>
+                    <ul>
+                        <li>Чи впевнені ви в тому, скільки ви заборгували? </li>
+                        <li>Чи знаходитесь ви під загрозою законних дій з боку колекторів? </li>
+                    </ul>
+
+                    <p>Будь-яке «так» на будь-яке з цих питань це знак того, що ви повинні зробити боргові виплати своїм найвищим пріоритетом. </p>
+                </div>
+            </div><br>
+            <p class="pagesummary">Відповіді на ці прості запитання допоможуть оцінити боргове навантаження</p>
+            <h3>Тест містить десять запитань. Обирайте відповідь та отримуйте результат. Загальна оцінка - по завершенню теста.</h3>
+            <div class="box fill grey" id="quiz-container" style="padding:0rem 1rem;">
+                <!-- QUESTION 1 -->
+                <div class="qquestion" id="q1">
+                    <h3>Чи зростає частка від доходу, що йде на виплату боргів?</h3>
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                </div>
+                <!-- QUESTION 2 -->
+                <div class="qquestion" id="q2">
+                    <h3>Чи відмовляли вам у отриманні кредиту?</h3>
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                </div>
+                <!-- QUESTION 3 -->
+                <div class="qquestion" id="q3">
+                    <h3>Чи близько ви від ліміту ваших кредитних ліній?</h3>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                    <!-- feedback -->
+                </div>
+                <!-- QUESTION 4 -->
+                <div class="qquestion" id="q4">
+                    <h3>Чи здійснюєте ви тільки мінімальні платежі за вашою відновлювальною кредитною лінією за кредитною карткою?
+                        </>
+                        <!-- answers -->
+                        <ul>
+                            <li class="qanswer nikoly"> ТАК</li>
+                            <li class="qanswer inkoly"> НІ</li>
+                        </ul>
+                        <!-- feedback -->
+                </div>
+                <!-- QUESTION 5 -->
+                <div class="qquestion" id="q5">
+                    <h3>Чи часто ви запізнюєтесь із оплатою рахунків?</p>
+                        <!-- answers -->
+                        <ul>
+                            <li class="qanswer nikoly"> ТАК</li>
+                            <li class="qanswer inkoly"> НІ</li>
+                        </ul>
+                        <!-- feedback -->
+                </div>
+                <!-- QUESTION 6 -->
+                <div class="qquestion" id="q6">
+                    <h3>Чи сплачуєте ви свої рахунки грошима, що призначені на щось інше?</h3>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                    <!-- feedback -->
+                </div>
+                <!-- QUESTION 7 -->
+                <div class="qquestion" id="q7">
+                    <h3>Чи використовуєте ви кредит для сплати за речі, що раніше купували за готівку?
+                    </h3>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                    <!-- feedback -->
+                </div>
+                <!-- QUESTION 8 -->
+                <div class="qquestion" id="q8">
+                    <h3>Якщо ви втратили роботу, чи постанете ви перед миттєвими фінансовими труднощами?</p>
+                        <!-- answers -->
+                        <ul>
+                            <li class="qanswer nikoly"> ТАК</li>
+                            <li class="qanswer inkoly"> НІ</li>
+                        </ul>
+                        <!-- feedback -->
+                </div>
+                <!-- QUESTION 9 -->
+                <div class="qquestion" id="q9">
+                    <h3>Чи маєте сумнів в тому, скільки ви заборгували?</h3>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                </div>
+                <!-- QUESTION 10 -->
+                <div class="qquestion" id="q10">
+                    <h3>Чи знаходитесь ви під загрозою законних дій з боку колекторів?</h3>
+                    <!-- answers -->
+                    <ul>
+                        <li class="qanswer nikoly"> ТАК</li>
+                        <li class="qanswer inkoly"> НІ</li>
+                    </ul>
+                </div>
+                <!-- RESULTS -->
+                <div class="qresults" id="qresults">
+                    <p style="text-align: center; margin-top: 2rem; font-size: 1.0em; font-weight: bold;">
+                        Вітаємо з закінченням тесту!<br /> Ваша загальна оцінка <span class="qscore">&nbsp;</span><br />
+                        <p class="pagesummary" style="text-align: center;">Висновки за результатами тесту:</p>
+                        <p class="total nikoly" style="text-align: center; font-size: 18px; color: #cc0000">Ви маєте зробити сплату боргів своїм найвищим пріоритетом.</p>
+                        <p class="total inkoly" style="text-align: center; font-size: 18px; color: #538cc6">Ви маєте добру нагоду ефективного управління своїми боргами.</p>
+                </div>
+            </div>
+            <aside class="upnext">
+                <div>
+                    <h2>&nbsp;Інші розділи</h2>
+                    <ul>
+                        <li class="clickable" title="Визначення пріоритетів">
+                            <a href="/krok_10.html">
+                                <h3>Крок 10 </h3>
+                                <p>Визначення пріоритетів</p>
+                                <p>1 відео,&nbsp; 4 хв. 04 сек</p>
+                            </a>
+                        </li>
+                        <li class="clickableback" title="Стартова позиція">
+                            <a href="/krok_8.html" style="text-align:right;padding-right:2rem">
+                                <h3>Крок 8</h3>
+                                <p>Визначення стартової позиції </p>
+                                <p>2 відео,&nbsp; 6 хв. 01 сек</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="accordianRow">
+                <div class="accordianTitle">
+                    <h2>
+                        <a id="faq"><i class="material-icons" style="color: #0047f5; font-size:18px;margin-top:5px">announcement</i></a>&nbsp; Уточнення
+                    </h2>
+                </div>
+                <div class="accordianRowContent">
+                    <p>Будь-яке посилання на конкретну компанію, комерційний продукт, процес чи послугу не є і не передбачає схвалення або рекомендацію. </p>
+                    <p>Ми робимо все можливе, щоб інформація на цих курсах була актуальною, але з часом нові матеріали, а також законодавчі та нормативні зміни можуть зробити цей матеріал неактуальним.</p>
+                    <p> Якщо ви виявите неточну інформацію, зв'яжіться з нами.</p>
+                </div>
+            </div><br>
+        </div>
+    </main>
+    <footer>
+        <div class="brandms">
+            <ul>
+                <li>
+                    <span style="font-size: 15px;">mail@vlasnifinansy.info&nbsp;</span>
+                    <span><i class='far fa-copyright'></i> 2023</span>
+                </li>
+                <li style="display:inline-block;">
+                    <a href="/" id="headerLogo">home></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            var error = 'Будь ласка, оберіть варіант відповіді і рухайтесь далі';
+            var qname = $("title").html();
+            qname = $.trim(qname);
+            qname = qname.substr(0, qname.search('[\|]') - 1);
+            var questions = $(".qquestion").length;
+            $(".qnum-questions").text(questions);
+            var value = 0;
+            $(".qquestion").each(function(i) {
+                i = i + 1;
+                $("#q" + i).prepend('<h2 class="article-title">Питання ' + i + ' з ' + questions + ':</h2>');
+                if (i !== 1) {
+                    $("#q" + i).append('<button type="button" class="qprevious" name="q' + parseInt(i - 1) + '">Назад</button>');
+                }
+                if (i < questions) {
+                    $("#q" + i).append('<button type="button" style="float:right"  class="qnext" name="q' + parseInt(i + 1) + '">Далі</button>');
+                }
+                if (i === questions) {
+                    $("#q" + i).append('<button type="button" style="float:right"  class="qnext" name="qresults">Результат</button>');
+                }
+                $("#q" + i + " li").each(function(x) {
+                    x = x + 1;
+                    value = $(this).children('.answer-value').text();
+                    //set default values
+                    if (value === '') {
+                        if ($(this).hasClass("nikoly")) {
+                            value = 1;
+                        } else {
+                            value = 0;
+                        }
+                    }
+                    $(this).attr("id", 'q' + i + 'a' + x);
+                    $(this).prepend('<input type="radio" name="q' + i + '" value="' + value + '" />');
+                });
+            });
+
+            var score;
+            var allAnswered;
+            var question;
+            $(".qanswer").on("click", function(e) {
+                score = 0;
+                allAnswered = true;
+                question = $(this).parents("div:first").attr('id');
+                var answer = 0;
+                $(".error").text('');
+                $("#" + question + " li").css('font-weight', 'normal');
+                $("#" + this.id).css('font-weight', 'bold');
+                $("#" + this.id + " input").attr('checked', true);
+                //$('input[name='+question+']').attr('disabled', true);
+                $(".qquestion").each(function(i) {
+                    i = i + 1;
+                    if ($("input:radio[name=q" + i + "]:checked").val() == "1") {
+                        $("#q" + i + " .qfeedback").hide();
+                        $("#q" + i + " .correct").show();
+                    }
+                    if ($("input:radio[name=q" + i + "]:checked").val() == "0") {
+                        $("#q" + i + " .qfeedback").hide();
+                        $("#q" + i + " .incorrect").show();
+                    }
+                    answer = parseInt($("input:radio[name=q" + i + "]:checked").val());
+                    if (isNaN(answer)) {
+                        answer = 0;
+                        allAnswered = false;
+                    }
+                    score = score + answer;
+                });
+                $(".qscore").text(score + " з 10 балів");
+                if (score >= 1) {
+                    $(" .total").hide();
+                    $(" .nikoly").show();
+                } else {
+                    $(" .total").hide();
+                    $(" .inkoly").show();
+                }
+            });
+
+            $("#qresults").append('<button type="button"  class="qprevious" name="q' + questions + '">Назад</button>');
+            $("#qresults").append('<button type="button" style="float:right"  class="start-over">Спочатку</button>');
+
+            $(".qnext, .qprevious").on("click", function() {
+                question = $(this).parents("div:first").attr('id');
+                if ($(this).hasClass('qnext') && $("input:radio[name=" + question + "]:checked").val() == undefined) {
+                    $(".error").css('background-color', '#29a3a3')
+                    $(".error").text(error);
+                    $(".error").fadeToggle(2000);
+                    $(".error").fadeOut(5000);
+                    return false;
+                };
+                var show = $(this).attr("name");
+                $("#qresults").hide();
+                $(".qquestion").hide();
+                $("#" + show).show();
+                if (allAnswered) {
+                    _gaq.push(['_trackEvent', 'Quiz - In Page', 'Completed', qname, score]);
+                }
+            });
+
+            $(".start-over").on("click", function() {
+                $("input:radio").removeAttr('disabled');
+                $(".qfeedback").hide();
+                $(".qanswer").css('font-weight', 'normal');
+                $("input:radio").attr('checked', false);
+                $(".qquestion").hide();
+                $(".qresults").hide();
+                $("#q1").show();
+                $(".response").hide();
+                $("#response0").show();
+                score = 0;
+            });
+
+            $("#quiz-container").append('<p class="error">&nbsp;</p>');
+            $('.qanswer').attr('onclick', ''); // hack for ios
+
+            $(".qanswer").on("click", function(e) {
+                if (allAnswered) {
+                    var responseValue;
+                    $(".qresponse").each(function(i) {
+                        i = i + 1;
+                        responseValue = parseInt($(this).children('.response-value').text());
+                        if (isNaN(responseValue)) {
+                            responseValue = 0;
+                        }
+                        if (score >= responseValue) {
+                            $(".qresponse").hide();
+                            $("#" + this.id).show();
+                        }
+                    });
+                }
+            });
+
+        });
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordianTitle");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

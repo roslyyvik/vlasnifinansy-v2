@@ -1,0 +1,18 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-style="normal" font-weight="normal" transform="matrix(5.672756355491613,0,0,5.532796632982186,-1188.721442170783,-1263.49415813028) " xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_1" y="287" x="210.82372" stroke-width="0" fill="#060f5e">vlasnifinansy</text>
+  <text stroke="null" transform="matrix(3.6664171284626463,0,0,3.5937056022993383,-1045.801651387259,-942.2746114426446) " xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_2" y="374" x="449.70564" stroke-width="0" fill="#172ded">.info</text>
+  <ellipse stroke="null" ry="10.5" rx="274.5" id="svg_4" cy="351.5" cx="314.5" stroke-opacity="null" stroke-width="1.5" fill="#1eedd1"/>
+  <path id="svg_5" d="m78.90065,20.57246l6.06563,-0.63624l-6.06563,-0.63624l3.46682,-0.3636l9.53319,0.99984l-9.53319,1.00016" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#1eedd1"/>
+ </g>
+</svg>
