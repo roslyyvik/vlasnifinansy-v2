@@ -16,10 +16,34 @@
     <link rel="stylesheet" href="css/budget.css" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style1.css">
-
-    <script src="js/asic.js"></script>
+    <script>
+        jQuery.cookie = function(a, e, o) {
+        if (void 0 === e) {
+            var t = null;
+            if (document.cookie && "" !== document.cookie)
+                for (var n = document.cookie.split(";"), l = 0; l < n.length; l++) {
+                    var s = jQuery.trim(n[l]);
+                    if (s.substring(0, a.length + 1) === a + "=") {
+                        t = decodeURIComponent(s.substring(a.length + 1));
+                        break
+                    }
+                }
+            return t;
+        }
+        o = o || {},
+            null === e && (e = "", o.expires = -1);
+        var r = "";
+        if (o.expires && ("number" == typeof o.expires || o.expires.toUTCString)) {
+            var c;
+            "number" == typeof o.expires ? (c = new Date).setTime(c.getTime() + 24 * o.expires * 60 * 60 * 1e3) : c = o.expires, r = "; expires=" + c.toUTCString()
+        }
+        var i = o.path ? "; path=" + o.path : "",
+            u = o.domain ? "; domain=" + o.domain : "",
+            d = o.secure ? "; secure" : "";
+        document.cookie = [a, "=", encodeURIComponent(e), r, i, u, d].join("")
+    };
+    </script>
     <script src="js/budget.js"></script>
-
     <title>Сімейний бюджет</title>
     <style>       
         .container {
@@ -353,7 +377,7 @@
                 </li>
             </ul>
         </div>
-    </footer>
+    </footer>    
     <script>
         var acc = document.getElementsByClassName("accordianTitle");
         var i;
