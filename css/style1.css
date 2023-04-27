@@ -40,11 +40,6 @@
     background-position-x: 30%;
 }
 
-#hp-tabs #grow-my-wealth .tab-content li:last-child a {
-    background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url(https://static.moneysmart.gov.au/nextgen/img/grow-my-wealth.jpg) 100% center/cover no-repeat;
-    background-color: #e0e4e5;
-}
-
 #hp-tabs #video-resources .tab-content li:last-child a {
     background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url("/assets/Media.png") 100% center/cover no-repeat;
     background-color: #8f7a79;
@@ -478,9 +473,7 @@
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/calculator2.png") 100% center/cover no-repeat;
         background-position-x: 30%;
     }
-    #hp-tabs #grow-my-wealth .tab-content li:last-child a {
-        background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url(https://static.moneysmart.gov.au/nextgen/img/grow-my-wealth.jpg) 100% center/cover no-repeat;
-    }
+    
     #hp-tabs #video-resources .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/Media.png") 100% center/cover no-repeat;
     }
