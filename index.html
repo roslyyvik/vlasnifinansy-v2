@@ -18,120 +18,110 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/style1.css">
 
-  
-  <style>
-    /* STARTER PACK SLIDES */
+<style>
 
-    .loading #starter-pack .slideshow {
-        display: none;
-    }
+/* STARTER PACK SLIDES */
+.loading #starter-pack .slideshow {
+  display: none; }
 
+.loaded #starter-pack .slideshow {
+  display: flex; }
+  @media (pointer: coarse) {
     .loaded #starter-pack .slideshow {
-        display: flex;
-    }
+      overflow: hidden;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; } }
 
-    @media (pointer: coarse) {
-        .loaded #starter-pack .slideshow {
-            overflow: hidden;
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
+#starter-pack {
+  display: flex;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: #F3F3F3;
+  /*
+  // Bring up bottom nav on last slide when clicked
+  &[data-current-slide='7'] {
+    animation: none;
+    transition: height .4s ease-in .5s;
+    height: calc(var(--vh, 1vh) * 70);
+    @include hover-supported() {
+      height: calc(var(--vh, 1vh) * 100);
     }
+  }
 
-    #starter-pack {
-        display: flex;
-        height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
-        background-color: #F3F3F3;
-    }
+  // Bring up bottom nav on last slide when automatically scrolled to
+  animation-name: move-nav-up;
+  animation-duration: .4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 26s;
+  @include hover-supported() {
+    animation-name: none;
+  }
 
-    #starter-pack .nowrap {
-        white-space: nowrap;
-    }
-
-    #starter-pack #slide-progress-bar {
-        height: 0.3rem;
-        width: 0rem;
-        background-color: #0047F5;
-        top: 4.5rem;
-        position: absolute;
-        z-index: 4;
-        left: 0;
-        animation-duration: 6s;
-        animation-name: none;
-        animation-timing-function: linear;
-        animation-iteration-count: 3;
-    }
-
+  &[data-current-slide]:not([data-current-slide='7']) {
+    animation: none;
+    transition: none;
+    height: calc(var(--vh, 1vh) * 100) !important;
+  }
+ */ }
+  #starter-pack .nowrap {
+    white-space: nowrap; }
+  #starter-pack #slide-progress-bar {
+    height: 0.3rem;
+    width: 0rem;
+    background-color: #0047F5;
+    top: 4.5rem;
+    position: absolute;
+    z-index: 7;
+    left: 0;
+    animation-duration: 6s;
+    animation-name: none;
+    animation-timing-function: linear;
+    animation-iteration-count: 6; }
     #starter-pack #slide-progress-bar.play-progress-bar {
-        animation-name: slide-progress-bar;
-    }
-
-    #starter-pack #slideNav {
-        position: absolute;
-        bottom: .5rem;
-        right: 2rem;
-        z-index: 4;
-    }
-
+      animation-name: slide-progress-bar; }
+  #starter-pack #slideNav {
+    position: absolute;
+    bottom: .5rem;
+    right: 2rem;
+    z-index: 7; }
     #starter-pack #slideNav button {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-        margin-right: 4px;
-        background-color: transparent;
-        border: 1px solid #2834b4;
-        cursor: pointer;
-        padding: 0;
-        border-radius: 0;
-        min-width: auto;
-        box-sizing: content-box;
-    }
-
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+      background-color: transparent;
+      border: 1px solid #2834b4;
+      cursor: pointer;
+      padding: 0;
+      border-radius: 0;
+      min-width: auto;
+      box-sizing: content-box; }
     #starter-pack #slideNav button:nth-child(1) span {
-        animation-name: slide-progress-first !important;
-    }
-
+      animation-delay: 0s; }
     #starter-pack #slideNav button:nth-child(2) span {
-        animation-delay: 4s;
-    }
-
+      animation-delay: 4s; }
     #starter-pack #slideNav button:nth-child(3) span {
-        animation-delay: 8s;
-    }
-
+      animation-delay: 8s; }
     #starter-pack #slideNav button:nth-child(4) span {
-        animation-delay: 12s;
-    }
-
+      animation-delay: 12s; }
     #starter-pack #slideNav button:nth-child(5) span {
-        animation-delay: 16s;
-    }
-
+      animation-delay: 16s; }
     #starter-pack #slideNav button:nth-child(6) span {
-        animation-delay: 20s;
-    }
-
+      animation-delay: 20s; }
+    #starter-pack #slideNav button:nth-child(7) span {
+      animation-delay: 24s; }
     #starter-pack #slideNav .snav {
-        position: relative;
-    }
-
-    #starter-pack #slideNav .snav.selected,
-    #starter-pack #slideNav .snav.unselected {
-        animation: none;
-    }
-
-    #starter-pack #slideNav .snav.selected {
-        background-color: #42BFC7;
-    }
-
-    #starter-pack #slideNav .snav.unselected {
-        background-color: transparent !important;
-    }
-
-    #starter-pack #slideNav .snav .slide-progress {
-        animation-duration: 16s;
+      position: relative; }
+      #starter-pack #slideNav .snav.selected, #starter-pack #slideNav .snav.unselected {
+        animation: none; }
+      #starter-pack #slideNav .snav.selected {
+        background-color: #42BFC7; }
+      #starter-pack #slideNav .snav.unselected {
+        background-color: transparent !important; }
+      #starter-pack #slideNav .snav .slide-progress {
+        animation-duration: 3s;
         animation-iteration-count: 1;
         animation-name: slide-progress;
         animation-play-state: paused;
@@ -146,296 +136,170 @@
         width: 18px;
         height: 18px;
         background-color: #42BFC7;
-        pointer-events: none;
-    }
-
-    #starter-pack #slideNav .snav .slide-progress.selected,
-    #starter-pack #slideNav .snav .slide-progress.unselected {
-        animation: none !important;
-    }
-
+        pointer-events: none; }
+        #starter-pack #slideNav .snav .slide-progress.selected, #starter-pack #slideNav .snav .slide-progress.unselected {
+          animation: none !important; }
     @media (pointer: coarse) {
-        #starter-pack #slideNav {
-            display: none;
-        }
-    }
-
-    #starter-pack #btnPausePlay {
-        display: none;
-        position: absolute;
-        top: 5.5rem;
-        right: 1.5rem;
-        width: 3rem;
-        z-index: 1;
-    }
-
-    #starter-pack .slide {
-        animation-duration: 16s;
-        animation-iteration-count: 1;
-        animation-name: fade-slide;
-        animation-play-state: paused;
-        animation-fill-mode: forwards;
-    }
-
+      #starter-pack #slideNav {
+        display: none; } }
+  #starter-pack .slide {
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-name: fade-slide;
+    animation-play-state: paused;
+    animation-fill-mode: forwards; }
     @media (pointer: coarse) {
-        #starter-pack .slide {
-            animation-name: none;
-        }
-    }
-
+      #starter-pack .slide {
+        animation-name: none; } }
     #starter-pack .slide h2 {
-        line-height: 1.1em;
-        animation-duration: 16s;
-        animation-iteration-count: 1;
-        animation-play-state: paused;
-        animation-fill-mode: forwards;
-    }
-
-    @media (pointer: coarse) {
-        #starter-pack .slide h2 {
-            animation-name: none;
-        }
-    }
-
-    #starter-pack .slide h3 {
-        animation-duration: 16s;
-        animation-iteration-count: 1;
-        animation-play-state: paused;
-        animation-fill-mode: forwards;
-    }
-
-    @media (pointer: coarse) {
-        #starter-pack .slide h3 {
-            animation-name: none;
-        }
-    }
-
+      line-height: 1.1em; }
     #starter-pack .slide a {
-        width: 100%;
-        text-decoration: none;
-        color: white;
-    }
-
-    #starter-pack .slide a:hover {
-        text-decoration: underline;
-    }
-
-    #starter-pack .playSlide {
-        animation-play-state: running !important;
-    }
-
+      width: 100%;
+      text-decoration: none;
+      color: white; }
+      #starter-pack .slide a:hover {
+        text-decoration: underline; }
+  #starter-pack .playSlide {
+    animation-play-state: running !important; }
     #starter-pack .playSlide h2 {
-        animation-play-state: running;
-    }
-
+      animation-play-state: running; }
     #starter-pack .playSlide h3 {
-        animation-play-state: running;
-    }
-
+      animation-play-state: running; }
     @media (pointer: coarse) {
-        #starter-pack .playSlide {
-            animation-name: none !important;
-        }
+      #starter-pack .playSlide {
+        animation-name: none !important; }
         #starter-pack .playSlide h2 {
-            animation-name: none;
-        }
+          animation-name: none; }
         #starter-pack .playSlide h3 {
-            animation-name: none;
-        }
-    }
-
-    #starter-pack #slide-1 {
-        z-index: 3;
-        background-color: #ACE8FA;
-    }
-
+          animation-name: none; } }
+  #starter-pack #slide-1 {
+    z-index: 3;
+    background-color: #ACE8FA;
+    animation-delay: 0s; }
     @media (orientation: portrait) {
-        #starter-pack #slide-1 {
-            background-image: url("/assets/financial-literacy_portraite.png");
-            background-position-x: 25%;
-            background-position-y: 90%;
-        }
-    }
-
+      #starter-pack #slide-1 {
+        background-image: url("/assets/financial-literacy_portraite.png"); } }
     @media (orientation: landscape) {
-        #starter-pack #slide-1 {
-            background-image: url("/assets/financial-literacy.jpg");
-        }
-    }
-
-    #starter-pack #slide-2 {
-        z-index: 2;
-        background-color: #ACE8FA;
-        animation-delay: 4s;
-    }
-
+      #starter-pack #slide-1 {
+        background-image: url("/assets/financial-literacy.jpg"); } }
+  #starter-pack #slide-2 {
+    z-index: 2;
+    background-color: #ACE8FA;
+    animation-delay: 4s; }
     @media (orientation: portrait) {
-        #starter-pack #slide-2 {
-            background-image: url("/assets/psychology.png");
-            background-position-x: 30%;
-        }
-    }
-
+      #starter-pack #slide-2 {
+        background-image: url("/assets/psychology.png"); } }
     @media (orientation: landscape) {
-        #starter-pack #slide-2 {
-            background-image: url("/assets/psychology.png");
-        }
-    }
-
-    #starter-pack #slide-2 h2 {
-        animation-delay: 4s;
-    }
-
-    #starter-pack #slide-2 h3 {
-        animation-delay: 4s;
-    }
-
-    #starter-pack #slide-3 {
-        z-index: 1;
-        background-color: #ACE8FA;
+      #starter-pack #slide-2 {
+        background-image: url("/assets/psychology.png"); } }
+  #starter-pack #slide-3 {
+    z-index: 1;
+    background-color: #ACE8FA;
+    animation-delay: 8s; }
+    @media (orientation: portrait) {
+      #starter-pack #slide-3 {
         background-image: url("/assets/calculator.png");
-        animation-delay: 8s;
-    }
-
-    #starter-pack #slide-3 h2 {
-        animation-delay: 8s;
-    }
-
-    #starter-pack #slide-3 h3 {
-        animation-delay: 8s;
-    }
-
-    #starter-pack #slide-blank {
-        animation-name: fade-slide-last;
-        background-image: none;
-        animation-delay: 11s;
-        opacity: 0;
-    }
-
+        background-position-y: -6rem; } }
+    @media (orientation: landscape) {
+      #starter-pack #slide-3 {
+        background-image: url("/assets/calculator.png"); } }
+  #starter-pack #slide-start {
+    animation-name: fade-slide-last;
+    background-image: linear-gradient(45deg, #0047f5, #0047f5 50%, #42bfc7);
+    background-position: 15% 0;
+    position: relative;
+    margin: 4.5rem 0 0;
+    /* animation-delay: 3s;  */
+  }
     @media (pointer: coarse) {
-        #starter-pack #slide-blank {
-            opacity: 1;
-            animation-name: none;
-        }
-    }
-
-    #starter-pack #slide-blank a {
-        display: inline;
-        width: auto;
-    }
-
-    #starter-pack #slide-blank h2 {
-        animation-delay: 11s;
-    }
-
-    #starter-pack #slide-blank h3 {
-        animation-name: fade-in-text-last2;
-        animation-delay: 11s;
-        display: inline;
-        margin-left: 0;
-    }
-
+      #starter-pack #slide-start {
+        opacity: 1;
+        animation-name: none; } }
+    #starter-pack #slide-start a {
+      display: inline;
+      width: auto; }
+    #starter-pack #slide-start h3 {
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-duration: 4s;
+      animation-name: fade-start-here-text;
+      animation-delay: 15s;
+      display: inline;
+      margin-left: 0;
+      opacity: 0; }
+      @media (pointer: coarse) {
+        #starter-pack #slide-start h3 {
+          opacity: 1;
+          animation-name: none; } }
+    #starter-pack #slide-start.showSlide {
+      animation-name: none; }
+      #starter-pack #slide-start.showSlide h3 {
+        opacity: 1;
+        animation-name: none; }
+  #starter-pack .slideshow {
+    display: flex;
+    position: relative;
+    width: 100%; }
+  #starter-pack .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: flex;
+    width: 100%;
+    position: absolute; }
     @media (pointer: coarse) {
-        #starter-pack #slide-blank h3 {
-            opacity: 1;
-            animation-name: none;
-        }
-    }
-
-    #starter-pack #slide-blank.showSlide {
-        animation-name: none;
-    }
-
-    #starter-pack #slide-blank.showSlide h3 {
-        animation-name: none;
-    }
-
-    #starter-pack .slideshow {
-        display: flex;
+      #starter-pack .slide {
+        flex-shrink: 0;
         position: relative;
-        width: 100%;
-    }
-
-    #starter-pack .slide {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        display: flex;
-        width: 100%;
-        position: absolute;
-    }
-
-    @media (pointer: coarse) {
-        #starter-pack .slide {
-            flex-shrink: 0;
-            position: relative;
-            scroll-snap-align: center;
-            scroll-snap-stop: always;
-        }
-    }
-
+        scroll-snap-align: center;
+        scroll-snap-stop: always; } }
     #starter-pack .slide .innerSlide {
-        display: block;
-        width: 100%;
-        height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
-        text-decoration: none;
-    }
-
+      display: block;
+      width: 100%;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      text-decoration: none; }
     #starter-pack .slide .headingBlock {
-        background-color: #0047F5;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        padding: 2rem 0 2rem 0;
-    }
-
-    @media (pointer: coarse) {
+      background-color: #0047F5;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      padding: 2rem 0 2rem 0; }
+      @media (pointer: coarse) {
         #starter-pack .slide .headingBlock {
-            padding-bottom: 1rem;
-        }
-    }
-
+          padding-bottom: 1rem; } }
     #starter-pack .slide h2 {
-        margin: 0 .25rem 0 1rem;
-        color: #FFFFFF;
-        font-size: 2.3rem;
-    }
-
-    @media (pointer: coarse) {
+      margin: 0 .25rem 0 1rem;
+      color: #FFFFFF;
+      font-size: 2.3rem; }
+      @media (min-width: 60rem) {
         #starter-pack .slide h2 {
-            opacity: 1;
-        }
-    }
-
-    @media (min-width: 60rem) {
+          margin-left: 4.25rem;
+          font-size: 5vw; } }
+      @media (min-width: 84.7rem) {
         #starter-pack .slide h2 {
-            margin-left: 4.25rem;
-            font-size: 5vw;
-        }
-    }
-
-    @media (min-width: 84.7rem) {
-        #starter-pack .slide h2 {
-            font-size: 4rem;
-        }
-    }
-
+          font-size: 4rem; } }
     #starter-pack .slide h3 {
-        margin-left: 1rem;
-        position: relative;
-        color: #FFFFFF;
-        padding-left: 4.25rem;
-        margin-top: 1rem;
-    }
-
-    @media (pointer: coarse) {
-        #starter-pack .slide h3 {
-            opacity: 1;
+      margin-left: 1rem;
+      position: relative;
+      color: #FFFFFF;
+      padding-left: 4.25rem;
+      margin-top: 1rem;
+      /*
+      &.billy-arrow {
+        @include hover-supported() {
+          padding-left: 0;
+          a:before {
+            width: 2.2rem;
+            height: 2.2rem;
+            transform: rotate(90deg);
+            left: 2rem;
+            top: 2rem;
+          }
         }
-    }
-
-    #starter-pack .slide h3.arrow a:before {
+      }
+      */ }
+      #starter-pack .slide h3.arrow a:before {
         position: absolute;
         width: 3.8rem;
         height: 2.2rem;
@@ -449,224 +313,283 @@
         background-repeat: no-repeat;
         background-position: center;
         display: block;
-        border-radius: 1.5rem;
-    }
-
-    @media (min-width: 60rem) {
+        border-radius: 1.5rem; }
+      @media (min-width: 60rem) {
         #starter-pack .slide h3:not(.billy-arrow) {
-            margin-left: 4rem;
-            font-size: 3vw;
-            padding-left: 8.5vw;
-        }
-        #starter-pack .slide h3:not(.billy-arrow).arrow a:before {
+          margin-left: 4rem;
+          font-size: 3vw;
+          padding-left: 8.5vw; }
+          #starter-pack .slide h3:not(.billy-arrow).arrow a:before {
             width: 6.8vw;
             height: 3.9vw;
             top: calc(50% - 1.95vw);
-            border-radius: 1.8vw;
-        }
-    }
-
-    @media (min-width: 84.7rem) {
+            border-radius: 1.8vw; } }
+      @media (min-width: 84.7rem) {
         #starter-pack .slide h3:not(.billy-arrow) {
-            margin-left: 4rem;
-            font-size: 2.5rem;
-            padding-left: 6.8rem;
-        }
-        #starter-pack .slide h3:not(.billy-arrow).arrow a:before {
+          margin-left: 4rem;
+          font-size: 2.5rem;
+          padding-left: 6.8rem; }
+          #starter-pack .slide h3:not(.billy-arrow).arrow a:before {
             width: 5.4rem;
             height: 3.1rem;
             top: calc(50% - 1.65rem);
-            border-radius: 1.5rem;
-        }
-    }
-
-    #starter-pack .hideSlide {
-        display: none;
-    }
-
+            border-radius: 1.5rem; } }
+  #starter-pack .hideSlide {
+    display: none; }
     @media (pointer: coarse) {
-        #starter-pack .hideSlide {
-            display: flex;
-        }
-    }
-
-    #starter-pack .showSlide {
-        display: flex;
-        animation-name: none;
-    }
-
-    #starter-pack .showSlide h2,
-    #starter-pack .showSlide h3 {
-        animation-name: none;
-        opacity: 1;
-    }
-
-    #starter-pack .showSlide#slide-blank {
-        opacity: 1;
-    }
-
+      #starter-pack .hideSlide {
+        display: flex; } }
+  #starter-pack .showSlide {
+    display: flex;
+    animation-name: none; }
+    #starter-pack .showSlide h2, #starter-pack .showSlide h3 {
+      animation-name: none;
+      opacity: 1; }
+    #starter-pack .showSlide#slide-start {
+      opacity: 1; }
     #starter-pack .showSlide #billy {
-        animation: grow 1s .6s forwards, puff 10s 6s infinite;
-    }
+      animation: grow 1s .6s forwards, puff 10s 6s infinite; }
+      #starter-pack .showSlide #billy .blink {
+        animation: blinkv2 20s 2s infinite; }
+  @media (pointer: coarse) {
+    #starter-pack #billy {
+      animation: grow 1s .6s forwards, puff 10s 6s infinite; }
+      #starter-pack #billy .blink {
+        animation: blinkv2 20s 2s infinite; } }
 
-    #starter-pack .showSlide #billy .blink {
-        animation: blinkv2 20s 2s infinite;
-    }
+@keyframes slide-progress {
+  0% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1); } }
+@keyframes fade-slide {
+  0%, 74% {
+    opacity: 1;
+    width: 100%; }
+  75%, 99% {
+    width: 100%; }
+  100% {
+    opacity: 0;
+    width: 1px; } }
+@keyframes fade-slide-last {
+  0%, 100% {
+    opacity: 1; } }
+@keyframes fade-start-here-text {
+  0%, 50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes slide-progress-bar {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+@keyframes move-nav-up {
+  0% {
+    height: calc(var(--vh, 1vh) * 100); }
+  100% {
+    height: calc(var(--vh, 1vh) * 70); } }
+/* START LOGO AND TAGLINE */
+#hero2 {
+  background: none;
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  position: absolute;
+  height: 75vh;
+  top: 25vh; 
+}
 
-    @media (pointer: coarse) {
-        #starter-pack #billy {
-            animation: grow 1s .6s forwards, puff 10s 6s infinite;
-        }
-        #starter-pack #billy .blink {
-            animation: blinkv2 20s 2s infinite;
-        }
-    }
+#heroText2 {
+  display: block;
+  margin: 0 auto 0 auto;
+  max-width: 52rem;
+}
+  #heroText2 h1 {
+    color: #42BFC7;
+    font-size: 2.25rem; }
+    @media (min-width: 60rem) {
+      #heroText2 h1 {
+        font-size: 3rem; } }
+  #heroText2 p {
+    font-size: 2rem;
+    line-height: 2.25rem; }
+  #heroText2 a {
+    color: #42BFC7 !important;
+    text-decoration: none; }
+    #heroText2 a:hover {
+      text-decoration: underline; }
 
-    @keyframes slide-progress-first {
-        0% {
-            transform: scaleX(0);
-        }
-        25%,
-        100% {
-            transform: scaleX(1);
-        }
-    }
+.hint {
+  animation: hint 5s 5s 2;
+  transform: translate3d(0, 0, 0); }
 
-    @keyframes slide-progress {
-        0% {
-            transform: scaleX(0);
-        }
-        25.7%,
-        100% {
-            transform: scaleX(1);
-        }
-    }
+@keyframes hint {
+  2%, 18% {
+    transform: translate3d(-1px, 0, 0); }
+  4%, 16% {
+    transform: translate3d(2px, 0, 0); }
+  6%, 10%, 14% {
+    transform: translate3d(-2px, 0, 0); }
+  8%, 12% {
+    transform: translate3d(2px, 0, 0); }
+  20%, 100% {
+    transform: translate3d(0, 0, 0); } }
+#content {
+  max-width: 100%;
+  padding: 0; }
 
-    @keyframes fade-in-text-title {
-        0% {
-            opacity: 0;
-        }
-        4% {
-            opacity: 1;
-        }
-        23% {
-            opacity: 1;
-        }
-        25% {
-            opacity: 0;
-        }
-        98% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-        }
+/* END LOGO AND TAGLINE */
+/* Billy effects */
+#billy {
+  animation: grow 1s 15s forwards, puff 10s 30s infinite;
+  transform: scale(0);
+  position: relative;
+  transform-origin: 15% 100%;
+  width: 300px;
+  height: 147px;
+  margin: 0 auto 1.25rem auto;
+  line-height: 2.25rem; }
+  #billy img {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 60rem) {
+    #billy {
+      width: 560px;
     }
+    #billy img {
+      margin-bottom: 3rem;
+    }
+  }
 
-    @keyframes fade-in-text-subheading {
-        0% {
-            opacity: 0;
-        }
-        4% {
-            opacity: 0;
-        }
-        8% {
-            opacity: 1;
-        }
-        23% {
-            opacity: 1;
-        }
-        25% {
-            opacity: 0;
-        }
-        98% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
+  #billy .blink {
+    animation: blinkv2 20s 26s infinite;
+    opacity: 1;
+    transform-origin: 50% 50%; }
+  #billy .eye {
+    position: absolute;
+    width: 3.75%;
+    height: 6.8%;
+    background: black;
+    border-radius: 50%; }
+  #billy #left-eye {
+    left: 37.7%;
+    top: 23.5%; }
+  #billy #right-eye {
+    left: 64.7%;
+    top: 22.5%; }
+  #billy #mouth {
+    animation: smile 10s 30s infinite;
+    position: absolute;
+    left: 43%;
+    top: 58%;
+    width: 10%;
+    height: 5.4%;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 4px solid black;
+    border-top: 0;
+    transform-origin: right bottom;
+    transform: rotate(30deg) scaleX(1.3); }
+  #billy #nose {
+    position: absolute;
+    left: 46%;
+    top: 15%;
+    width: 16.3%;
+    height: 30.6%;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg id='Artwork' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41.99 78.16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231e1147;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ENose%3C/title%3E%3Cpath class='cls-1' d='M41.14,46.35C38.74,38.68,33.19,35,22,33.52,13.36,32.36,10.35,30.8,9.1,26.83a7.59,7.59,0,0,1,.5-5.64,8.84,8.84,0,0,1,5.53-4.37A20.06,20.06,0,0,1,25,16.43l2.14.37.66-7.69L26.1,8.72a22.85,22.85,0,0,0-10.49.12L12.84,0,5.73,2.21l2.88,9.24C1.51,15.54-1.56,22.87.77,30.37,3.46,39,11.54,41.1,19.87,42.11c7.62.88,11.31,3.1,12.73,7.67a8.38,8.38,0,0,1-.64,6.9,10.44,10.44,0,0,1-6.05,4.52,21,21,0,0,1-11.34.11l-2.33-.63-.58,7.9,1.51.47a25.76,25.76,0,0,0,12.84,0l2.83,9.07L36,75.93l-3-9.52C40.46,62.19,43.66,54.42,41.14,46.35Z'/%3E%3C/svg%3E"); }
 
-    @keyframes fade-slide {
-        0% {
-            opacity: 1;
-        }
-        25% {
-            opacity: 1;
-        }
-        29% {
-            opacity: 0;
-            left: 0;
-            width: 100%;
-        }
-        30% {
-            opacity: 0;
-            width: 1px;
-        }
-        96% {
-            opacity: 0;
-            width: 1px;
-        }
-        100% {
-            opacity: 0;
-            width: 1px;
-        }
-    }
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  1% {
+    opacity: 0; }
+  2% {
+    opacity: 1; }
+  15% {
+    opacity: 1; }
+  16% {
+    opacity: 0; }
+  17% {
+    opacity: 1; }
+  20% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  51% {
+    opacity: 0; }
+  52% {
+    opacity: 1; }
+  53% {
+    opacity: 0; }
+  54% {
+    opacity: 1; } }
+@keyframes blinkv2 {
+  0% {
+    transform: scaleY(1);
+    width: 3.75%; }
+  1% {
+    transform: scaleY(0.1); }
+  2% {
+    transform: scaleY(1); }
+  15% {
+    transform: scaleY(1); }
+  16% {
+    transform: scaleY(0.1); }
+  17% {
+    transform: scaleY(1); }
+  20% {
+    transform: scaleY(1); }
+  50% {
+    transform: scaleY(1); }
+  51% {
+    transform: scaleY(0.1); }
+  52% {
+    transform: scaleY(1); }
+  53% {
+    transform: scaleY(0.1); }
+  54% {
+    transform: scaleY(1); } }
+@keyframes grow {
+  0% {
+    transform: scale(0) translateZ(0); }
+  50% {
+    transform: scale(1.2) translateZ(0); }
+  100% {
+    transform: scale(1) translateZ(0); } }
+@keyframes puff {
+  0% {
+    transform-origin: center top;
+    transform: scale(1); }
+  5%,40% {
+    transform-origin: center top;
+    transform: scale(1.02); }
+  45%, 100% {
+    transform-origin: center top;
+    transform: scale(1); } }
+@keyframes smile {
+  0%,8% {
+    transform: rotate(30deg) scaleX(1.3);
+    left: 43%;
+    top: 58%;
+    border-width: 4px; }
+  12%, 32% {
+    transform: rotate(20deg) scaleX(1.5);
+    left: 40%;
+    top: 55%;
+    border-width: 3px; }
+  38%, 100% {
+    transform: rotate(30deg) scaleX(1.3);
+    left: 43%;
+    top: 58%;
+    border-width: 4px; } 
+} 
 
-    @keyframes fade-slide-last {
-        0% {
-            opacity: 0;
-        }
-        10% {
-            opacity: 1;
-        }
-        20% {
-            opacity: 1;
-        }
-        25% {
-            opacity: 1;
-        }
-        95% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade-in-text-last2 {
-        0% {
-            opacity: 0;
-        }
-        12% {
-            opacity: 0;
-        }
-        18% {
-            opacity: 1;
-        }
-        23% {
-            opacity: 1;
-        }
-        25% {
-            opacity: 1;
-        }
-        98% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes slide-progress-bar {
-        0% {
-            width: 0;
-        }
-        100% {
-            width: 100%;
-        }
-    }
 </style>
+ 
 </head>
 <body>
   <header class="pagetype-content">
@@ -910,13 +833,44 @@
                     </div>
                 </div>
             </div>
-            <div id="slideNav"><button class="snav" data-index="1"><span class="slide-progress"></span><span class="visuallyhidden">Go to slide 1 – Help if you're affected by COVID-19 starter pack</span></button> <button class="snav" data-index="2"><span class="slide-progress"></span><span class="visuallyhidden">Go to slide 2 – Dealing with natural disasters starter pack</span></button>                    <button class="snav" data-index="3"><span class="slide-progress"></span><span class="visuallyhidden">Go to slide 3 – Indigenous resources starter pack</span></button></div>
+            <div id="slide-start" class="slide playSlide">
+                <div id="hero2">
+                    <div id="heroText2">
+                        <div id="billy">
+                          <img src="/assets/growing(1).svg" alt="" />
+                          <h3 class="arrow">
+                            <a href="#get-help-with-psychology" data-index="4">
+                                До справ
+                            </a>
+                          </h3>                            
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div id="slideNav">
+                <button class="snav" data-index="1">
+                    <span class="slide-progress"></span>
+                    <!-- <span class="visuallyhidden">Go to slide 1 – Help if you're affected by COVID-19 starter pack</span> -->
+                </button> 
+                <button class="snav" data-index="2">
+                    <span class="slide-progress"></span>
+                    <!-- <span class="visuallyhidden">Go to slide 2 – Dealing with natural disasters starter pack</span> -->
+                </button>                    
+                <button class="snav" data-index="3">
+                    <span class="slide-progress"></span>
+                    <!-- <span class="visuallyhidden">Go to slide 3 – Indigenous resources starter pack</span> -->
+                </button>
+                <button class="snav" data-index="4">
+                    <span class="slide-progress"></span>
+                    <!-- <span class="visuallyhidden">Go to slide 3 – Indigenous resources starter pack</span> -->
+                </button>
+            </div>
         </div>
     </div>
     <div id="content">
         <div id="hp-tabs">
             <ul id="tabs-list">
-                <li id="get-help-with-money"><button class="tabLevel1Link"><span class="icon-container"><i class="material-icons">psychology</i></span><span class="tab-text">Фінанси і психологія</span></button>
+                <li id="get-help-with-psychology"><button class="tabLevel1Link"><span class="icon-container"><i class="material-icons">psychology</i></span><span class="tab-text">Фінанси і психологія</span></button>
                     <ul id="get-help-with-money-content" class="tab-content">
                         <li><a href="/psyhology_faktory_vplyvu.html" class="arrow">Фактори впливу <span>Що впливає на Ваші фінансові рішення</span></a> </li>
                         <li><a href="/psyhology_tsinnosty.html" class="arrow">Цілі і цінності <span>Цінності проявляються у ваших рішеннях, діях і судженнях.</span></a> </li>

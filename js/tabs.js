@@ -11,7 +11,7 @@
           } // hack for ie11
       }
 
-      var SLIDES_AUTO_PLAY = false;
+      var SLIDES_AUTO_PLAY = true;
       document.addEventListener("DOMContentLoaded", function(e) {
 
           //detect if can't support filter
