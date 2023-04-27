@@ -29,12 +29,12 @@
     background-position-x: 30%;
 }
 
-#hp-tabs #reduce-my-debt .tab-content li:last-child a {
+#hp-tabs #step-by-step .tab-content li:last-child a {
     background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url("/assets/GettyImages-1224542448_454622.jpg") 100% center/cover no-repeat;
     background-color: #44484c;
 }
 
-#hp-tabs #plan-for-the-future .tab-content li:last-child a {
+#hp-tabs #calculators-for-live .tab-content li:last-child a {
     background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url("/assets/calculator2.png") 100% center/cover no-repeat;
     background-color: #ade8f6;
     background-position-x: 30%;
@@ -45,12 +45,12 @@
     background-color: #e0e4e5;
 }
 
-#hp-tabs #tools-and-resources .tab-content li:last-child a {
+#hp-tabs #video-resources .tab-content li:last-child a {
     background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url("/assets/Media.png") 100% center/cover no-repeat;
     background-color: #8f7a79;
 }
 
-#hp-tabs #find-teaching-resources .tab-content li:last-child a {
+#hp-tabs #tests-resources .tab-content li:last-child a {
     background: linear-gradient(transparent calc(100% - 5rem), rgba(0, 2, 20, 0.7) calc(100% - 5rem)), url("/assets/currency.jpeg") 100% center/cover no-repeat;
     background-color: #ecedf1;
     background-position-x: 30%;
@@ -471,20 +471,20 @@
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/kursy1.jpg") 100% center/cover no-repeat;
         background-position-x: 30%;
     }
-    #hp-tabs #reduce-my-debt .tab-content li:last-child a {
+    #hp-tabs #step-by-step .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/GettyImages-1224542448_454622.jpg") 100% center/cover no-repeat;
     }
-    #hp-tabs #plan-for-the-future .tab-content li:last-child a {
+    #hp-tabs #calculators-for-live .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/calculator2.png") 100% center/cover no-repeat;
         background-position-x: 30%;
     }
     #hp-tabs #grow-my-wealth .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url(https://static.moneysmart.gov.au/nextgen/img/grow-my-wealth.jpg) 100% center/cover no-repeat;
     }
-    #hp-tabs #tools-and-resources .tab-content li:last-child a {
+    #hp-tabs #video-resources .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 3.5rem), rgba(0, 2, 20, 0.7) calc(100% - 3.5rem)), url("/assets/Media.png") 100% center/cover no-repeat;
     }
-    #hp-tabs #find-teaching-resources .tab-content li:last-child a {
+    #hp-tabs #tests-resources .tab-content li:last-child a {
         background: linear-gradient(transparent calc(100% - 4rem), rgba(0, 2, 20, 0.7) calc(100% - 4rem)), url("/assets/currency.jpeg") 100% center/cover no-repeat;
         background-position-x: 30%;
     }
