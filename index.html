@@ -18,7 +18,7 @@
         }
         setHeight();
         window.addEventListener('resize', setHeight);
-})();
+      })();
     </script>
   <title>Vlasni-Test</title>
 
@@ -48,33 +48,7 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   background-color: #F3F3F3;
-  /*
-  // Bring up bottom nav on last slide when clicked
-  &[data-current-slide='4'] {
-    animation: none;
-    transition: height .4s ease-in .5s;
-    height: calc(var(--vh, 1vh) * 70);
-    @include hover-supported() {
-      height: calc(var(--vh, 1vh) * 100);
-    }
-  }
-
-  // Bring up bottom nav on last slide when automatically scrolled to
-  animation-name: move-nav-up;
-  animation-duration: .4s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-  animation-delay: 26s;
-  @include hover-supported() {
-    animation-name: none;
-  }
-
-  &[data-current-slide]:not([data-current-slide='7']) {
-    animation: none;
-    transition: none;
-    height: calc(var(--vh, 1vh) * 100) !important;
-  }
- */ }
+}
   #starter-pack .nowrap {
     white-space: nowrap; }
   #starter-pack #slide-progress-bar {
