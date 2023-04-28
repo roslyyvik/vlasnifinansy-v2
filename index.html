@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--vh:10.08px;">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,11 +36,11 @@
 #starter-pack {
   display: flex;
   height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #F3F3F3;
   /*
   // Bring up bottom nav on last slide when clicked
-  &[data-current-slide='7'] {
+  &[data-current-slide='4'] {
     animation: none;
     transition: height .4s ease-in .5s;
     height: calc(var(--vh, 1vh) * 70);
@@ -279,20 +279,7 @@
       color: #FFFFFF;
       padding-left: 4.25rem;
       margin-top: 1rem;
-      /*
-      &.billy-arrow {
-        @include hover-supported() {
-          padding-left: 0;
-          a:before {
-            width: 2.2rem;
-            height: 2.2rem;
-            transform: rotate(90deg);
-            left: 2rem;
-            top: 2rem;
-          }
-        }
       }
-      */ }
       #starter-pack .slide h3.arrow a:before {
         position: absolute;
         width: 3.8rem;
@@ -343,14 +330,10 @@
       opacity: 1; }
     #starter-pack .showSlide #billy {
       animation: grow 1s .6s forwards, puff 10s 6s infinite; }
-      /* #starter-pack .showSlide #billy .blink {
-        animation: blinkv2 20s 2s infinite; } */
   @media (pointer: coarse) {
     #starter-pack #billy {
       animation: grow 1s .6s forwards, puff 10s 6s infinite; }
-      /* #starter-pack #billy .blink {
-        animation: blinkv2 20s 2s infinite; }  */
-      }
+    }
 
 @keyframes slide-progress {
   0% {
