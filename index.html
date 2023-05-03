@@ -10,7 +10,10 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script>
+    <script>
+      var vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', vh + "px");
       (function init100vh(){
         function setHeight() {
           var vh = window.innerHeight * 0.01;
@@ -19,7 +22,7 @@
         setHeight();
         window.addEventListener('resize', setHeight);
       })();
-    </script> -->
+    </script>
   <title>Vlasni-Test</title>
 
   <link rel="stylesheet" href="./assets/favicon.ico">

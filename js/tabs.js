@@ -180,7 +180,7 @@
               }
           }
 
-          updateHeight();
+        //   updateHeight();
 
           //stop scrolling animation if user touches slide
           slideshowContainer.addEventListener('touchstart', function(event) {
@@ -230,25 +230,25 @@
       /* https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
       // Set css variable to be screen height to display full screen sections
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-      var vh = window.innerHeight * 0.01;
+    //   var vh = window.innerHeight * 0.01;
       // Then we set the value in the --vh custom property to the root of the document
-      document.documentElement.style.setProperty('--vh', vh + "px");
+    //   document.documentElement.style.setProperty('--vh', vh + "px");
 
-      function updateHeight() {
-          var vh = window.innerHeight * 0.01;
-          document.documentElement.style.setProperty('--vh', vh + "px");
-      }
+    //   function updateHeight() {
+    //       var vh = window.innerHeight * 0.01;
+    //       document.documentElement.style.setProperty('--vh', vh + "px");
+    //   }
 
-      window.onorientationchange = debounce(function() {
-          updateHeight();
-      }, 200);
+    //   window.onorientationchange = debounce(function() {
+    //       updateHeight();
+    //   }, 200);
 
-      window.onresize = debounce(function(event) {
-          //don't update if android or ios
-          if (OPERATING_SYSTEM == "" || OPERATING_SYSTEM == "unknown") {
-              updateHeight();
-          }
-      }, 200);
+    //   window.onresize = debounce(function(event) {
+    //       //don't update if android or ios
+    //       if (OPERATING_SYSTEM == "" || OPERATING_SYSTEM == "unknown") {
+    //           updateHeight();
+    //       }
+    //   }, 200);
 
       // Credit David Walsh (https://davidwalsh.name/javascript-debounce-function)
       // Returns a function, that, as long as it continues to be invoked, will not
