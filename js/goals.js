@@ -275,7 +275,7 @@ function DrawCalculator() { // CALCULATOR FRAMEWORK HTML
         '<hr class="col100 hr-break"><p class="nper">' +
         '<label for="nper">Я хочу витратити на це:</label>' +
         '<label for="nperCbx" class="offScreen">Я хочу досягти цього якомога швидше</label><input id="nperCbx" type="checkbox"/> ' +
-        '<label class="chkLabel" for="nperCbx">Якнайшвидше</label><span class="or">АБО</span><input id="nper" inputmode="numeric" type="text" class="int empty" /></p>' +
+        '<label class="chkLabel" for="nperCbx">Як найшвидше</label><span class="or">АБО</span><input id="nper" inputmode="numeric" type="text" class="int empty" /></p>' +
         '<p id="nperFreqP"><label for="nperFreq">&nbsp;</label><select id="nperFreq">' +
         '<option value="1" selected="selected">Років</option><option value="12">Місяців</option></select>' +
         '</p><hr class="col100 hr-break" >' +
