@@ -1,2 +1,3 @@
 User-agent:*
 Allow: /
+Sitemap: https://vlasnifinancy.com/sitemap.xml
