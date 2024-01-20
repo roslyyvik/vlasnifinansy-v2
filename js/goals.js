@@ -31,7 +31,7 @@ $(document).ready(function() {
         if (this.id == 'nper' && this.value > 60) { $(this).val(60); } // set a max nper of 60
         if (this.id == 'pmt' && this.value === 0) { $(this).val(1); } // set a min pmt of 1
         if (this.id == 'rate' && this.value > 20) { $(this).val(20); } // set a max rate of 10%
-        if ($(this).hasClass('dollars')) { $(this).val('$' + formatNumber($(this).val(), 0, 0, true)); }
+        if ($(this).hasClass('dollars')) { $(this).val('₴' + formatNumber($(this).val(), 0, 0, true)); }
         if ($(this).hasClass('interest')) { $(this).val(formatNumber($(this).val(), 0, 2, true) + '%'); }
         if ($(this).hasClass('years')) { $(this).val(parseInt($(this).val()) + ' years'); }
         calculate();
