@@ -23,6 +23,36 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="css/style1.css"> -->
     <title>Соціальні фактори | Власні Фінанси</title>
+    <style>
+        .container {
+            margin: 50px auto;
+            max-width: 640px;
+        }
+        
+        .accord:after {
+            content: '\002B';
+            color: #e9ebf0;
+            font-weight: bold;
+            justify-content: flex-end;
+            /* margin: 1rem; */
+        }
+        
+        .active:not(.mainNavLevel1) {
+            background-color: #F3F3F3;
+            border-bottom: 2px solid #ff9100;
+        }
+        
+        .active:not(.mainNavLevel1):after {
+            content: "\2212";
+        }
+        
+        .accordpanel {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+    </style>
 </head>
 <body>
     <header class="pagetype-content">
