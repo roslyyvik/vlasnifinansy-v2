@@ -10,6 +10,14 @@
 
     gtag('config', 'G-227CNCJHX9');
   </script>
+  <script>
+    const worker = new Worker('/js/worker.js');
+
+worker.postMessage([40, 2]);
+worker.addEventListener('message', event => {
+  console.log(event.data);
+});
+  </script>
   <meta charset="UTF-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
