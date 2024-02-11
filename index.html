@@ -718,8 +718,9 @@ worker.addEventListener('message', event => {
                 <div id="hero2">
                     <div id="heroText2">
                         <div id="billy">
-                          <img src="/assets/growing(1).svg" alt="Власні фінанси" width="826.06346" height="335.01004" loading="lazy"
-                          decoding="async"/>
+                          <!-- loading="lazy" decoding="async"/> -->
+                          <img data-src="/assets/growing(1).svg" alt="Власні фінанси" width="826.06346" height="335.01004" class="lazyload"
+                          />
                           <h3 class="arrow">
                             <a href="#get-help-with-psychology" data-index="4">
                                 <small>До справ</small>
@@ -839,7 +840,7 @@ worker.addEventListener('message', event => {
     }
   });
 </script>
-<!-- <script src="/js/lazysizes.min.js" async></script> -->
+<script src="/js/lazysizes.min.js" async></script>
   <!-- <script src="/js/tabs.js"></script> -->
   <script defer src="/js/script.js"></script>
 </body>
