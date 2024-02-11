@@ -195,7 +195,7 @@ worker.addEventListener('message', event => {
     animation-delay: 4s; }
     @media (orientation: portrait) {
       #starter-pack #slide-2 {
-        background-image: url("/assets/psychology.webp"); } }
+        background-size: cover; } }
     @media (orientation: landscape) {
       #starter-pack #slide-2 {
         background-image: url("/assets/psychology.webp"); } }
@@ -205,7 +205,7 @@ worker.addEventListener('message', event => {
     animation-delay: 8s; }
     @media (orientation: portrait) {
       #starter-pack #slide-3 {
-        background-image: url("/assets/calculator.webp");
+        background-size: cover;
         background-position-y: -6rem; } }
     @media (orientation: landscape) {
       #starter-pack #slide-3 {
@@ -698,17 +698,17 @@ worker.addEventListener('message', event => {
                     </div>
                 </div>
             </div>
-            <div id="slide-2" class="slide">
+            <div id="slide-2" class="slide" data-bgimage="/assets/psychology.webp">
                 <div class="innerSlide">
-                    <div class="headingBlock clickable lazy-background">
+                    <div class="headingBlock clickable">
                         <h2>Фінанси і психологія</h2>
                         <h3 class="arrow"><a id="slide2-link" href="/psyhology_faktory_vplyvu.html" data-index="2"><span class="visuallyhidden">Дізнайтесь про фактори, що впливають на фінансові рішення </span>дізнавайтесь</a></h3>
                     </div>
                 </div>
             </div>
-            <div id="slide-3" class="slide">
+            <div id="slide-3" class="slide" data-bgimage="/assets/calculator.webp">
                 <div class="innerSlide">
-                    <div class="headingBlock clickable lazy-background">
+                    <div class="headingBlock clickable">
                         <h2>Фінансові калькулятори</h2>
                         <h3 class="arrow"><a id="slide3-link" href="/budget.html" data-index="3"><span class="visuallyhidden">Використовуйте калькулятори, щоб визначити свої можливості </span>починайте рахувати</a></h3>
                     </div>
@@ -718,7 +718,6 @@ worker.addEventListener('message', event => {
                 <div id="hero2">
                     <div id="heroText2">
                         <div id="billy">
-                          <!-- loading="lazy" decoding="async"/> -->
                           <img data-src="/assets/growing(1).svg" alt="Власні фінанси" width="826.06346" height="335.01004" class="lazyload"
                           />
                           <h3 class="arrow">
@@ -737,15 +736,12 @@ worker.addEventListener('message', event => {
                 </button> 
                 <button class="snav" data-index="2">
                     <span class="slide-progress"></span>
-                    <!-- <span class="visuallyhidden">Go to slide 2 – Dealing with natural disasters starter pack</span> -->
                 </button>                    
                 <button class="snav" data-index="3">
                     <span class="slide-progress"></span>
-                    <!-- <span class="visuallyhidden">Go to slide 3 – Indigenous resources starter pack</span> -->
                 </button>
                 <button class="snav" data-index="4">
                     <span class="slide-progress"></span>
-                    <!-- <span class="visuallyhidden">Go to slide 3 – Indigenous resources starter pack</span> -->
                 </button>
             </div>
         </div>
@@ -823,22 +819,30 @@ worker.addEventListener('message', event => {
   if(window.URLSearchParams){var e=new URLSearchParams(location.search);e.has("ReturnUrl")&&(location.href=e.get("ReturnUrl"))}else location.search.indexOf("welcome")>0&&(location.href="/welcome-to-the-next-generation-of-moneysmart");var SLIDES_AUTO_PLAY=!0;document.addEventListener("DOMContentLoaded",function(e){var t,s="filter";!1==((t=document.createElement("div")).style.cssText=s+":initial","initial"===t.style[s])&&document.getElementById("hp-tabs").classList.add("no-filter");var a,n,i=Math.ceil(document.getElementById("starter-pack").offsetWidth/16)>=60;i&&document.getElementById("tabs-list").firstChild.nextSibling.classList.add("active");for(var l=document.getElementsByClassName("tabLevel1Link"),r=0;r<l.length;r++)l[r].addEventListener("click",function(e){for(var t=document.getElementById("tabs-list").getElementsByTagName("li"),s=this.parentElement.className,a=0;a<t.length;a++)t[a].classList.remove("active");"active"==s||i?i&&this.parentElement.classList.add("active"):this.parentElement.classList.add("active");var n=document.getElementsByClassName("active");i||0!=n.length?window.location.href="#"+this.parentElement.id:window.location.href="#"+t[0].id});var d=document.getElementsByClassName("slide"),o=document.getElementsByClassName("snav");a=window.innerWidth>window.innerHeight?"/assets/financial-literacy.webp":"/assets/financial-literacy_portraite.webp";var c=document.querySelector("body");c.classList.add("loading");var h=document.createElement("img");h.src=a;var v=1,g=document.getElementById("slideshow-container"),m=document.getElementById("slide-progress-bar");h.addEventListener("load",function(e){if(c.classList.remove("loading"),c.classList.add("loaded"),h=null,matchMedia("(pointer:coarse)").matches)SLIDES_AUTO_PLAY&&(m.classList.add("play-progress-bar"),n=setInterval(function(){var e=g.offsetWidth;g.scrollTo({left:v*e,behavior:"smooth"}),++v==d.length&&clearInterval(n)},6e3));else{for(var t=0;t<o.length;t++){var s=o[t].getElementsByClassName("slide-progress");SLIDES_AUTO_PLAY?s[0].classList.add("playSlide"):0==t&&s[0].parentElement.classList.add("selected"),o[t].addEventListener("click",function(e){u(this.dataset.index)})}for(var t=0;t<d.length;t++)SLIDES_AUTO_PLAY&&d[t].classList.add("playSlide")}});for(var r=0;r<d.length;r++){var f=d[r].getElementsByTagName("a");f.length>0&&f[0].addEventListener("focus",function(e){u(this.dataset.index)})}function u(e){for(var t=0;t<o.length;t++)o[t].classList.remove("selected"),o[t].classList.add("unselected"),o[t].getElementsByClassName("slide-progress")[0].classList.add("unselected");o[e-1].classList.remove("unselected"),o[e-1].classList.add("selected");for(var t=0;t<d.length;t++)d[t].classList.add("hideSlide"),d[t].classList.remove("showSlide");d[e-1].classList.remove("hideSlide"),d[e-1].classList.add("showSlide"),document.getElementById("slide"+e+"-link").focus()}function L(){for(var e=0;e<d.length;e++)d[e].classList.remove("playSlide");for(var e=0;e<o.length;e++)o[e].classList.remove("playSlide")}updateHeight(),g.addEventListener("touchstart",function(e){clearInterval(n),m.remove()},{passive:!0})});var OPERATING_SYSTEM=getMobileOperatingSystem();function getMobileOperatingSystem(){var e=navigator.userAgent||navigator.vendor||window.opera;return/windows phone/i.test(e)?"Windows Phone":/android/i.test(e)?"Android":/iPad|iPhone|iPod/.test(e)&&!window.MSStream||(-1!==navigator.userAgent.indexOf("iPad")||navigator.userAgent.indexOf("Mac")>-1)&&"ontouchend"in document?"iOS":"unknown"}var vh=.01*window.innerHeight;function updateHeight(){var e=.01*window.innerHeight;document.documentElement.style.setProperty("--vh",e+"px")}function debounce(e,t,s){var a;return function n(){var i=this,l=arguments,r=function(){a=null,s||e.apply(i,l)},d=s&&!a;clearTimeout(a),a=setTimeout(r,t),d&&e.apply(i,l)}}document.documentElement.style.setProperty("--vh",vh+"px"),window.onorientationchange=debounce(function(){updateHeight()},200),window.onresize=debounce(function(e){(""==OPERATING_SYSTEM||"unknown"==OPERATING_SYSTEM)&&updateHeight()},200);
 </script>
 <script>
+if ('IntersectionObserver' in window) {
   document.addEventListener("DOMContentLoaded", function() {
-    var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-    if ("IntersectionObserver" in window) {
-      let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            lazyBackgroundObserver.unobserve(entry.target);
-          }
-        });
-      });
-      lazyBackgrounds.forEach(function(lazyBackground) {
-        lazyBackgroundObserver.observe(lazyBackground);
+
+    function handleIntersection(entries) {
+      entries.map((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.backgroundImage = "url('"+entry.target.dataset.bgimage+"')";
+          observer.unobserve(entry.target);
+        }
       });
     }
+    const headers = document.querySelectorAll('#slide-2,#slide-3');
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      { rootMargin: "100px" }
+    );
+    headers.forEach(header => observer.observe(header));
   });
+} else {
+  const headers = document.querySelectorAll('#slide-2,#slide-3');
+  headers.forEach(header => {
+    header.style.backgroundImage = "url('"+header.dataset.bgimage+"')";
+  });
+}
 </script>
 <script src="/js/lazysizes.min.js" async></script>
   <!-- <script src="/js/tabs.js"></script> -->
