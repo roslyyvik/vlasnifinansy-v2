@@ -16,12 +16,230 @@
     <meta name="description" content="Калькулятор планування сімейного бюджету дозволяє визначити куди витрачаються ваші кошти, визначити структуру витрат за напрямками та прогнозувати витрати на місяць,квартал,півроку,рік">
     <link rel="canonical" href="https://vlasnifinancy.com/budget.html" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/budget.css" />
-    <link rel="stylesheet" href="css/normalize1.css" />
-    <link rel="stylesheet" href="css/index1.css">
+    <!-- budget.css -->
+    <style>
+        @media screen {
+            #calculator-container {
+            background-color: #f5f5f5;
+            padding: 0;
+            /* margin: 0 0 2rem; */
+            border: 1px solid #e1e1e1;
+        }
+        /* CALCULATOR HEADER */
+        #calculator-container .header {
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        #calculator-container .header h2 {
+            margin-bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.2rem;
+            border-top: solid #fafafa;
+            border-width: 1px;
+            border-bottom: 2px solid #e1e1e1;
+            padding: 1rem;
+        }
+        #calculator-container h2 {
+            padding: 0 2.5rem 0 1.5rem;
+            margin: 0;
+            line-height: 2rem;
+        }
+         /* footer */
+         #calculator-container div.footer {
+            border: none;
+        }
+        #calculator-container h4 {
+            font-size: 1.1em
+        }
+        #calculator-container #summary ul {
+            margin: 0;
+        }
+        #calculator-container h4.deficit,
+        td.total-nett.negative {
+            color: #d00000;
+        }
+        #calculator-container .input>div {
+            clear: both;
+        }
+        #calculator-container .input div.category,
+        #calculator-container .input div.summary {
+            overflow: hidden;
+            border-top: solid #fafafa;
+            border-width: 1px;
+            border-bottom: 2px solid #e1e1e1
+        }
+        #calculator-container .input div>h3 {
+            /* background-color: white;
+        line-height: 2.5em;
+        padding: 0 10px;
+        margin-bottom: 0;
+        cursor: pointer;
+        cursor: hand; */
+            position: relative;
+            background-color: #fff;
+            text-align: right;
+            padding: 0.8rem;
+            z-index: auto;
+        }
+        #calculator-container .input .category>h3 {
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 1rem 2.5rem;
+            background-color: #efefef;
+            cursor: pointer;
+            font-size: .9rem;
+        }
+        #calculator-container .input .category>h3>span {
+            flex-grow: 1;
+            text-align: right;
+        }
+        #calculator-container .item {
+            padding: .75rem;
+            display: flex;
+            border-bottom: 1px dotted #999;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+        }
+        @media (max-width: 36rem) {
+            #calculator-container .input .category .item {
+                display: flex;
+                /* flex-direction: column */
+                flex-wrap: wrap;
+            }
+            #calculator-container .input .category .item select,
+            #calculator-container .input .category .item input,
+            #calculator-container .input .category .item span {
+                margin-top: .8rem;
+                flex: 0 100%;
+            }
+            #calculator-container .input .category>h3 {
+                padding: 1rem 0.5rem;
+                text-align: left
+            }
+            #calculator-container .input .amount {
+                margin-right: 0rem;
+            }
+            #calculator-container .input div>h3 select {
+                width: 100%
+            }
+        }
+        #calculator-container .item label {
+            display: inline-block;
+            width: 50%;
+            padding-left: 15px;
+            line-height: 1em;
+            font-size: 14px;
+        }
+        #calculator-container .item span.total {
+            width: 6rem;
+            text-align: right;
+            margin-left: 1rem;
+        }
+        #calculator-container #summary h3 {
+            overflow: hidden;
+            display: flex;
+            margin: 0;
+            color: #fff;
+            background-color: #0146f5;
+            padding: 1rem 2.5rem;
+        }
+        #calculator-container #summary span {
+            flex-grow: 1;
+            float: right;
+        }
+        #calculator-container #summary h3:focus {
+            background-color: #0146f5;
+            outline: none;
+        }
+        #calculator-container #summary h3 span.nagative {
+            color: #d00000;
+        }
+        #calculator-container input:focus,
+        #calculator-container select:focus {
+            border: 1px solid #6e9934;
+            outline: none;
+        }
+        #calculator-container a.custom {
+            display: none;
+            text-decoration: none;
+        }
+        #calculator-container label a {
+            color: #999;
+            font-size: 0.8em
+        }
+        /*#calculator-container .item input { margin-right: 5px; }*/
+        #calculator-container h3 span {
+            float: right
+        }
+        #result {
+            padding: 0 10px;
+        }
+        /* calculator form elements */
+        #calculator-container select,
+        #calculator-container input[type="text"],
+        #calculator-container input[type="number"] {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: white;
+            border: 1px solid #ccc;
+            -moz-border-radius: 10px;
+            border-radius: 5px;
+            color: #336699;
+            /* height: 2.5em; */
+            padding: 1rem 10px;
+        }
+        #calculator-container input.amount {
+            text-align: right;
+            width: 7rem;
+            color: #336699;
+            margin-right: 0.5rem;
+        }
+        @media only screen and (max-width: 55em) {
+            #calculator-container .item label {
+                width: 50%
+            }
+        }
+        @media only screen and (max-width: 38em) {
+            #calculator-container .item label {
+                width: 35%
+            }
+            #calculator-container .item span.total {
+                margin-left: 0;
+            }
+        }
+        @media only screen and (max-width: 33em) {
+            #calculator-container .item label {
+                width: 95%
+            }
+        }}
+    </style>
+    <link rel="preload" href="./css/budget1.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./css/budget1.css"></noscript>
+    <!-- <link rel="stylesheet" href="css/normalize1.css" />
+    <link rel="stylesheet" href="css/index1.css"> -->
     <!-- <link rel="stylesheet" href="css/style1.css"> -->
+      <!-- Index.css -->
+  <style>
+    .visuallyhidden,body.noScroll{overflow:hidden}#pagetime,h1{color:#fff;line-height:1}#mask,.offScreen,.visuallyhidden,blockquote::before{position:absolute}#searchWrapper,.tooltip .tooltiptext,header{left:0;position:fixed}#headerLogo,#heroImg{background-size:cover}#hero,#mainNav{background-image:linear-gradient(45deg,#0047f5,#0047f5 50%,#42bfc7)}#menuBack,#toggleMenu,#toggleSearch{height:1.25rem;width:1.25rem}#searchWrapper,.mainNavLevel2Container{max-height:calc(100vh - 4.5rem);box-sizing:border-box}#content .socialLinks,#heroText,#mainNav,#mainNavUl,#searchWrapper,#topButtons,.accordian,.accordianRowToggle,.alert,.covidImportant,.glossDef,.important,.mainNavLevel2Container,.smartTip,.tooltip .tooltiptext,header,input[type=number],input[type=text]{box-sizing:border-box}#jumplinksUl a,#mainNav a,.breadcrumbLink,.calculatorLink a,.upnext a,button.glossButton,footer a{text-decoration:none}body{font-family:Roboto;background-color:#f8fafc;font-weight:400;letter-spacing:1.1px;line-height:1.5}.visuallyhidden{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;padding:0;width:1px}#mainNav,#searchWrapper.hidden{transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out}#mainContent{padding-bottom:0}#headerLogo1,#headerLogo,header.dark #headerLogo{background-image:url(/assets/icons/vlasnifinansy0_3.svg);background-repeat:no-repeat}#headerTitle,#navActiveSectionTitle,.calcResult a,.transcriptTitle,h2,h3{font-weight:600}#mask.hidden,#menuBack.hidden,#toggleMenu.hidden,.accordianRow.closed .accordianRowContent,.mainNavLevel1Link>ul.hidden,.mainNavLevel2Container.hidden,.transcriptButton.hidden,.transcriptDiv.hidden{display:none}#content{margin:0 auto}h1{font-size:2.65rem;margin:0}h2{color:#0047f5;font-size:2.05rem;line-height:1.39;margin:4rem 0 1.5rem}h3{color:#222;line-height:1.24}a{color:#333}img{max-width:100%;height:auto}#calculator-container button,#content button,.alert button,aside.feedback button{padding:.55rem 1.25rem;border-radius:2rem;font-size:1rem;color:#0047f5;border:.1rem solid #0047f5;background-color:#fff;cursor:pointer;min-width:8rem}#calculator-container button:hover,#content button,.alert button:hover,aside.feedback button:hover{border-radius:2rem;font-size:1rem;color:#fff;border:.1rem solid #0047f5;background-color:#0047f5;overflow:visible}#headerLogo,#searchQuery,header.dark #headerLogo{background-color:transparent}#mainNav,#searchResultsWrapper,.mainNavLevel2Container{-webkit-overflow-scrolling:touch}.glossaryItem h3::first-letter,h1::first-letter{text-transform:capitalize}#menuBack,#searchSubmit,#toggleMenu,.glossDef button{color:transparent;cursor:pointer;text-indent:-10000rem}#headerLogo,#mainNavUl,.upnext li{position:relative}#jumplinksUl a,.upnext li,footer .brandms,header{background-color:#fff}.upnext ul,footer ul{list-style-type:none;padding:0;margin:0}footer{text-align:center}footer .brandms{padding:1rem 0}#content button:focus,#searchInputWrapper,.scrolltracker .progress,header.dark{background-color:#0047f5}footer a{font-size:.8rem}header{border-bottom:.01rem solid #ccc;top:0;width:100%;z-index:9;height:4.5rem}#topButtons{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;padding:0 1rem;width:100%;height:4.25rem}#headerLogo{height:3.5rem;display:block;text-indent:-1000rem;width:12rem;background-position:center;opacity:1}#mainNav,.overlay{position:absolute}#headerTitle,#navActiveSectionTitle{height:2.5rem;line-height:2.5rem;width:auto;color:#0047f5;max-width:calc(100vw - 7rem);text-overflow:ellipsis;overflow:hidden;white-space:nowrap}#headerLogo.hidden,#headerLogo.mHidden,#headerTitle.hidden,#navActiveSectionTitle.hidden{display:none;width:0}#mainNav{color:#fff;height:calc(100vh - 4.5rem);overflow:auto;padding:0;transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out;width:100%}#mainNav.hidden{visibility:hidden;-webkit-transition-property:all;height:0;overflow:hidden;-webkit-transition-duration:.3s;-webkit-transition-timing-function:ease-in-out;transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out}.scrolltracker{height:.25rem;width:100%}.scrolltracker .progress{height:.3rem;width:0}#toggleMenu{background:url(/assets/icons/menu-blue.svg) top center no-repeat;border:0}#menuBack{background:url(/assets/icons/back-blue.svg) top center no-repeat;border:0}.vertJustify{display:flex;flex-direction:column;height:calc(100vh - 4.5rem);justify-content:space-between;overflow-y:auto;overflow-x:hidden}#mainNav a{color:#fff}#mainNavUl{list-style-type:none;padding:2rem 1rem 1rem 2rem;color:#fff;margin:0;font-family:regular,montserrat,sans-serif}.mainNavLevel1{margin:0 0 .5rem;font-size:1.5rem;line-height:1.25;padding:.2rem 0}#feedback-useful,.mainNavLevel1Link{font-weight:700}.mainNavLevel2Container{list-style-type:none;padding:2rem 1rem 1rem .5rem;font-size:1.25rem;font-weight:400;overflow-y:scroll;position:absolute;top:0;width:50%;left:50%;-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out}.mainNavLevel2Container>li>ul{list-style-type:none;padding:0 0 2rem;font-size:1rem;font-weight:200}.mainNavLevel2Container>li>ul>li>a{padding:.5rem 0 .5rem 2.5rem;display:inline-block;margin:0}.mainNavLevel2Container>li>a{display:block;padding-left:2.5rem;margin-top:1.5rem}.mainNavLevel2Container>li>a>i{margin-right:.5rem}@media screen and (max-width:50rem){ul.pos1{-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out;left:0}.mainNavLevel2Container{list-style-type:none;padding:3rem 1rem 1rem .75rem;font-size:1.25rem;font-weight:400;overflow-y:scroll;-webkit-overflow-scrolling:touch;position:absolute;top:0;width:100%;left:100%;box-sizing:border-box;-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out;max-height:calc(100vh - 4.5rem)}.mainNavLevel2Container.hidden{left:200%;display:block}}
+    .visuallyhidden,body.noScroll{overflow:hidden}#pagetime,h1{color:#fff;line-height:1}#mask,.offScreen,.visuallyhidden,blockquote::before{position:absolute}#searchWrapper,.tooltip .tooltiptext,header{left:0;position:fixed}#headerLogo,#headerLogo1,#heroImg{background-size:cover}#hero,#mainNav{background-image:linear-gradient(45deg,#0047f5,#0047f5 50%,#42bfc7)}#menuBack,#toggleMenu,#toggleSearch{height:1.25rem;width:1.25rem}#searchWrapper,.mainNavLevel2Container{max-height:calc(100vh - 4.5rem);box-sizing:border-box}#content .socialLinks,#heroText,#mainNav,#mainNavUl,#searchWrapper,#topButtons,.accordian,.accordianRowToggle,.alert,.covidImportant,.glossDef,.important,.mainNavLevel2Container,.smartTip,.tooltip .tooltiptext,header,input[type=number],input[type=text]{box-sizing:border-box}#jumplinksUl a,#mainNav a,.breadcrumbLink,.calculatorLink a,.upnext a,button.glossButton,footer a{text-decoration:none}body{font-family:Roboto;background-color:#f8fafc;font-weight:400;letter-spacing:1.1px;line-height:1.5}.visuallyhidden{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;padding:0;width:1px}#mainNav,#searchWrapper.hidden{transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out}#mainContent{padding-bottom:0}#headerLogo1,#headerLogo,header.dark #headerLogo{background-image:url(/assets/icons/vlasnifinansy0_3.svg);background-repeat:no-repeat}#headerTitle,#navActiveSectionTitle,.calcResult a,.transcriptTitle,h2,h3{font-weight:600}#mask.hidden,#menuBack.hidden,#toggleMenu.hidden,.accordianRow.closed .accordianRowContent,.mainNavLevel1Link>ul.hidden,.mainNavLevel2Container.hidden,.transcriptButton.hidden,.transcriptDiv.hidden{display:none}#content{margin:0 auto}h1{font-size:2.65rem;margin:0}h2{color:#0047f5;font-size:2.05rem;line-height:1.39;margin:4rem 0 1.5rem}h3{color:#222;line-height:1.24}a{color:#333}img{max-width:100%;height:auto}#calculator-container button,#content button,.alert button,aside.feedback button{padding:.55rem 1.25rem;border-radius:2rem;font-size:1rem;color:#0047f5;border:.1rem solid #0047f5;background-color:#fff;cursor:pointer;min-width:8rem}#calculator-container button:hover,#content button,.alert button:hover,aside.feedback button:hover{border-radius:2rem;font-size:1rem;color:#fff;border:.1rem solid #0047f5;background-color:#0047f5;overflow:visible}#headerLogo,#searchQuery,header.dark #headerLogo{background-color:transparent}#mainNav,#searchResultsWrapper,.mainNavLevel2Container{-webkit-overflow-scrolling:touch}.glossaryItem h3::first-letter,h1::first-letter{text-transform:capitalize}#menuBack,#searchSubmit,#toggleMenu,.glossDef button{color:transparent;cursor:pointer;text-indent:-10000rem}#headerLogo,#mainNavUl,.upnext li{position:relative}#jumplinksUl a,.upnext li,footer .brandms,header{background-color:#fff}.upnext ul,footer ul{list-style-type:none;padding:0;margin:0}footer{text-align:center}footer .brandms{padding:1rem 0}#content button:focus,#searchInputWrapper,.scrolltracker .progress,header.dark{background-color:#0047f5}footer a{font-size:.8rem}header{border-bottom:.01rem solid #ccc;top:0;width:100%;z-index:9;height:4.5rem}#topButtons{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;padding:0 1rem;width:100%;height:4.25rem}#headerLogo,#headerLogo1{height:3.5rem;display:block;text-indent:-1000rem;width:12rem;background-position:center;opacity:1}#mainNav,.overlay{position:absolute}#headerTitle,#navActiveSectionTitle{height:2.5rem;line-height:2.5rem;width:auto;color:#0047f5;max-width:calc(100vw - 7rem);text-overflow:ellipsis;overflow:hidden;white-space:nowrap}#headerLogo.hidden,#headerLogo.mHidden,#headerTitle.hidden,#navActiveSectionTitle.hidden{display:none;width:0}#mainNav{color:#fff;height:calc(100vh - 4.5rem);overflow:auto;padding:0;transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out;width:100%}#mainNav.hidden{visibility:hidden;-webkit-transition-property:all;height:0;overflow:hidden;-webkit-transition-duration:.3s;-webkit-transition-timing-function:ease-in-out;transition-duration:.3s;transition-property:all;transition-timing-function:ease-in-out}.scrolltracker{height:.25rem;width:100%}.scrolltracker .progress{height:.3rem;width:0}#toggleMenu{background:url(/assets/icons/menu-blue.svg) top center no-repeat;border:0}#menuBack{background:url(/assets/icons/back-blue.svg) top center no-repeat;border:0}.vertJustify{display:flex;flex-direction:column;height:calc(100vh - 4.5rem);justify-content:space-between;overflow-y:auto;overflow-x:hidden}#mainNav a{color:#fff}#mainNavUl{list-style-type:none;padding:2rem 1rem 1rem 2rem;color:#fff;margin:0;font-family:regular,montserrat,sans-serif}.mainNavLevel1{margin:0 0 .5rem;font-size:1.5rem;line-height:1.25;padding:.2rem 0}#feedback-useful,.mainNavLevel1Link{font-weight:700}.mainNavLevel2Container{list-style-type:none;padding:2rem 1rem 1rem .5rem;font-size:1.25rem;font-weight:400;overflow-y:scroll;position:absolute;top:0;width:50%;left:50%;-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out}.mainNavLevel2Container>li>ul{list-style-type:none;padding:0 0 2rem;font-size:1rem;font-weight:200}.mainNavLevel2Container>li>ul>li>a{padding:.5rem 0 .5rem 2.5rem;display:inline-block;margin:0}.mainNavLevel2Container>li>a{display:block;padding-left:2.5rem;margin-top:1.5rem}.mainNavLevel2Container>li>a>i{margin-right:.5rem}@media screen and (max-width:50rem){ul.pos1{-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out;left:0}.mainNavLevel2Container{list-style-type:none;padding:3rem 1rem 1rem .75rem;font-size:1.25rem;font-weight:400;overflow-y:scroll;-webkit-overflow-scrolling:touch;position:absolute;top:0;width:100%;left:100%;box-sizing:border-box;-webkit-transition-property:left;-webkit-transition-duration:.5s;-webkit-transition-timing-function:ease-in-out;transition-property:left;transition-duration:.5s;transition-timing-function:ease-in-out;max-height:calc(100vh - 4.5rem)}.mainNavLevel2Container.hidden{left:200%;display:block}}
+  </style>
+  <link rel="preload" href="./css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./css/index.css"></noscript>
+  <!-- <link rel="stylesheet" href="./assets/favicon.ico"> -->
+<!-- normalize.css -->
+<style>
+  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+  button,hr,input{overflow:visible}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}a{background-color:transparent}small{font-size:80%}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{appearance:button}
+</style>
+<link rel="preload" href="./css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./css/normalize.css"></noscript>
     <script>
         jQuery.cookie = function(a, e, o) {
         if (void 0 === e) {
@@ -399,10 +617,10 @@
             });
         }
     </script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="js/script.js"></script>
+    <script defer src="https://code.highcharts.com/highcharts.js"></script>
+    <script defer src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script defer src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 
 </html>
