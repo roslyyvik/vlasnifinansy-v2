@@ -1364,7 +1364,7 @@ function __utmSetInfo() {
     if (__utmfsc && __utmfns) { __utmsrc += __utmGetClientInfo(); }
     if (__utmctm) { __utmsrc += __utmSetCampaignInfo(); }
     __utmsrc += "&utmr=" + __utmr + "&utmp=" + loc.pathname + loc.search;
-    __utmi.src = __utmsrc;
+    // __utmi.src = __utmsrc;
     return 0;
 }
 
