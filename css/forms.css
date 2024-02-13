@@ -1,10 +1,10 @@
-/* .clear {
+.clear {
     clear: both;
     overflow: hidden;
     height: 0;
     line-height: 0;
     font-size: 0;
-} */
+}
 
 .clear_value {
     color: #CCCCCC;
