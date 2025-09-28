@@ -70,9 +70,9 @@
           var imageUrl;
           //SET THIS TO FIRST SLIDE IMAGE DEPENDING ON ORIENTATION
           if (window.innerWidth > window.innerHeight) {
-              imageUrl = "/assets/financial-literacy_portraite.png"
+              imageUrl = "/assets/financial-literacy_portraite.webp"
           } else {
-              imageUrl = "/assets/financial-literacy.jpg"
+              imageUrl = "/assets/financial-literacy.webp"
           }
 
           var bgElement = document.querySelector("body");
