@@ -31,7 +31,7 @@ $(document).ready(function() {
         if (this.id == 'nper' && this.value > 60) { $(this).val(60); } // set a max nper of 60
         if (this.id == 'pmt' && this.value === 0) { $(this).val(1); } // set a min pmt of 1
         if (this.id == 'rate' && this.value > 20) { $(this).val(20); } // set a max rate of 10%
-        if ($(this).hasClass('dollars')) { $(this).val('₴' + formatNumber($(this).val(), 0, 0, true)); }
+        if ($(this).hasClass('dollars')) { $(this).val('$' + formatNumber($(this).val(), 0, 0, true)); }
         if ($(this).hasClass('interest')) { $(this).val(formatNumber($(this).val(), 0, 2, true) + '%'); }
         if ($(this).hasClass('years')) { $(this).val(parseInt($(this).val()) + ' years'); }
         calculate();
@@ -296,7 +296,7 @@ function DrawCalculator() { // CALCULATOR FRAMEWORK HTML
         '<h3>Результат</h3>' +
         '<div id="chart" /><div id="savingsGoalsResult"/>' +
         '<hr><h3>Що я маю робити далі?</h3>' +
-        '<ul><li>Порівнюйте умови депозитних рахунків щоб знайти найкращі відсотки</li><li>Налаштуйте автоматичне перерахування <span id="pmtAction"></span> на свій рахунок заощаджень</li><li>Використовуйте <a href="/budget.html">бюджетне планування</a> щоб з’ясувати, скільки ви можете дозволити собі заощаджувати</li></ul>' +
+        '<ul><li>Порівнюйте умови <a href="/banking/savings-accounts">депозитних рахунків</a> щоб знайти найкращі відсотки</li><li>Налаштуйте автоматичне перерахування <span id="pmtAction"></span> на свій рахунок заощаджень</li><li>Використовуйте <a href="/budgeting/budget-planner">бюджетне планування</a> щоб з’ясувати, скільки ви можете дозволити собі заощаджувати</li></ul>' +
         '</div>' +
         '</div>';
 

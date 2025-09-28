@@ -29,11 +29,11 @@
     background-color: #EEE;
 }
 
-/* .content {
+.content {
     background: #ffffff url(/Images/FLM/CommonImages/content_bg_n.gif) left top repeat-x;
     display: table;
     width: 100%;
-} */
+}
 
 .content_padding {
     padding: 14px 0 30px 0;
@@ -73,21 +73,21 @@
     overflow: hidden;
 }
 
-/* .center_content {
+.center_content {
     vertical-align: top;
     background: url(/Images/FLM/CommonImages/inner_content_block_bg.gif) left top no-repeat;
     width: 100%;
-} */
+}
 
 .center_content .center_content_toppad {
     padding: 10px 8px 0 8px;
 }
 
-/* .center_content_cal {
+.center_content_cal {
     vertical-align: top;
     background: url(/Images/FLM/CommonImages/inner_content_calblock_bg.gif) left top no-repeat;
     width: 100%;
-} */
+}
 
 
 /* .center_content_cal .center_content_toppad {
